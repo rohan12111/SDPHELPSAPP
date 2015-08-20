@@ -61,7 +61,7 @@ namespace HELPSMobileFrontEnd
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int mylistview = 2131034112;
 			
 			static Id()
 			{
