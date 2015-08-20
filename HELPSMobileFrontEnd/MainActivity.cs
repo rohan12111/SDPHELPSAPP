@@ -23,7 +23,7 @@ namespace HELPSMobileFrontEnd
 			SetContentView (Resource.Layout.Main);
 			mListview = FindViewById<ListView> (Resource.Id.mylistview);
 			aItems = new List<string>{};
-			//test
+
 			aItems.Add("Booking ");
 			aItems.Add ("Search");
 			aItems.Add ("Cancel");
