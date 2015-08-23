@@ -61,7 +61,13 @@ namespace HELPSMobileFrontEnd
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int mylistview = 2131034112;
+			public const int btnGetData = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int lblData = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int lvPageLayout = 2131034114;
 			
 			static Id()
 			{
