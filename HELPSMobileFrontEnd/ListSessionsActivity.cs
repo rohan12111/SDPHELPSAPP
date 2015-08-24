@@ -20,8 +20,9 @@ namespace HELPSMobileFrontEnd
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.Main);
-			// Create your application here
+			SetContentView (Resource.Layout.ListSessions);
+
+			ActionBar.Hide ();
 		}
 	}
 }

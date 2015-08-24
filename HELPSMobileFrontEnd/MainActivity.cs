@@ -22,8 +22,9 @@ namespace HELPSMobileFrontEnd
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
+
+			ActionBar.Hide (); //Hides the top label
 
 			// Get our button from the layout resource,
 			// and attach an event to it
@@ -34,9 +35,9 @@ namespace HELPSMobileFrontEnd
 			};
 		}
 
-		private async void RESTDataCall()
+		private void RESTDataCall()
 		{
-			String url = "";
+			//String url = "";
 
 //			JsonValue json = await FetchAsync(url);
 			TextView lblData = FindViewById<TextView> (Resource.Id.lblData);
