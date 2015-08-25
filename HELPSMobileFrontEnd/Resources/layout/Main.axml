@@ -1,49 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="#F0F8FF">
-    <TableLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tableLayout1">
-        <TableRow
-            android:id="@+id/tableRow1">
-            <FrameLayout
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_column="0"
-                android:id="@+id/frameLayout1"
-                android:layout_height="127.3dp"
-                android:layout_width="166.7dp"
-                android:layout_span="2" />
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow2">
-            <Button
-                android:text="Button"
-                android:layout_column="0"
-                android:id="@+id/button1" />
-            <Button
-                android:text="Button"
-                android:layout_column="1"
-                android:id="@+id/button2" />
-        </TableRow>
-        <TableRow
-            android:id="@+id/tableRow3">
-            <Button
-                android:text="Button"
-                android:layout_column="0"
-                android:id="@+id/button3" />
-            <Button
-                android:text="Button"
-                android:layout_column="1"
-                android:id="@+id/button4" />
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+<TableLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/tableLayout1"
+    p1:stretchColumns="*"
+    p1:background="#EEEEEE">
+    <TableRow
+        p1:id="@+id/tableRow1">
+        <TableLayout
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_column="0"
+            p1:id="@+id/tableLayout2"
+            p1:layout_span="2"
+            p1:background="#FFFFFF"
+            p1:layout_margin="10px"
+            p1:padding="10px"
+            p1:stretchColumns="1">
+            <TableRow
+                p1:id="@+id/tableRow4">
+                <TextView
+                    p1:text="Next Session:"
+                    p1:textAppearance="?android:attr/textAppearanceLarge"
+                    p1:textColor="#000000"
+                    p1:layout_span="3"
+                    p1:layout_column="0"
+                    p1:paddingBottom="10px"
+                    p1:id="@+id/textView11" />
+                <TextView
+                    p1:minWidth="30px"
+                    p1:minHeight="30px"
+                    p1:id="@+id/textView15" />
+                <TextView
+                    p1:minWidth="30px"
+                    p1:minHeight="30px"
+                    p1:id="@+id/textView16" />
+            </TableRow>
+            <TableRow
+                p1:id="@+id/tableRow5">
+                <TextView
+                    p1:text="Some HELPS Class that doesnt help..."
+                    p1:textAppearance="?android:attr/textAppearanceMedium"
+                    p1:textColor="#000000"
+                    p1:layout_column="0"
+                    p1:layout_span="3"
+                    p1:layout_marginBottom="10px"
+                    p1:id="@+id/textView12" />
+            </TableRow>
+            <TableRow
+                p1:id="@+id/tableRow6">
+                <TextView
+                    p1:text="11:00am - 12:00pm"
+                    p1:textAppearance="?android:attr/textAppearanceMedium"
+                    p1:textColor="#000000"
+                    p1:layout_column="0"
+                    p1:id="@+id/textView13" />
+                <TextView
+                    p1:minWidth="30px"
+                    p1:minHeight="30px"
+                    p1:layout_column="1"
+                    p1:id="@+id/textView17" />
+                <TextView
+                    p1:text="CB11.05.404"
+                    p1:textAppearance="?android:attr/textAppearanceMedium"
+                    p1:textColor="#000000"
+                    p1:layout_column="2"
+                    p1:id="@+id/textView14" />
+            </TableRow>
+        </TableLayout>
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow2"
+        p1:minWidth="25px"
+        p1:minHeight="25px">
+        <Button
+            p1:text="Booking"
+            p1:layout_column="0"
+            p1:id="@+id/button1"
+            p1:layout_margin="20px"
+            p1:background="#E53935"
+            p1:minHeight="250px" />
+        <Button
+            p1:text="Button"
+            p1:layout_column="1"
+            p1:id="@+id/button2"
+            p1:minHeight="250px"
+            p1:background="#E53935"
+            p1:layout_margin="20px" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow3">
+        <Button
+            p1:text="Button"
+            p1:layout_column="0"
+            p1:id="@+id/button3"
+            p1:minHeight="250px"
+            p1:background="#E53935"
+            p1:layout_margin="20px" />
+        <Button
+            p1:text="Button"
+            p1:layout_column="1"
+            p1:id="@+id/button4"
+            p1:minHeight="250px"
+            p1:background="#E53935"
+            p1:layout_margin="20px" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow7">
+        <Button
+            p1:text="Settings"
+            p1:layout_column="0"
+            p1:id="@+id/button5"
+            p1:minHeight="250px"
+            p1:background="#E53935"
+            p1:layout_margin="20px" />
+        <Button
+            p1:text="Exit"
+            p1:layout_column="1"
+            p1:id="@+id/button6"
+            p1:minHeight="250px"
+            p1:background="#E53935"
+            p1:layout_margin="20px" />
+    </TableRow>
+</TableLayout>

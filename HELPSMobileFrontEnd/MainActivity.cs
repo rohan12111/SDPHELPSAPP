@@ -9,10 +9,11 @@ using Android.OS;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "HELPSMobileFrontEnd", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "UTS: HELPS", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : Activity
 	{
 
@@ -25,7 +26,7 @@ namespace HELPSMobileFrontEnd
 				SetContentView (Resource.Layout.Main);
 
 				//Hides the top label
-				ActionBar.Hide (); 
+//				ActionBar.Hide (); 
 
 				// Get our button from the layout resource, and attach an event to it
 				Button btnGetData = FindViewById<Button> (Resource.Id.button1);
