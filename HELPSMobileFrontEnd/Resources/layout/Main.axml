@@ -4,25 +4,47 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <Button
-        android:text="Get data"
+    android:minHeight="25px"
+    android:background="#F0F8FF">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnGetData" />
-    <TextView
-        android:text="Placeholder for data"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblData" />
-    <Button
-        android:text="Go to Class List"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnNavigateClassList" />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lvPageLayout" />
+        android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="*">
+            <FrameLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_column="0"
+                android:id="@+id/frameLayout1"
+                android:layout_height="127.3dp"
+                android:layout_width="166.7dp"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <Button
+                android:text="Button"
+                android:layout_column="0"
+                android:id="@+id/button1" />
+            <Button
+                android:text="Button"
+                android:layout_column="1"
+                android:id="@+id/button2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <Button
+                android:text="Button"
+                android:layout_column="0"
+                android:id="@+id/button3" />
+            <Button
+                android:text="Button"
+                android:layout_column="1"
+                android:id="@+id/button4" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
