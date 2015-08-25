@@ -28,8 +28,8 @@ namespace HELPSMobileFrontEnd
 				ActionBar.Hide (); 
 
 				// Get our button from the layout resource, and attach an event to it
-				Button btnGetData = FindViewById<Button> (Resource.Id.btnGetData);
-				Button btnNavigateClassList = FindViewById<Button> (Resource.Id.btnNavigateClassList);
+				Button btnGetData = FindViewById<Button> (Resource.Id.button1);
+				Button btnNavigateClassList = FindViewById<Button> (Resource.Id.button2);
 				
 				btnGetData.Click += delegate {
 					RESTDataCall();
@@ -52,7 +52,7 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
-				TextView lblData = FindViewById<TextView> (Resource.Id.lblData);
+				TextView lblData = FindViewById<TextView> (Resource.Id.button1);
 				lblData.Text = "test";
 			}
 			catch 
@@ -60,3 +60,5 @@ namespace HELPSMobileFrontEnd
 				throw;
 			}
 		}
+	}
+}
