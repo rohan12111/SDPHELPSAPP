@@ -1,8 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="#EEEEEE">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLogo" />
+    <TextView
+        android:text="Login"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="78.8dp"
+        android:id="@+id/txtLogin"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:autoText="true" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="78.8dp"
+        android:id="@+id/txtUsername"
+        android:text="Student ID"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="#FFFFFF" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="78.8dp"
+        android:id="@+id/txtPassword"
+        android:text="Password"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp" />
+    <Button
+        android:text="Sign into UTS: HELPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E53935"
+        android:id="@+id/btnLogin"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="160dp" />
 </LinearLayout>
-

@@ -18,6 +18,7 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "LoginActivity")]			
 	public class LoginActivity : Activity
 	{
+		
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
