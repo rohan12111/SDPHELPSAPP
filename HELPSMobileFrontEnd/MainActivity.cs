@@ -13,7 +13,7 @@ using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "UTS: HELPS", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity (Label = "UTS: HELPS")]
 	public class MainActivity : Activity
 	{
 

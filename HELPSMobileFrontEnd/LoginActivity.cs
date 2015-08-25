@@ -12,20 +12,25 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "LoginActivity")]			
+	[Activity (Label = "LoginActivity", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class LoginActivity : Activity
 	{
-		
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
 
-				// Create your application here
+				SetContentView (Resource.Layout.Login);
+
+				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+				btnLogin.Click += delegate {
+					StartActivity(new Intent(this, typeof(MainActivity)));
+				};
 			}
 			catch (Exception e)
 			{
