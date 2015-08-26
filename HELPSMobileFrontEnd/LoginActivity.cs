@@ -13,6 +13,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using System.Runtime.Serialization;
 
 namespace HELPSMobileFrontEnd
 {
@@ -41,16 +42,30 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
-//		private async Task<SLIMSMobile_Handshake> MessageFixed(SLIMSMobile_Handshake _SM_Handshake)
-//		{
-//			try
-//			{
-//
-//				using (HttpClient _HttpClient = new HttpClient())
-//				{
-//					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
-//					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, SYNC_URL + "MessageFixed"))
-//					{
+//		private Task<SLIMSMobile_Handshake> MessageFixed(SLIMSMobile_Handshake _SM_Handshake)
+		private void MessageFixed()
+		{
+			try
+			{
+				using (HttpClient _HttpClient = new HttpClient())
+				{
+					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
+					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://SDPMachine.cloudapp.net/myservice.svc" + "ListWorkshopSets"))
+					{
+						if (_HttpRequest.Content != null)
+						{
+							new AlertDialog.Builder (this)
+								.SetMessage("Success!!!@#!FSDG")
+								.SetTitle("Woot woot")
+								.Show();
+						}
+						else
+						{
+							new AlertDialog.Builder (this)
+								.SetMessage("Failed")
+								.SetTitle("Aww")
+								.Show();
+						}
 //						_HttpRequest.Content = new StringContent(HandshakeToString(_SM_Handshake), Encoding.UTF8, "application/json");
 //						using (HttpResponseMessage _HttpResponse = await _HttpClient.SendAsync(_HttpRequest))
 //						{
@@ -64,15 +79,21 @@ namespace HELPSMobileFrontEnd
 //								return null;
 //							}
 //						}
-//					}
-//				}
-//
-//			}
-//			catch
-//			{
-//				throw;
-//			}
-//		}
+					}
+				}
+			}
+			catch
+			{
+				throw;
+			}
+		}
+	}
+
+	[DataContract] public class workshopSets
+	{
+		[DataMember] public String id = "";
+		[DataMember] public String name = "";
+		[DataMember] public String archived = "";
 	}
 }
 
