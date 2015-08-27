@@ -20,13 +20,16 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "ListSessionsActivity")]			
 	public class ListSessionsActivity : Activity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected async override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.ListSessions);
 				ActionBar.Hide ();
+				ListView lvWorkshops = FindViewById<ListView> (Resource.Id.lvClasses);
+
+				List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
 			}
 			catch (Exception e)
 			{

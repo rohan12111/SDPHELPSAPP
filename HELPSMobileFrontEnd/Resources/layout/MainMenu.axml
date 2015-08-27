@@ -76,7 +76,7 @@
         <Button
             p1:text="Booking"
             p1:layout_column="0"
-            p1:id="@+id/button1"
+            p1:id="@+id/btnBooking"
             p1:layout_margin="20px"
             p1:background="#E53935"
             p1:minHeight="250px" />
@@ -110,14 +110,14 @@
         <Button
             p1:text="Settings"
             p1:layout_column="0"
-            p1:id="@+id/button5"
+            p1:id="@+id/btnSettings"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />
         <Button
-            p1:text="Exit"
+            p1:text="Logout"
             p1:layout_column="1"
-            p1:id="@+id/button6"
+            p1:id="@+id/btnLogout"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />

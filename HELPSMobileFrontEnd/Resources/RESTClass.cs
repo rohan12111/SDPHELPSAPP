@@ -9,11 +9,7 @@ namespace HELPSMobileFrontEnd
 {
 	public static class RESTClass
 	{
-//		public RESTClass ()
-//		{
-//		}
-
-		public static async Task GetWorkshopList()
+		public static async Task<List<WorkshopSets>> GetWorkshopList()
 		{
 			try
 			{
@@ -28,9 +24,13 @@ namespace HELPSMobileFrontEnd
 						{
 							if (_HttpResponse.IsSuccessStatusCode)
 							{
-								String _temp = await _HttpResponse.Content.ReadAsStringAsync();
-								Result _Result = new Result(_temp);
-								throw new Exception("");
+								String strResponse = await _HttpResponse.Content.ReadAsStringAsync();
+								RootObject _RootObj = new RootObject(strResponse);
+								return _RootObj.Results;
+							}
+							else
+							{
+								return null;
 							}
 						}
 					}
@@ -43,25 +43,8 @@ namespace HELPSMobileFrontEnd
 		}
 	}
 
-	public class Result
+	public class WorkshopSets
 	{
-		public Result(String strJson)
-		{
-			try
-			{
-				JObject jObject = JObject.Parse(strJson);
-				JToken jUser = jObject["user"];
-
-				id = (int) jUser["id"];
-				name = (string) jUser["name"];
-				archived = (string) jUser["archived"];
-			}
-			catch 
-			{
-				throw;
-			}
-		}
-
 		public int id { get; set; }
 		public string name { get; set; }
 		public string archived { get; set; }
@@ -69,7 +52,29 @@ namespace HELPSMobileFrontEnd
 
 	public class RootObject
 	{
-		public List<Result> Results { get; set; }
+		public RootObject(String strJson)
+		{
+			try
+			{
+				String text = "";
+				JObject jObject = JObject.Parse(strJson);
+
+				foreach (var d in jObject["Results"].Children())
+				{
+					Results.Add(new WorkshopSets(){
+						id = (int)d["id"],
+						name = (string)d["name"],
+						archived = (string)d["archived"]
+					});
+				}
+			}
+			catch 
+			{
+				throw;
+			}
+		}
+
+		public List<WorkshopSets> Results { get; set; }
 		public bool IsSuccess { get; set; }
 		public object DisplayMessage { get; set; }
 	}

@@ -63,11 +63,17 @@ namespace HELPSMobileFrontEnd
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060014
+			public const int btnBooking = 2131099668;
+			
 			// aapt resource value: 0x7f060005
 			public const int btnLogin = 2131099653;
 			
-			// aapt resource value: 0x7f060014
-			public const int button1 = 2131099668;
+			// aapt resource value: 0x7f06001b
+			public const int btnLogout = 2131099675;
+			
+			// aapt resource value: 0x7f06001a
+			public const int btnSettings = 2131099674;
 			
 			// aapt resource value: 0x7f060015
 			public const int button2 = 2131099669;
@@ -77,12 +83,6 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f060018
 			public const int button4 = 2131099672;
-			
-			// aapt resource value: 0x7f06001a
-			public const int button5 = 2131099674;
-			
-			// aapt resource value: 0x7f06001b
-			public const int button6 = 2131099675;
 			
 			// aapt resource value: 0x7f060001
 			public const int imgLogo = 2131099649;
@@ -167,7 +167,7 @@ namespace HELPSMobileFrontEnd
 			public const int Login = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int MainMenu = 2130903042;
 			
 			static Layout()
 			{
