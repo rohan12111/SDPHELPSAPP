@@ -20,7 +20,7 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "ListSessionsActivity")]			
 	public class ListSessionsActivity : Activity
 	{
-		protected async override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle bundle)
 		{
 			try
 			{
