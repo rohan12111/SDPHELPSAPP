@@ -29,6 +29,7 @@ namespace HELPSMobileFrontEnd
 				SetContentView (Resource.Layout.Login);
 
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+
 				btnLogin.Click += delegate {
 					StartActivity(new Intent(this, typeof(MainActivity)));
 				};
@@ -41,59 +42,6 @@ namespace HELPSMobileFrontEnd
 					.Show();
 			}
 		}
-
-//		private Task<SLIMSMobile_Handshake> MessageFixed(SLIMSMobile_Handshake _SM_Handshake)
-		private void MessageFixed()
-		{
-			try
-			{
-				using (HttpClient _HttpClient = new HttpClient())
-				{
-					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
-					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://SDPMachine.cloudapp.net/myservice.svc" + "ListWorkshopSets"))
-					{
-						if (_HttpRequest.Content != null)
-						{
-							new AlertDialog.Builder (this)
-								.SetMessage("Success!!!@#!FSDG")
-								.SetTitle("Woot woot")
-								.Show();
-						}
-						else
-						{
-							new AlertDialog.Builder (this)
-								.SetMessage("Failed")
-								.SetTitle("Aww")
-								.Show();
-						}
-//						_HttpRequest.Content = new StringContent(HandshakeToString(_SM_Handshake), Encoding.UTF8, "application/json");
-//						using (HttpResponseMessage _HttpResponse = await _HttpClient.SendAsync(_HttpRequest))
-//						{
-//							if (_HttpResponse.IsSuccessStatusCode)
-//							{
-//								SLIMSMobile_Handshake _SM_Handshake_Response = StringToHandshake(await _HttpResponse.Content.ReadAsStringAsync());
-//								return _SM_Handshake_Response;
-//							}
-//							else
-//							{
-//								return null;
-//							}
-//						}
-					}
-				}
-			}
-			catch
-			{
-				throw;
-			}
-		}
-	}
-
-	[DataContract] public class workshopSets
-	{
-		[DataMember] public String id = "";
-		[DataMember] public String name = "";
-		[DataMember] public String archived = "";
 	}
 }
 
