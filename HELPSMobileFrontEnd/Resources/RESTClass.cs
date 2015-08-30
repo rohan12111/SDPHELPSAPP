@@ -45,6 +45,13 @@ namespace HELPSMobileFrontEnd
 
 	public class WorkshopSets
 	{
+		public WorkshopSets(int intID, string strName, string strArchived)
+		{
+			id = intID;
+			name = strName;
+			archived = strArchived;
+		}
+
 		public int id { get; set; }
 		public string name { get; set; }
 		public string archived { get; set; }
@@ -56,16 +63,12 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
-				String text = "";
 				JObject jObject = JObject.Parse(strJson);
+				Results = new List<WorkshopSets>();
 
 				foreach (var d in jObject["Results"].Children())
 				{
-					Results.Add(new WorkshopSets(){
-						id = (int)d["id"],
-						name = (string)d["name"],
-						archived = (string)d["archived"]
-					});
+					Results.Add(new WorkshopSets((int)d["id"], (string)d["name"], (string)d["archived"]));
 				}
 			}
 			catch 
