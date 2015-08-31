@@ -15,10 +15,11 @@ using Android.Views;
 using Android.Widget;
 using System.IO;
 using System.Runtime.Serialization.Json;
+using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "ListSessionsActivity")]			
+	[Activity (Label = "ListSessionsActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ListSessionsActivity : Activity
 	{
 		protected async override void OnCreate (Bundle bundle)
@@ -66,7 +67,8 @@ namespace HELPSMobileFrontEnd
 		}
 	}
 
-	public class HomeScreenAdapter : BaseAdapter<string> {
+	public class HomeScreenAdapter : BaseAdapter<string> 
+	{
 		string[] items;
 		Activity context;
 
