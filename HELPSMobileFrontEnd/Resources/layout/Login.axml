@@ -6,8 +6,6 @@
     android:minWidth="25px"
     android:minHeight="25px"
     android:background="#EEEEEE">
-    <ImageView
-        android:id="@+id/imgHELPSLogo" />
     <TextView
         android:id="@+id/lblLogin"
         android:text="Login"

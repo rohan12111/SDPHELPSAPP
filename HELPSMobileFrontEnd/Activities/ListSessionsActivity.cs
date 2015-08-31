@@ -19,7 +19,7 @@ using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "ListSessionsActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "Make a booking", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ListSessionsActivity : Activity
 	{
 		protected async override void OnCreate (Bundle bundle)

@@ -74,16 +74,16 @@
         p1:minWidth="25px"
         p1:minHeight="25px">
         <Button
-            p1:text="Booking"
+            p1:id="@+id/btnMakeBooking"
+            p1:text="Make Booking"
             p1:layout_column="0"
-            p1:id="@+id/btnBooking"
             p1:layout_margin="20px"
             p1:background="#E53935"
             p1:minHeight="250px" />
         <Button
-            p1:text="Button"
+            p1:id="@+id/btnViewBooking"
+            p1:text="View Booking"
             p1:layout_column="1"
-            p1:id="@+id/button2"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />
@@ -91,16 +91,16 @@
     <TableRow
         p1:id="@+id/tableRow3">
         <Button
-            p1:text="Button"
+            p1:id="@+id/btnSearch"
+            p1:text="Search"
             p1:layout_column="0"
-            p1:id="@+id/button3"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />
         <Button
-            p1:text="Button"
+            p1:id="@+id/btnHelp"
+            p1:text="Help"
             p1:layout_column="1"
-            p1:id="@+id/button4"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />
@@ -108,16 +108,16 @@
     <TableRow
         p1:id="@+id/tableRow7">
         <Button
-            p1:text="Settings"
+            p1:id="@+id/btnProfile"
+            p1:text="Profile"
             p1:layout_column="0"
-            p1:id="@+id/btnSettings"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />
         <Button
+            p1:id="@+id/btnLogout"
             p1:text="Logout"
             p1:layout_column="1"
-            p1:id="@+id/btnLogout"
             p1:minHeight="250px"
             p1:background="#E53935"
             p1:layout_margin="20px" />

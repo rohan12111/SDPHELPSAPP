@@ -17,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "LoginActivity", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "UTS: HELPS", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class LoginActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -31,7 +31,7 @@ namespace HELPSMobileFrontEnd
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 
 				btnLogin.Click += delegate {
-					StartActivity(new Intent(this, typeof(MainActivity)));
+					StartActivity(new Intent(this, typeof(MainMenuActivity)));
 				};
 			}
 			catch (Exception e)
