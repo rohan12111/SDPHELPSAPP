@@ -45,3 +45,31 @@ namespace HELPSMobileFrontEnd
 	}
 }
 
+/*
+ * 
+ * login
+ *       string userName = txtusername.text;
+ *		 string password = txtpassword.text;
+ *		
+ * public void Login(string userName ,string password)
+ * {
+ * 		
+ *		if (username = "" && password = "")
+ *{
+ *		lblmessage.text = "Please Supply username or Password"
+ *}
+ *else
+ *{
+ *     Connection();
+ *     for (datarow row in login data set)
+ *      {
+ * 		if (row.itemsarray[0].equals(username) && row.ItemsArray[1].Equals(password))
+ * {
+ * lblmessage.text = "User Successfully logged in!!";
+ * 
+ * }
+ * 
+
+*}
+ *
+ * }
