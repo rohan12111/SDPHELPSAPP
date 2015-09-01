@@ -6,7 +6,7 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <ListView
+        android:id="@+id/lvClasses"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lvClasses" />
+        android:layout_height="match_parent" />
 </LinearLayout>
