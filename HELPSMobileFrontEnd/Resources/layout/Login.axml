@@ -14,50 +14,33 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/holo_blue_dark"
         android:textStyle="bold"
-        android:textSize="30px"
+        android:textSize="70dip"
         android:layout_margin="20dp"
         android:gravity="center"
         android:autoText="true" />
-    <TableLayout
-        android:id="@+id/tlLogin"
+    <EditText
+        android:id="@+id/tbStudentID"
+        android:inputType="number"
+        android:textColor="@android:color/holo_blue_light"
+        android:background="#FFFFFF"
+        android:hint="Student ID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="1"
-        android:layout_margin="5dp">
-        <TableRow
-            android:id="@+id/trStudentID"
-            android:layout_marginBottom="5dp">
-            <TextView
-                android:id="@+id/lblStudentID"
-                android:text="Student ID:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="0"
-                android:textColor="@android:color/black"
-                android:paddingRight="5dp" />
-            <EditText
-                android:id="@+id/tbStudentID"
-                android:inputType="number"
-                android:textColor="@android:color/holo_blue_light"
-                android:background="#FFFFFF"
-                android:layout_column="1" />
-        </TableRow>
-        <TableRow
-            android:id="@+id/trPassword">
-            <TextView
-                android:id="@+id/lblPassword"
-                android:text="Password:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_column="0"
-                android:textColor="@android:color/black"
-                android:paddingRight="5dp" />
-            <EditText
-                android:id="@+id/tbPassword"
-                android:inputType="textPassword"
-                android:textColor="@android:color/holo_blue_light"
-                android:background="#FFFFFF"
-                android:layout_column="1" />
-        </TableRow>
-    </TableLayout>
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" />
+    <EditText
+        android:id="@+id/tbPassword"
+        android:inputType="textPassword"
+        android:textColor="@android:color/holo_blue_light"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_margin="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" />
     <Button
         android:id="@+id/btnLogin"
         android:text="Sign into UTS: HELPS"
