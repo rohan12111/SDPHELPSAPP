@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<style name="MainButton">
+		<item name="android:Height">200dp</item>
+		<item name="android:Width">200dp</item>
+		<item name="android:background">#E53935</item>
+		<item name="android:layout_margin">5dp</item>
+		<item name="android:layout_height">100dp</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+
+	<style name="TableLayoutInfo">
+		<item name="android:background">#FFFFFFFF</item>
+		<item name="android:layout_margin">2dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:layout_width">match_parent</item>
+	</style>
+</resources>
