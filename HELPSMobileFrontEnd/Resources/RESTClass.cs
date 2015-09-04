@@ -16,7 +16,7 @@ namespace HELPSMobileFrontEnd
 				using (HttpClient _HttpClient = new HttpClient())
 				{
 					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
-					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://sdpmachine.cloudapp.net/" + "api/workshop/workshopSets"))
+					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://sdpmachine.cloudapp.net/api" + "/workshop/workshopSets"))
 					{
 						_HttpRequest.Headers.Add("AppKey", "123456");
 
@@ -42,14 +42,14 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
-		public static async Task<List<SessionTypes>> GetWorkshopList(string strActive = "")
+		public static async Task<List<SessionTypes>> GetSessionTypes(string strActive = "")
 		{
 			try
 			{
 				using (HttpClient _HttpClient = new HttpClient())
 				{
 					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
-					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://sdpmachine.cloudapp.net/" + "api/session/sessionTypes"))
+					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Get, "http://sdpmachine.cloudapp.net/api" + "/session/sessionTypes"))
 					{
 						_HttpRequest.Headers.Add("AppKey", "123456");
 
