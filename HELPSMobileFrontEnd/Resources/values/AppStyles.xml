@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
 	<style name="MainButton">
-		<item name="android:Height">200dp</item>
-		<item name="android:Width">200dp</item>
+		<item name="android:height">200dp</item>
+		<item name="android:width">200dp</item>
 		<item name="android:background">#E53935</item>
 		<item name="android:layout_margin">5dp</item>
 		<item name="android:layout_height">100dp</item>

@@ -4,7 +4,7 @@
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
     p1:background="#EEEEEE"
-    p1:id="llPageRoot">
+    p1:id="@+id/llPageRoot">
     <TableLayout
         p1:id="@+id/tlBackgroundBorder"
         p1:layout_width="wrap_content"
@@ -78,12 +78,14 @@
                 p1:id="@+id/btnMakeBooking"
                 p1:text="Make Booking"
                 p1:layout_column="0"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
             <Button
                 p1:id="@+id/btnViewBooking"
                 p1:text="View Booking"
                 p1:layout_column="1"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
         <TableRow
             p1:id="@+id/rowButtons2">
@@ -91,12 +93,14 @@
                 p1:id="@+id/btnSearch"
                 p1:text="Search"
                 p1:layout_column="0"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
             <Button
                 p1:id="@+id/btnHelp"
                 p1:text="Help"
                 p1:layout_column="1"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
         <TableRow
             p1:id="@+id/rowButtons3">
@@ -104,12 +108,14 @@
                 p1:id="@+id/btnProfile"
                 p1:text="Profile"
                 p1:layout_column="0"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
             <Button
                 p1:id="@+id/btnLogout"
                 p1:text="Logout"
                 p1:layout_column="1"
-                style="@style/MainButton" />
+                style="@style/MainButton"
+                p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

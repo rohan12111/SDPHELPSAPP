@@ -37,7 +37,7 @@ namespace HELPSMobileFrontEnd
 			catch (Exception e)
 			{
 				new AlertDialog.Builder (this)
-					.SetMessage(e.Message)
+					.SetMessage(e.Message + "\n" + e.StackTrace)
 					.SetTitle("Application Error")
 					.Show();
 			}
