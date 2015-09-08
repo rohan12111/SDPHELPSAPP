@@ -25,22 +25,24 @@
         android:background="#FFFFFF"
         android:hint="Student ID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:paddingLeft="10dip"
-        android:paddingRight="10dip" />
+        android:paddingRight="10dip"
+        android:layout_marginTop="20dp" />
     <EditText
         android:id="@+id/tbPassword"
         android:inputType="textPassword"
         android:textColor="@android:color/holo_blue_light"
         android:background="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="Password"
         android:layout_margin="10dip"
         android:paddingLeft="10dip"
-        android:paddingRight="10dip" />
+        android:paddingRight="10dip"
+        android:layout_marginTop="20dp" />
     <Button
         android:id="@+id/btnLogin"
         android:text="Sign into UTS: HELPS"
@@ -48,5 +50,6 @@
         android:layout_height="wrap_content"
         android:background="#E53935"
         android:textStyle="bold"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="40dp" />
 </LinearLayout>

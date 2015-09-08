@@ -50,6 +50,9 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f020001
 			public const int Icon = 2130837505;
 			
+			// aapt resource value: 0x7f020002
+			public const int monoandroidsplash = 2130837506;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -206,6 +209,9 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f040000
 			public const int MainButton = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int Mono_Android_Theme_Splash = 2130968578;
 			
 			// aapt resource value: 0x7f040001
 			public const int TableLayoutInfo = 2130968577;
