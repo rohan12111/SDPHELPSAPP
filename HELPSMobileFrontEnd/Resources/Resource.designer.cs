@@ -135,6 +135,9 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06000a
 			public const int tlNextSession = 2131099658;
 			
+			// aapt resource value: 0x7f06001c
+			public const int tvListLayout = 2131099676;
+			
 			// aapt resource value: 0x7f06000e
 			public const int txtDescription = 2131099662;
 			
@@ -171,6 +174,9 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f030003
 			public const int MainMenu = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int SessionsListViewLayout = 2130903044;
 			
 			static Layout()
 			{

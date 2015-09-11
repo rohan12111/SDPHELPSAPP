@@ -4,7 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="#FFFFFFFF">
     <ListView
         android:id="@+id/lvClasses"
         android:layout_width="match_parent"
