@@ -29,33 +29,21 @@ namespace HELPSMobileFrontEnd
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.ListSessions);
 
-				Stopwatch _Stop = new Stopwatch();
-				_Stop.Start();
-
 				ActionBar.Hide ();
 				ListView lvWorkshops = FindViewById<ListView> (Resource.Id.lvClasses);
-				TextView btnCount = FindViewById<TextView> (Resource.Id.btnCount);
-				btnCount.Text += "\n Finished setup: " + _Stop.ElapsedMilliseconds.ToString();
 
 				List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
-				btnCount.Text += "\n Got Wrkshops: " + _Stop.ElapsedMilliseconds.ToString();
-
 
 				string[] items = new string[WrkSets.Count];
-				btnCount.Text += "\n Made new string array: " + _Stop.ElapsedMilliseconds.ToString();
 
 				for (int i = 0; i < WrkSets.Count; i++)
 				{
 					items[i] = WrkSets[i].name;
-					btnCount.Text += "\n Iteration " + i + ": " + _Stop.ElapsedMilliseconds.ToString();
 				}
 
 				HomeScreenAdapter ListAdapter = new HomeScreenAdapter(this, items);
-				btnCount.Text += "\n Made Screen Adapter: " + _Stop.ElapsedMilliseconds.ToString();
 
 				lvWorkshops.Adapter = ListAdapter;
-				_Stop.Stop();
-				btnCount.Text += "\n Finished: " + _Stop.ElapsedMilliseconds.ToString();
 			}
 			catch (Exception e)
 			{

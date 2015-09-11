@@ -17,11 +17,22 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ProfileActivity : Activity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected async override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+			try
+			{
+				base.OnCreate (bundle);
 
-			// Create your application here
+				Student student = await RESTClass.GetStudent("00000000");
+				throw new Exception(student.status + student.country_origin);
+			}
+			catch (Exception e) 
+			{
+				new AlertDialog.Builder (this)
+					.SetMessage(e.Message + "\n\n" + e.StackTrace)
+					.SetTitle("Application Error")
+					.Show();
+			}
 		}
 	}
 }
