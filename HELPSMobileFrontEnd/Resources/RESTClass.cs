@@ -89,7 +89,7 @@ namespace HELPSMobileFrontEnd
 
 	public class Student
 	{
-		public Student(String strstudentID, String strdob, String strgender, String strdegree, String strstatus, String strfirst_language, String strcountry_origin, String strbackground, Boolean blnHSC, Int32 intHSC_mark, Boolean blnIELTS, Int32 intIELTS_mark, Boolean blnTOEFL, Int32 intTOEFL_mark, Boolean blnTAFE, Int32 intTAFE_mark, Boolean blnCULT, Int32 intCULT_mark, Boolean blnInsearchDEEP, Int32 intInsearchDEEP_mark, Boolean blnInsearchDiploma, Int32 intInsearchDiploma_mark, Boolean blnfoundationcourse, Int32 intfoundationcourse_mark, String strcreated, String strcreatorID, String strdegree_details, String stralternative_contact, String strpreferred_name)
+		public Student(String strstudentID, String strdob, String strgender, String strdegree, String strstatus, String strfirst_language, String strcountry_origin, String strbackground, String strHSC, String intHSC_mark, String strIELTS, String intIELTS_mark, String strTOEFL, String intTOEFL_mark, String strTAFE, String intTAFE_mark, String strCULT, String intCULT_mark, String strInsearchDEEP, String intInsearchDEEP_mark, String strInsearchDiploma, String intInsearchDiploma_mark, String strfoundationcourse, String intfoundationcourse_mark, String strcreated, String strcreatorID, String strdegree_details, String stralternative_contact, String strpreferred_name)
 		{
 			studentID = strstudentID;
 			dob = strdob;
@@ -99,21 +99,21 @@ namespace HELPSMobileFrontEnd
 			first_language = strfirst_language;
 			country_origin = strcountry_origin;
 			background = strbackground;
-			HSC = blnHSC;
+			HSC = strHSC;
 			HSC_mark = intHSC_mark;
-			IELTS = blnIELTS;
+			IELTS = strIELTS;
 			IELTS_mark = intIELTS_mark;
-			TOEFL = blnTOEFL;
+			TOEFL = strTOEFL;
 			TOEFL_mark = intTOEFL_mark;
-			TAFE = blnTAFE;
+			TAFE = strTAFE;
 			TAFE_mark = intTAFE_mark;
-			CULT = blnCULT;
+			CULT = strCULT;
 			CULT_mark = intCULT_mark;
-			InsearchDEEP = blnInsearchDEEP;
+			InsearchDEEP = strInsearchDEEP;
 			InsearchDEEP_mark = intInsearchDEEP_mark;
-			InsearchDiploma = blnInsearchDiploma;
+			InsearchDiploma = strInsearchDiploma;
 			InsearchDiploma_mark = intInsearchDiploma_mark;
-			foundationcourse = blnfoundationcourse;
+			foundationcourse = strfoundationcourse;
 			foundationcourse_mark = intfoundationcourse_mark;
 			created = strcreated;
 			creatorID = strcreatorID;
@@ -130,22 +130,22 @@ namespace HELPSMobileFrontEnd
 		public String first_language { get; set; }
 		public String country_origin { get; set; }
 		public String background { get; set; }
-		public Boolean HSC { get; set; }
-		public Int32 HSC_mark { get; set; }
-		public Boolean IELTS { get; set; }
-		public Int32 IELTS_mark { get; set; }
-		public Boolean TOEFL { get; set; }
-		public Int32 TOEFL_mark { get; set; }
-		public Boolean TAFE { get; set; }
-		public Int32 TAFE_mark { get; set; }
-		public Boolean CULT { get; set; }
-		public Int32 CULT_mark { get; set; }
-		public Boolean InsearchDEEP { get; set; }
-		public Int32 InsearchDEEP_mark { get; set; }
-		public Boolean InsearchDiploma { get; set; }
-		public Int32 InsearchDiploma_mark { get; set; }
-		public Boolean foundationcourse { get; set; }
-		public Int32 foundationcourse_mark { get; set; }
+		public String HSC { get; set; }
+		public String HSC_mark { get; set; }
+		public String IELTS { get; set; }
+		public String IELTS_mark { get; set; }
+		public String TOEFL { get; set; }
+		public String TOEFL_mark { get; set; }
+		public String TAFE { get; set; }
+		public String TAFE_mark { get; set; }
+		public String CULT { get; set; }
+		public String CULT_mark { get; set; }
+		public String InsearchDEEP { get; set; }
+		public String InsearchDEEP_mark { get; set; }
+		public String InsearchDiploma { get; set; }
+		public String InsearchDiploma_mark { get; set; }
+		public String foundationcourse { get; set; }
+		public String foundationcourse_mark { get; set; }
 		public String created { get; set; }
 		public String creatorID { get; set; }
 		public String degree_details { get; set; }
@@ -162,14 +162,17 @@ namespace HELPSMobileFrontEnd
 				var d = jObject["Result"];
 				Result = new Student((String)d["studentID"], (String)d["dob"], (String)d["gender"], 
 					(String)d["degree"], (String)d["status"], (String)d["first_language"], 
-					(String)d["country_origin"], (String)d["background"], (Boolean)d["HSC"], 
-					(Int32)d["HSC_mark"], (Boolean)d["IELTS"], (Int32)d["IELTS_mark"], 
-					(Boolean)d["TOEFL"], (Int32)d["TOEFL_mark"], (Boolean)d["TAFE"], (Int32)d["TAFE_mark"], 
-					(Boolean)d["CULT"], (Int32)d["CULT_mark"], (Boolean)d["InsearchDEEP"], 
-					(Int32)d["InsearchDEEP_mark"], (Boolean)d["InsearchDiploma"], (Int32)d["InsearchDiploma_mark"], 
-					(Boolean)d["foundationcourse"], (Int32)d["foundationcourse_mark"], (String)d["created"], 
-					(String)d["creatorID"], (String)d["degree_details"], (String)d["alternative_contact"], 
-					(String)d["preferred_name"]);
+					(String)d["country_origin"], (String)d["background"], 
+					(String)d["HSC"], (String)d["HSC_mark"], 
+					(String)d["IELTS"], (String)d["IELTS_mark"], 
+					(String)d["TOEFL"], (String)d["TOEFL_mark"], 
+					(String)d["TAFE"], (String)d["TAFE_mark"], 
+					(String)d["CULT"], (String)d["CULT_mark"], 
+					(String)d["InsearchDEEP"], (String)d["InsearchDEEP_mark"], 
+					(String)d["InsearchDiploma"], (String)d["InsearchDiploma_mark"], 
+					(String)d["foundationcourse"], (String)d["foundationcourse_mark"], 
+					(String)d["created"], (String)d["creatorID"], 
+					(String)d["degree_details"], (String)d["alternative_contact"], (String)d["preferred_name"]);
 			}
 			catch 
 			{
@@ -177,13 +180,13 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 		public Student Result { get; set; }
-		public bool IsSuccess { get; set; }
+		public Boolean IsSuccess { get; set; }
 		public object DisplayMessage { get; set; }
 	}
 
 	public class SessionTypes
 	{
-		public SessionTypes(int intID, String strAbbName, String strFullName, bool strIscurrent)
+		public SessionTypes(Int32 intID, String strAbbName, String strFullName, Boolean strIscurrent)
 		{
 			id = intID;
 			abbName = strAbbName;
@@ -191,10 +194,10 @@ namespace HELPSMobileFrontEnd
 			iscurrent = strIscurrent;
 		}
 
-		public int id { get; set; }
+		public Int32 id { get; set; }
 		public String abbName { get; set; }
 		public String fullName { get; set; }
-		public bool iscurrent { get; set; }
+		public Boolean iscurrent { get; set; }
 	}
 	public class RootSessionTypes
 	{
@@ -206,7 +209,7 @@ namespace HELPSMobileFrontEnd
 				Results = new List<SessionTypes>();
 				foreach (var d in jObject["Results"].Children()) 
 				{ 
-					Results.Add(new SessionTypes((int)d["id"], (String)d["abbName"], (String)d["fullName"], (bool)d["iscurrent"]));
+					Results.Add(new SessionTypes((Int32)d["id"], (String)d["abbName"], (String)d["fullName"], (Boolean)d["iscurrent"]));
 				}
 			}
 			catch 
