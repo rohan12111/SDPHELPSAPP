@@ -66,17 +66,20 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060001
 			public const int bookinglist = 2131099649;
 			
+			// aapt resource value: 0x7f060017
+			public const int btnCheckIn = 2131099671;
+			
 			// aapt resource value: 0x7f060000
 			public const int btnCount = 2131099648;
 			
-			// aapt resource value: 0x7f060018
-			public const int btnHelp = 2131099672;
+			// aapt resource value: 0x7f06001b
+			public const int btnHelp = 2131099675;
 			
 			// aapt resource value: 0x7f060006
 			public const int btnLogin = 2131099654;
 			
-			// aapt resource value: 0x7f06001b
-			public const int btnLogout = 2131099675;
+			// aapt resource value: 0x7f06001c
+			public const int btnLogout = 2131099676;
 			
 			// aapt resource value: 0x7f060014
 			public const int btnMakeBooking = 2131099668;
@@ -84,14 +87,26 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06001a
 			public const int btnProfile = 2131099674;
 			
-			// aapt resource value: 0x7f060017
-			public const int btnSearch = 2131099671;
+			// aapt resource value: 0x7f060018
+			public const int btnSearch = 2131099672;
 			
 			// aapt resource value: 0x7f060015
 			public const int btnViewBooking = 2131099669;
 			
+			// aapt resource value: 0x7f060021
+			public const int button1 = 2131099681;
+			
+			// aapt resource value: 0x7f06001e
+			public const int frameLayout1 = 2131099678;
+			
+			// aapt resource value: 0x7f06001f
+			public const int frameLayout2 = 2131099679;
+			
 			// aapt resource value: 0x7f060003
 			public const int lblLogin = 2131099651;
+			
+			// aapt resource value: 0x7f06001d
+			public const int llMainLayout = 2131099677;
 			
 			// aapt resource value: 0x7f060007
 			public const int llPageRoot = 2131099655;
@@ -120,6 +135,9 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06000f
 			public const int rowTimeRoom = 2131099663;
 			
+			// aapt resource value: 0x7f060020
+			public const int tabWidget1 = 2131099680;
+			
 			// aapt resource value: 0x7f060005
 			public const int tbPassword = 2131099653;
 			
@@ -135,8 +153,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06000a
 			public const int tlNextSession = 2131099658;
 			
-			// aapt resource value: 0x7f06001c
-			public const int tvListLayout = 2131099676;
+			// aapt resource value: 0x7f060022
+			public const int tvListLayout = 2131099682;
 			
 			// aapt resource value: 0x7f06000e
 			public const int txtDescription = 2131099662;
@@ -176,7 +194,10 @@ namespace HELPSMobileFrontEnd
 			public const int MainMenu = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int SessionsListViewLayout = 2130903044;
+			public const int Profile = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int SessionsListViewLayout = 2130903045;
 			
 			static Layout()
 			{

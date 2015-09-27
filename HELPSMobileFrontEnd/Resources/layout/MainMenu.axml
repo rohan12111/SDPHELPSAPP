@@ -88,16 +88,18 @@
                 p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
         <TableRow
-            p1:id="@+id/rowButtons2">
+            p1:id="@+id/rowButtons2"
+            p1:minWidth="25px"
+            p1:minHeight="25px">
             <Button
-                p1:id="@+id/btnSearch"
-                p1:text="Search"
+                p1:id="@+id/btnCheckIn"
+                p1:text="Check-In"
                 p1:layout_column="0"
                 style="@style/MainButton"
                 p1:background="@drawable/buttonroundedcorners" />
             <Button
-                p1:id="@+id/btnHelp"
-                p1:text="Help"
+                p1:id="@+id/btnSearch"
+                p1:text="Search"
                 p1:layout_column="1"
                 style="@style/MainButton"
                 p1:background="@drawable/buttonroundedcorners" />
@@ -111,11 +113,18 @@
                 style="@style/MainButton"
                 p1:background="@drawable/buttonroundedcorners" />
             <Button
-                p1:id="@+id/btnLogout"
-                p1:text="Logout"
+                p1:id="@+id/btnHelp"
+                p1:text="Help"
                 p1:layout_column="1"
                 style="@style/MainButton"
                 p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
     </TableLayout>
+    <Button
+        p1:id="@+id/btnLogout"
+        p1:text="Logout"
+        p1:background="#E53935"
+        p1:layout_marginTop="20dp"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content" />
 </LinearLayout>

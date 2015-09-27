@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Android.Util;
 
 namespace HELPSMobileFrontEnd
 {
@@ -23,8 +24,16 @@ namespace HELPSMobileFrontEnd
 			{
 				base.OnCreate (bundle);
 
-				Student student = await RESTClass.GetStudent("00000000");
-				throw new Exception(student.status + student.country_origin);
+				SetContentView (Resource.Layout.Profile);
+
+				TabWidget tabWidg = FindViewById<TabWidget> (Resource.Id.tabWidget1);
+
+				tabWidg.AddView(new View(this));
+				tabWidg.AddView(new View(this));
+				tabWidg.AddView(new View(this));
+
+//				Student student = await RESTClass.GetStudent("00000000");
+//				throw new Exception(student.status + student.country_origin);
 			}
 			catch (Exception e) 
 			{

@@ -66,7 +66,8 @@ namespace HELPSMobileFrontEnd
 						{
 							if (_HttpResponse.IsSuccessStatusCode)
 							{
-								return await _HttpResponse.Content.ReadAsStringAsync();
+								String strTemp = await _HttpResponse.Content.ReadAsStringAsync();
+								return strTemp;
 							}
 							else
 							{
@@ -89,7 +90,17 @@ namespace HELPSMobileFrontEnd
 
 	public class Student
 	{
-		public Student(String strstudentID, String strdob, String strgender, String strdegree, String strstatus, String strfirst_language, String strcountry_origin, String strbackground, String strHSC, String intHSC_mark, String strIELTS, String intIELTS_mark, String strTOEFL, String intTOEFL_mark, String strTAFE, String intTAFE_mark, String strCULT, String intCULT_mark, String strInsearchDEEP, String intInsearchDEEP_mark, String strInsearchDiploma, String intInsearchDiploma_mark, String strfoundationcourse, String intfoundationcourse_mark, String strcreated, String strcreatorID, String strdegree_details, String stralternative_contact, String strpreferred_name)
+		public Student(String strstudentID, String strdob, String strgender, 
+			String strdegree, String strstatus, String strfirst_language, 
+			String strcountry_origin, String strbackground, String strHSC, 
+			String intHSC_mark, String strIELTS, String intIELTS_mark, 
+			String strTOEFL, String intTOEFL_mark, String strTAFE, 
+			String intTAFE_mark, String strCULT, String intCULT_mark, 
+			String strInsearchDEEP, String intInsearchDEEP_mark, 
+			String strInsearchDiploma, String intInsearchDiploma_mark, 
+			String strfoundationcourse, String intfoundationcourse_mark, 
+			String strcreated, String strcreatorID, String strdegree_details, 
+			String stralternative_contact, String strpreferred_name)
 		{
 			studentID = strstudentID;
 			dob = strdob;

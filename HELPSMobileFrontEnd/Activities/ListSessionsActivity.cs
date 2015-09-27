@@ -46,8 +46,8 @@ namespace HELPSMobileFrontEnd
 					
 //				HomeScreenAdapter ListAdapter = new HomeScreenAdapter(this, items);
 
-				lvWorkshops.Adapter = ListAdapter;
 				ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
+//				lvWorkshops.Adapter = ListAdapter;
 //				HomeScreenAdapter ListAdapter = new HomeScreenAdapter(this, items);
 //				lvWorkshops.Adapter = ListAdapter;
 			}
