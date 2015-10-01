@@ -23,6 +23,22 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
+
+
+		public static async Task<WorkshopBooking> GetWorkshopBookings(String strParamters = "")
+		{
+			try
+			{
+				String result = await GetRESTCall("/workshop/booking/search", strParamters);
+				RootWorkshopBooking _RootObj = new RootWorkshopBooking(result);
+				return _RootObj.Result;
+			}
+			catch
+			{
+				throw;
+			}
+		}
+
 		public static async Task<List<SessionTypes>> GetSessionTypes(String strParamters = "")
 		{
 			try
@@ -236,14 +252,14 @@ namespace HELPSMobileFrontEnd
 
 	public class WorkshopSets
 	{
-		public WorkshopSets(int intID, String strName, String strArchived)
+		public WorkshopSets(Int32 intID, String strName, String strArchived)
 		{
 			id = intID;
 			name = strName;
 			archived = strArchived;
 		}
 
-		public int id { get; set; }
+		public Int32 id { get; set; }
 		public String name { get; set; }
 		public String archived { get; set; }
 	}
@@ -267,6 +283,48 @@ namespace HELPSMobileFrontEnd
 		}
 
 		public List<WorkshopSets> Results { get; set; }
+		public bool IsSuccess { get; set; }
+		public object DisplayMessage { get; set; }
+	}
+
+	public class WorkshopBooking
+	{
+		public Int32 BookingId { get; set; }
+		public Int32 workshopID { get; set; }
+		public String studentID { get; set; }
+		public String topic { get; set; }
+		public String description { get; set; }
+		public String targetingGroup { get; set; }
+		public Int32 campusID { get; set; }
+		public String starting { get; set; }
+		public String ending { get; set; }
+		public Int32 maximum { get; set; }
+		public String cutoff { get; set; }
+		public String canceled { get; set; }
+		public String attended { get; set; }
+		public Int32 WorkShopSetID { get; set; }
+		public String type { get; set; }
+		public Int32 reminder_num { get; set; }
+		public Int32 reminder_sent { get; set; }
+		public String WorkshopArchived { get; set; }
+		public String BookingArchived { get; set; }
+	}
+	public class RootWorkshopBooking
+	{
+		public RootWorkshopBooking(String strJson)
+		{
+			try
+			{
+				JObject jObject = JObject.Parse(strJson);
+				var d = jObject["Result"];
+				Result = (WorkshopBooking)d.ToObject(typeof(WorkshopBooking));
+			}
+			catch 
+			{
+				throw;
+			}
+		}
+		public WorkshopBooking Result { get; set; }
 		public bool IsSuccess { get; set; }
 		public object DisplayMessage { get; set; }
 	}

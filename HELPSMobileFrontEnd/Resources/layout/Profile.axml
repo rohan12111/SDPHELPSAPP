@@ -20,10 +20,8 @@
         p1:layout_height="wrap_content"
         p1:id="@+id/frameLayout2">
         <TabWidget
-            p1:minWidth="25px"
-            p1:minHeight="25px"
-            p1:layout_height="25px"
-            p1:layout_width="25px"
+            p1:minWidth="50px"
+            p1:minHeight="50px"
             p1:id="@+id/tabWidget1" />
     </FrameLayout>
     <Button

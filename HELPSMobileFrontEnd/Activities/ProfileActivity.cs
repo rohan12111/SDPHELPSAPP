@@ -18,19 +18,13 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ProfileActivity : Activity
 	{
-		protected async override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
 
 				SetContentView (Resource.Layout.Profile);
-
-				TabWidget tabWidg = FindViewById<TabWidget> (Resource.Id.tabWidget1);
-
-				tabWidg.AddView(new View(this));
-				tabWidg.AddView(new View(this));
-				tabWidg.AddView(new View(this));
 
 //				Student student = await RESTClass.GetStudent("00000000");
 //				throw new Exception(student.status + student.country_origin);
@@ -45,4 +39,3 @@ namespace HELPSMobileFrontEnd
 		}
 	}
 }
-
