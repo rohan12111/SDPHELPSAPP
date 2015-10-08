@@ -64,6 +64,7 @@
     <Compile Include="RESTClass.cs" />
     <Compile Include="zTabs\SlidingTabStrip.cs" />
     <Compile Include="zTabs\SlidingTabScrollView.cs" />
+    <Compile Include="zTabs\ExpandListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -85,6 +86,9 @@
     <AndroidResource Include="Resources\layout\Profile.axml" />
     <AndroidResource Include="Resources\layout\SessionsListViewLayout.xml" />
     <AndroidResource Include="Resources\values\AppStyles.xml" />
+    <AndroidResource Include="Resources\layout\HelpPage.axml" />
+    <AndroidResource Include="Resources\layout\ListControl_Group.axml" />
+    <AndroidResource Include="Resources\layout\ListControl_Child.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
