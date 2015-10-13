@@ -62,9 +62,9 @@
     <Compile Include="Activities\SearchActivity.cs" />
     <Compile Include="Activities\ViewBookingsActivity.cs" />
     <Compile Include="RESTClass.cs" />
-    <Compile Include="zTabs\SlidingTabStrip.cs" />
-    <Compile Include="zTabs\SlidingTabScrollView.cs" />
-    <Compile Include="zTabs\ExpandListAdapter.cs" />
+    <Compile Include="Resources\ExpandListAdapter.cs" />
+    <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
+    <Compile Include="Activities\Fragments\CurrentBookingsFrag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -89,11 +89,14 @@
     <AndroidResource Include="Resources\layout\HelpPage.axml" />
     <AndroidResource Include="Resources\layout\ListControl_Group.axml" />
     <AndroidResource Include="Resources\layout\ListControl_Child.axml" />
+    <AndroidResource Include="Resources\layout\ViewBookings.axml" />
+    <AndroidResource Include="Resources\layout\PastBookings.axml" />
+    <AndroidResource Include="Resources\layout\CurrentBookings.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Activities\" />
-    <Folder Include="zTabs\" />
+    <Folder Include="Activities\Fragments\" />
   </ItemGroup>
 </Project>

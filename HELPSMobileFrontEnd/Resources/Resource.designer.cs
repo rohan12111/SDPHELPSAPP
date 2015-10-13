@@ -99,6 +99,9 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060002
 			public const int ctlExListBox = 2131099650;
 			
+			// aapt resource value: 0x7f060027
+			public const int flTabs = 2131099687;
+			
 			// aapt resource value: 0x7f060022
 			public const int frameLayout1 = 2131099682;
 			
@@ -197,28 +200,37 @@ namespace HELPSMobileFrontEnd
 			public const int BookingList = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int HelpPage = 2130903041;
+			public const int CurrentBookings = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ListControl_Child = 2130903042;
+			public const int HelpPage = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int ListControl_Group = 2130903043;
+			public const int ListControl_Child = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ListSessions = 2130903044;
+			public const int ListControl_Group = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Login = 2130903045;
+			public const int ListSessions = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int MainMenu = 2130903046;
+			public const int Login = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int Profile = 2130903047;
+			public const int MainMenu = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int SessionsListViewLayout = 2130903048;
+			public const int PastBookings = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int Profile = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int SessionsListViewLayout = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int ViewBookings = 2130903051;
 			
 			static Layout()
 			{

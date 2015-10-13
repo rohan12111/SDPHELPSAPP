@@ -1,10 +1,10 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Android.App;
+
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -17,31 +17,35 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "View Bookings", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ViewBookingsActivity : Activity
 	{
-		private List<string> mItems;
-		private ListView mListView;
+		Fragment[] _fragments;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.BookingList);
-			mListView = FindViewById<ListView> (Resource.Id.bookinglist);
+			SetContentView(Resource.Layout.ViewBookings);
+			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
+			_fragments = new Fragment[] { new CurrentBookingsFrag(), new PastBookingsFrag() };
 
-			mItems = new List<string> ();
-			mItems.Add ("Class1");
-			mItems.Add ("Class2");
-			mItems.Add ("Class3");
-			mItems.Add ("Class4");
-			ArrayAdapter<string> adapter = new ArrayAdapter<string> (this, Android.Resource.Layout.SimpleListItem1, mItems);
-			mListView.Adapter = adapter;
-			mListView.ItemClick += MListView_ItemClick;
-			// Create your application here
+			AddTabToActionBar("Current");
+			AddTabToActionBar("Past");
 		}
 
-		void MListView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
+		private void AddTabToActionBar(String strLabel)
 		{
-			
+			ActionBar.Tab tab = ActionBar.NewTab();
+			tab.SetText (strLabel);
+			tab.TabSelected += Tab_TabSelected;
+			ActionBar.AddTab(tab);
+		}
+
+		private void Tab_TabSelected(object sender, ActionBar.TabEventArgs tabEventArgs)
+		{
+			ActionBar.Tab tab = (ActionBar.Tab)sender;
+
+			Fragment frag = _fragments[tab.Position];
+			tabEventArgs.FragmentTransaction.Replace(Resource.Id.flTabs, frag);
 		}
 	}
 }
