@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 using Android.App;
-
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -17,36 +16,51 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "View Bookings", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ViewBookingsActivity : Activity
 	{
-		Fragment[] _fragments;
+		//Fragment[] _fragments;
 
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+			try
+			{
+				base.OnCreate (bundle);
 
-			SetContentView(Resource.Layout.ViewBookings);
-			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+				SetContentView(Resource.Layout.ViewBookings);
 
-			_fragments = new Fragment[] { new CurrentBookingsFrag(), new PastBookingsFrag() };
-
-			AddTabToActionBar("Current");
-			AddTabToActionBar("Past");
+				FragmentTransaction transaction = FragmentManager.BeginTransaction();
+				SlidingTabsFragment fragment = new SlidingTabsFragment();
+				transaction.Replace(Resource.Id.flTabs, fragment);
+				transaction.Commit();
+			}
+			catch (Exception e)
+			{
+				new AlertDialog.Builder (this)
+					.SetMessage(e.Message + "\n" + e.StackTrace)
+					.SetTitle("Application Error")
+					.Show();
+			}
+//			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+//
+//			_fragments = new Fragment[] { new CurrentBookingsFrag(), new PastBookingsFrag() };
+//
+//			AddTabToActionBar("Current");
+//			AddTabToActionBar("Past");
 		}
 
-		private void AddTabToActionBar(String strLabel)
-		{
-			ActionBar.Tab tab = ActionBar.NewTab();
-			tab.SetText (strLabel);
-			tab.TabSelected += Tab_TabSelected;
-			ActionBar.AddTab(tab);
-		}
-
-		private void Tab_TabSelected(object sender, ActionBar.TabEventArgs tabEventArgs)
-		{
-			ActionBar.Tab tab = (ActionBar.Tab)sender;
-
-			Fragment frag = _fragments[tab.Position];
-			tabEventArgs.FragmentTransaction.Replace(Resource.Id.flTabs, frag);
-		}
+//		private void AddTabToActionBar(String strLabel)
+//		{
+//			ActionBar.Tab tab = ActionBar.NewTab();
+//			tab.SetText (strLabel);
+//			tab.TabSelected += Tab_TabSelected;
+//			ActionBar.AddTab(tab);
+//		}
+//
+//		private void Tab_TabSelected(object sender, ActionBar.TabEventArgs tabEventArgs)
+//		{
+//			ActionBar.Tab tab = (ActionBar.Tab)sender;
+//
+//			Fragment frag = _fragments[tab.Position];
+//			tabEventArgs.FragmentTransaction.Replace(Resource.Id.flTabs, frag);
+//		}
 	}
 }
 

@@ -49,6 +49,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -65,6 +68,9 @@
     <Compile Include="Resources\ExpandListAdapter.cs" />
     <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
     <Compile Include="Activities\Fragments\CurrentBookingsFrag.cs" />
+    <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
+    <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
+    <Compile Include="Resources\Tabs\SlidingTabStrip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -92,11 +98,13 @@
     <AndroidResource Include="Resources\layout\ViewBookings.axml" />
     <AndroidResource Include="Resources\layout\PastBookings.axml" />
     <AndroidResource Include="Resources\layout\CurrentBookings.axml" />
+    <AndroidResource Include="Resources\layout\ViewBookingFragmentLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Activities\" />
     <Folder Include="Activities\Fragments\" />
+    <Folder Include="Resources\Tabs\" />
   </ItemGroup>
 </Project>
