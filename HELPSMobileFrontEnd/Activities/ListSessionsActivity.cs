@@ -30,7 +30,7 @@ namespace HELPSMobileFrontEnd
 				base.OnCreate (bundle);
 //				SetContentView (Resource.Layout.ListSessions);
 
-				ActionBar.Hide ();
+				//ActionBar.Hide ();
 
 				ListView lvWorkshops = FindViewById<ListView> (Resource.Id.lvClasses);
 

@@ -126,5 +126,6 @@
         p1:background="#E53935"
         p1:layout_marginTop="20dp"
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content" />
+        p1:layout_height="wrap_content"
+        p1:textColor="#ffffffff" />
 </LinearLayout>

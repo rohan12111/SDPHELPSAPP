@@ -7,6 +7,8 @@
 		<item name="android:layout_margin">5dp</item>
 		<item name="android:layout_height">100dp</item>
 		<item name="android:layout_weight">1</item>
+		<item name="android:textColor">#ffffffff</item>
+		<item name="android:textSize">18dip</item>
 	</style>
 
 	<style name="TableLayoutInfo">
@@ -14,5 +16,20 @@
 		<item name="android:layout_margin">2dp</item>
 		<item name="android:padding">5dp</item>
 		<item name="android:layout_width">match_parent</item>
+	</style>
+
+	<style name="ActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#E53935</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleStyle</item>
+        <item name="android:logo">@android:color/transparent</item>
+    </style>
+
+	<style name="ActionBarTitleStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">20dip</item>
 	</style>
 </resources>

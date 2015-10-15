@@ -13,11 +13,9 @@ using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "View Bookings", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "View Bookings", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]
 	public class ViewBookingsActivity : Activity
 	{
-		//Fragment[] _fragments;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
@@ -38,29 +36,7 @@ namespace HELPSMobileFrontEnd
 					.SetTitle("Application Error")
 					.Show();
 			}
-//			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-//
-//			_fragments = new Fragment[] { new CurrentBookingsFrag(), new PastBookingsFrag() };
-//
-//			AddTabToActionBar("Current");
-//			AddTabToActionBar("Past");
 		}
-
-//		private void AddTabToActionBar(String strLabel)
-//		{
-//			ActionBar.Tab tab = ActionBar.NewTab();
-//			tab.SetText (strLabel);
-//			tab.TabSelected += Tab_TabSelected;
-//			ActionBar.AddTab(tab);
-//		}
-//
-//		private void Tab_TabSelected(object sender, ActionBar.TabEventArgs tabEventArgs)
-//		{
-//			ActionBar.Tab tab = (ActionBar.Tab)sender;
-//
-//			Fragment frag = _fragments[tab.Position];
-//			tabEventArgs.FragmentTransaction.Replace(Resource.Id.flTabs, frag);
-//		}
 	}
 }
 
