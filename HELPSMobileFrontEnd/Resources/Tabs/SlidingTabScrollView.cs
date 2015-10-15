@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V4.View;
 using Android.Util;
+using Android.Graphics;
 
 namespace HELPSMobileFrontEnd
 {
@@ -23,8 +24,8 @@ namespace HELPSMobileFrontEnd
 
         private int mTitleOffset;
 
-        private int mTabViewLayoutID;
-        private int mTabViewTextViewID;
+//        private int mTabViewLayoutID;
+//        private int mTabViewTextViewID;
 
         private ViewPager mViewPager;
         private ViewPager.IOnPageChangeListener mViewPagerPageChangeListener;
@@ -153,7 +154,7 @@ namespace HELPSMobileFrontEnd
             {
                 TextView tabView = CreateDefaultTabView(Context);
                 tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
-				tabView.SetTextColor(Android.Graphics.Color.White);
+				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
 				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / 2);

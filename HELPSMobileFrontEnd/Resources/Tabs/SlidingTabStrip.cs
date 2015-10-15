@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 using Android.Util;
+using Android.Support.V4.View;
 
 namespace HELPSMobileFrontEnd
 {
@@ -18,7 +19,7 @@ namespace HELPSMobileFrontEnd
     {
 //        private const int DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS = 2;
 //        private const byte DEFAULT_BOTTOM_BORDER_COLOR_ALPHA = 0X26;
-        private const int SELECTED_INDICATOR_THICKNESS_DIPS = 8;
+        private const int SELECTED_INDICATOR_THICKNESS_DIPS = 3;
 //        private int[] INDICATOR_COLORS = { 0x19A319, 0x0000FC };
 //        private int[] DIVIDER_COLORS = { 0xC5C5C5 };
 
@@ -118,10 +119,31 @@ namespace HELPSMobileFrontEnd
 
         public void OnViewPagerPageChanged(int position, float positionOffset)
         {
+			FadeTabs (position);
             mSelectedPosition = position;
             mSelectionOffset = positionOffset;
             this.Invalidate();
         }
+
+		private void FadeTabs(int inPos)
+		{
+			View selectedTab;
+
+			for (int i = 0; i < ChildCount; i++) 
+			{
+				if (i == inPos) 
+				{
+					selectedTab = GetChildAt(inPos);
+					//selectedTab.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73));
+					selectedTab.SetBackgroundColor (new Color(0xFF, 0xFF, 0xFF, 0xFF));
+				} 
+				else
+				{
+					selectedTab = GetChildAt(i);
+					selectedTab.SetBackgroundColor (new Color(0xFF, 0xFF, 0xFF, 0x73));
+				}
+			}
+		}
 
         protected override void OnDraw(Canvas canvas)
         {
@@ -133,7 +155,7 @@ namespace HELPSMobileFrontEnd
             //Thick colored underline below the current selection
             if (tabCount > 0)
             {
-                View selectedTitle = GetChildAt(mSelectedPosition);
+				View selectedTitle = GetChildAt(mSelectedPosition);
                 int left = selectedTitle.Left;
                 int right = selectedTitle.Right;
                 int color = tabColorizer.GetIndicatorColor(mSelectedPosition);
