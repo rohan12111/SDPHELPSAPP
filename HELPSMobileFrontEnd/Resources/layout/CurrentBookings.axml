@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#EEEEEE">
     <ExpandableListView
         android:id="@+id/elvCurrentBookings"
         android:layout_width="fill_parent"
@@ -11,4 +12,18 @@
         android:layout_marginRight="2dip"
         android:layout_marginTop="5dip"
         android:layout_marginBottom="5dip" />
+    <FrameLayout
+        android:id="@+id/flNoCurrentBookings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvNoCurrentBookings"
+            android:text="No Current Bookings"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:gravity="center_horizontal"
+            android:layout_margin="30dip" />
+    </FrameLayout>
 </LinearLayout>

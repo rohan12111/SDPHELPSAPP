@@ -25,8 +25,7 @@ namespace HELPSMobileFrontEnd
 
 				SetContentView (Resource.Layout.MainMenu);
 
-				//Hides the top label
-//				ActionBar.Hide (); 
+
 
 				// Get our button from the layout resource, and attach an event to it
 				Button btnMakeBooking = FindViewById<Button> (Resource.Id.btnMakeBooking);
@@ -35,8 +34,6 @@ namespace HELPSMobileFrontEnd
 				Button btnHelp = FindViewById<Button> (Resource.Id.btnHelp);
 				Button btnProfile = FindViewById<Button> (Resource.Id.btnProfile);
 				Button btnLogout = FindViewById<Button> (Resource.Id.btnLogout);
-
-
 
 				btnMakeBooking.Click += delegate {
 					StartActivity(new Intent(this, typeof(ListSessionsActivity)));

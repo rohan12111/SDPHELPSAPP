@@ -66,134 +66,155 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060001
 			public const int bookinglist = 2131099649;
 			
-			// aapt resource value: 0x7f06001c
-			public const int btnCheckIn = 2131099676;
+			// aapt resource value: 0x7f060021
+			public const int btnCheckIn = 2131099681;
 			
 			// aapt resource value: 0x7f060000
 			public const int btnCount = 2131099648;
 			
-			// aapt resource value: 0x7f060020
-			public const int btnHelp = 2131099680;
+			// aapt resource value: 0x7f060025
+			public const int btnHelp = 2131099685;
 			
-			// aapt resource value: 0x7f06000b
-			public const int btnLogin = 2131099659;
-			
-			// aapt resource value: 0x7f060021
-			public const int btnLogout = 2131099681;
-			
-			// aapt resource value: 0x7f060019
-			public const int btnMakeBooking = 2131099673;
-			
-			// aapt resource value: 0x7f06001f
-			public const int btnProfile = 2131099679;
-			
-			// aapt resource value: 0x7f06001d
-			public const int btnSearch = 2131099677;
-			
-			// aapt resource value: 0x7f06001a
-			public const int btnViewBooking = 2131099674;
+			// aapt resource value: 0x7f060010
+			public const int btnLogin = 2131099664;
 			
 			// aapt resource value: 0x7f060027
-			public const int button1 = 2131099687;
+			public const int btnLogout = 2131099687;
 			
-			// aapt resource value: 0x7f060003
-			public const int ctlExListBox = 2131099651;
+			// aapt resource value: 0x7f06001e
+			public const int btnMakeBooking = 2131099678;
+			
+			// aapt resource value: 0x7f060024
+			public const int btnProfile = 2131099684;
+			
+			// aapt resource value: 0x7f060022
+			public const int btnSearch = 2131099682;
+			
+			// aapt resource value: 0x7f06001f
+			public const int btnViewBooking = 2131099679;
+			
+			// aapt resource value: 0x7f06002e
+			public const int button1 = 2131099694;
+			
+			// aapt resource value: 0x7f060005
+			public const int ctlExListBox = 2131099653;
 			
 			// aapt resource value: 0x7f060002
 			public const int elvCurrentBookings = 2131099650;
 			
-			// aapt resource value: 0x7f06002b
-			public const int flTabs = 2131099691;
-			
-			// aapt resource value: 0x7f060024
-			public const int frameLayout1 = 2131099684;
-			
-			// aapt resource value: 0x7f060025
-			public const int frameLayout2 = 2131099685;
-			
-			// aapt resource value: 0x7f060008
-			public const int lblLogin = 2131099656;
-			
-			// aapt resource value: 0x7f060004
-			public const int linearLayout1 = 2131099652;
-			
-			// aapt resource value: 0x7f060023
-			public const int llMainLayout = 2131099683;
-			
-			// aapt resource value: 0x7f06000c
-			public const int llPageRoot = 2131099660;
-			
-			// aapt resource value: 0x7f060007
-			public const int lvClasses = 2131099655;
-			
-			// aapt resource value: 0x7f06000e
-			public const int rowBackground = 2131099662;
-			
-			// aapt resource value: 0x7f060018
-			public const int rowButtons1 = 2131099672;
-			
-			// aapt resource value: 0x7f06001b
-			public const int rowButtons2 = 2131099675;
-			
-			// aapt resource value: 0x7f06001e
-			public const int rowButtons3 = 2131099678;
-			
-			// aapt resource value: 0x7f060012
-			public const int rowDescription = 2131099666;
-			
-			// aapt resource value: 0x7f060010
-			public const int rowNextSession = 2131099664;
-			
-			// aapt resource value: 0x7f060014
-			public const int rowTimeRoom = 2131099668;
-			
-			// aapt resource value: 0x7f060029
-			public const int sliding_tabs = 2131099689;
+			// aapt resource value: 0x7f060028
+			public const int elvPastBookings = 2131099688;
 			
 			// aapt resource value: 0x7f060026
-			public const int tabWidget1 = 2131099686;
+			public const int flLogout = 2131099686;
 			
-			// aapt resource value: 0x7f06000a
-			public const int tbPassword = 2131099658;
+			// aapt resource value: 0x7f060003
+			public const int flNoCurrentBookings = 2131099651;
 			
-			// aapt resource value: 0x7f060009
-			public const int tbStudentID = 2131099657;
-			
-			// aapt resource value: 0x7f060022
-			public const int textView1 = 2131099682;
-			
-			// aapt resource value: 0x7f06000d
-			public const int tlBackgroundBorder = 2131099661;
-			
-			// aapt resource value: 0x7f060017
-			public const int tlButtons = 2131099671;
+			// aapt resource value: 0x7f060029
+			public const int flNoPastBookings = 2131099689;
 			
 			// aapt resource value: 0x7f06000f
-			public const int tlNextSession = 2131099663;
+			public const int flSignIn = 2131099663;
 			
-			// aapt resource value: 0x7f060028
-			public const int tvListLayout = 2131099688;
+			// aapt resource value: 0x7f060032
+			public const int flTabs = 2131099698;
 			
-			// aapt resource value: 0x7f060013
-			public const int txtDescription = 2131099667;
+			// aapt resource value: 0x7f060007
+			public const int frameLayout1 = 2131099655;
+			
+			// aapt resource value: 0x7f06002c
+			public const int frameLayout2 = 2131099692;
 			
 			// aapt resource value: 0x7f060006
-			public const int txtLarge = 2131099654;
+			public const int llFAQChild = 2131099654;
+			
+			// aapt resource value: 0x7f06002b
+			public const int llMainLayout = 2131099691;
 			
 			// aapt resource value: 0x7f060011
-			public const int txtNextSession = 2131099665;
+			public const int llPageRoot = 2131099665;
 			
-			// aapt resource value: 0x7f060016
-			public const int txtRoom = 2131099670;
+			// aapt resource value: 0x7f06000b
+			public const int llRoot = 2131099659;
 			
-			// aapt resource value: 0x7f060005
-			public const int txtSmall = 2131099653;
+			// aapt resource value: 0x7f06000c
+			public const int llTextFields = 2131099660;
+			
+			// aapt resource value: 0x7f06000a
+			public const int lvClasses = 2131099658;
+			
+			// aapt resource value: 0x7f060013
+			public const int rowBackground = 2131099667;
+			
+			// aapt resource value: 0x7f06001d
+			public const int rowButtons1 = 2131099677;
+			
+			// aapt resource value: 0x7f060020
+			public const int rowButtons2 = 2131099680;
+			
+			// aapt resource value: 0x7f060023
+			public const int rowButtons3 = 2131099683;
+			
+			// aapt resource value: 0x7f060017
+			public const int rowDescription = 2131099671;
 			
 			// aapt resource value: 0x7f060015
-			public const int txtTime = 2131099669;
+			public const int rowNextSession = 2131099669;
+			
+			// aapt resource value: 0x7f060019
+			public const int rowTimeRoom = 2131099673;
+			
+			// aapt resource value: 0x7f060030
+			public const int sliding_tabs = 2131099696;
+			
+			// aapt resource value: 0x7f06002d
+			public const int tabWidget1 = 2131099693;
+			
+			// aapt resource value: 0x7f06000e
+			public const int tbPassword = 2131099662;
+			
+			// aapt resource value: 0x7f06000d
+			public const int tbStudentID = 2131099661;
+			
+			// aapt resource value: 0x7f060012
+			public const int tlBackgroundBorder = 2131099666;
+			
+			// aapt resource value: 0x7f06001c
+			public const int tlButtons = 2131099676;
+			
+			// aapt resource value: 0x7f060014
+			public const int tlNextSession = 2131099668;
+			
+			// aapt resource value: 0x7f06002f
+			public const int tvListLayout = 2131099695;
+			
+			// aapt resource value: 0x7f060004
+			public const int tvNoCurrentBookings = 2131099652;
 			
 			// aapt resource value: 0x7f06002a
-			public const int viewpager = 2131099690;
+			public const int tvNoPastBookings = 2131099690;
+			
+			// aapt resource value: 0x7f060018
+			public const int txtDescription = 2131099672;
+			
+			// aapt resource value: 0x7f060009
+			public const int txtLarge = 2131099657;
+			
+			// aapt resource value: 0x7f060016
+			public const int txtNextSession = 2131099670;
+			
+			// aapt resource value: 0x7f06001b
+			public const int txtRoom = 2131099675;
+			
+			// aapt resource value: 0x7f060008
+			public const int txtSmall = 2131099656;
+			
+			// aapt resource value: 0x7f06001a
+			public const int txtTime = 2131099674;
+			
+			// aapt resource value: 0x7f060031
+			public const int viewpager = 2131099697;
 			
 			static Id()
 			{

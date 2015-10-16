@@ -120,12 +120,17 @@
                 p1:background="@drawable/buttonroundedcorners" />
         </TableRow>
     </TableLayout>
-    <Button
-        p1:id="@+id/btnLogout"
-        p1:text="Logout"
-        p1:background="#E53935"
-        p1:layout_marginTop="20dp"
+    <FrameLayout
+        p1:id="@+id/flLogout"
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:textColor="#ffffffff" />
+        p1:layout_height="match_parent">
+        <Button
+            p1:id="@+id/btnLogout"
+            p1:text="Logout"
+            p1:background="#E53935"
+            p1:layout_width="match_parent"
+            p1:layout_height="60dip"
+            p1:textColor="#ffffffff"
+            p1:layout_gravity="bottom" />
+    </FrameLayout>
 </LinearLayout>

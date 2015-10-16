@@ -3,16 +3,23 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/linearLayout1"
-    android:minWidth="25px"
-    android:minHeight="25px"
+    android:id="@+id/llFAQChild"
     android:background="#fafafa">
+    <FrameLayout
+        android:minWidth="20px"
+        android:minHeight="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout1"
+        android:background="#ffc3c3c3" />
     <TextView
-        android:text="Small Text"
+        android:text="Answer to question"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000"
-        android:layout_width="fill_parent"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtSmall"
-        android:layout_marginLeft="26.0dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp" />
 </LinearLayout>

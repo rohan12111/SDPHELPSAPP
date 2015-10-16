@@ -14,6 +14,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 using System.Runtime.Serialization;
+using Android.Views.InputMethods;
 
 namespace HELPSMobileFrontEnd
 {
@@ -29,10 +30,30 @@ namespace HELPSMobileFrontEnd
 				SetContentView (Resource.Layout.Login);
 
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+				EditText tbStudentID = FindViewById<EditText>(Resource.Id.tbStudentID);
+				EditText tbPassword = FindViewById<EditText>(Resource.Id.tbPassword);
+				LinearLayout llRoot = FindViewById<LinearLayout>(Resource.Id.llRoot);
+
+				llRoot.Click += delegate {
+					//Dismiss Keybaord
+					InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
+					imm.HideSoftInputFromWindow(tbStudentID.WindowToken, 0);
+					btnLogin.RequestFocus();
+				};
 
 				btnLogin.Click += delegate {
 					StartActivity(new Intent(this, typeof(MainMenuActivity)));
 				};
+
+//				tbStudentID.KeyPress += delegate(object sender, View.KeyEventArgs e) {
+//					if (e.KeyCode == Keycode.Enter)
+//					{
+//						new AlertDialog.Builder (this)
+//							.SetMessage("Enter")
+//							.SetTitle("Application Error")
+//							.Show();
+//					}
+//				};
 			}
 			catch (Exception e)
 			{

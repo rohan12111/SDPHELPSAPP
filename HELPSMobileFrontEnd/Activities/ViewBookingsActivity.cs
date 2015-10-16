@@ -25,6 +25,9 @@ namespace HELPSMobileFrontEnd
 
 				SetContentView(Resource.Layout.ViewBookings);
 
+				ActionBar.SetHomeButtonEnabled(true);
+				ActionBar.SetDisplayHomeAsUpEnabled(true);
+
 				FragmentTransaction transaction = FragmentManager.BeginTransaction();
 				SlidingTabsFragment sltFragment = new SlidingTabsFragment();
 				transaction.Replace(Resource.Id.flTabs, sltFragment);
@@ -37,6 +40,19 @@ namespace HELPSMobileFrontEnd
 					.SetMessage(e.Message + "\n" + e.StackTrace)
 					.SetTitle("Application Error")
 					.Show();
+			}
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case Android.Resource.Id.Home:
+					Finish();
+					return true;
+
+				default:
+					return base.OnOptionsItemSelected(item);
 			}
 		}
 	}

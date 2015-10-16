@@ -176,7 +176,7 @@ namespace HELPSMobileFrontEnd
 				} 
 				else
 				{
-					tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73));
+					tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0xAA));
 				}
 			}
 		}

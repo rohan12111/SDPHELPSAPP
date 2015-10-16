@@ -5,51 +5,51 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="#EEEEEE">
-    <TextView
-        android:id="@+id/lblLogin"
-        android:text="Login"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    android:background="#EEEEEE"
+    android:id="@+id/llRoot">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textStyle="bold"
-        android:textSize="70dip"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:autoText="true" />
-    <EditText
-        android:id="@+id/tbStudentID"
-        android:inputType="number"
-        android:textColor="@android:color/holo_blue_light"
-        android:background="#FFFFFF"
-        android:hint="Student ID"
+        android:id="@+id/llTextFields"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="90dp">
+        <EditText
+            android:id="@+id/tbStudentID"
+            android:inputType="number"
+            android:textColor="@android:color/holo_blue_light"
+            android:background="#FFFFFF"
+            android:hint="Student ID"
+            android:textColorHint="#AAAAAA"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp" />
+        <EditText
+            android:id="@+id/tbPassword"
+            android:inputType="textPassword"
+            android:textColor="@android:color/holo_blue_light"
+            android:hint="Password"
+            android:textColorHint="#AAAAAA"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:layout_marginTop="20dp" />
-    <EditText
-        android:id="@+id/tbPassword"
-        android:inputType="textPassword"
-        android:textColor="@android:color/holo_blue_light"
-        android:background="#FFFFFF"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Password"
-        android:layout_margin="10dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:layout_marginTop="20dp" />
-    <Button
-        android:id="@+id/btnLogin"
-        android:text="Sign into UTS: HELPS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E53935"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="40dp" />
+        android:layout_height="match_parent"
+        android:id="@+id/flSignIn">
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="Sign into UTS: HELPS"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:background="#E53935"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
 </LinearLayout>
