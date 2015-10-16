@@ -18,7 +18,7 @@ namespace HELPSMobileFrontEnd
     public class SlidingTabScrollView : HorizontalScrollView
     {
 
-        private const int TITLE_OFFSET_DIPS = 24;
+        private const int TITLE_OFFSET_DIPS = 10;
         private const int TAB_VIEW_PADDING_DIPS = 16;
         private const int TAB_VIEW_TEXT_SIZE_DIPS = 14;
 
@@ -56,7 +56,7 @@ namespace HELPSMobileFrontEnd
             mTitleOffset = (int)(TITLE_OFFSET_DIPS * Resources.DisplayMetrics.Density);
 
             mTabStrip = new SlidingTabStrip(context);
-            this.AddView(mTabStrip, LayoutParams.MatchParent, LayoutParams.MatchParent);
+			this.AddView(mTabStrip, LayoutParams.MatchParent, LayoutParams.MatchParent);
         }
 
         public TabColorizer CustomTabColorizer
@@ -163,6 +163,23 @@ namespace HELPSMobileFrontEnd
             }
 
         }
+
+		static public void FadeTabs(int inPos, float inPosOffset)
+		{
+			for (int i = 0; i < mTabStrip.ChildCount; i++) 
+			{
+				TextView tabView = (TextView)mTabStrip.GetChildAt (i);
+
+				if (i == inPos && inPosOffset == 0) 
+				{
+					tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0xFF));
+				} 
+				else
+				{
+					tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73));
+				}
+			}
+		}
 
         void tabView_Click(object sender, EventArgs e)
         {

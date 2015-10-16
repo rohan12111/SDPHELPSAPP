@@ -119,31 +119,11 @@ namespace HELPSMobileFrontEnd
 
         public void OnViewPagerPageChanged(int position, float positionOffset)
         {
-			FadeTabs (position);
+			SlidingTabScrollView.FadeTabs(position, positionOffset);
             mSelectedPosition = position;
             mSelectionOffset = positionOffset;
             this.Invalidate();
         }
-
-		private void FadeTabs(int inPos)
-		{
-			View selectedTab;
-
-			for (int i = 0; i < ChildCount; i++) 
-			{
-				if (i == inPos) 
-				{
-					selectedTab = GetChildAt(inPos);
-					//selectedTab.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73));
-					selectedTab.SetBackgroundColor (new Color(0xFF, 0xFF, 0xFF, 0xFF));
-				} 
-				else
-				{
-					selectedTab = GetChildAt(i);
-					selectedTab.SetBackgroundColor (new Color(0xFF, 0xFF, 0xFF, 0x73));
-				}
-			}
-		}
 
         protected override void OnDraw(Canvas canvas)
         {

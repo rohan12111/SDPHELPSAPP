@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
@@ -25,9 +26,10 @@ namespace HELPSMobileFrontEnd
 				SetContentView(Resource.Layout.ViewBookings);
 
 				FragmentTransaction transaction = FragmentManager.BeginTransaction();
-				SlidingTabsFragment fragment = new SlidingTabsFragment();
-				transaction.Replace(Resource.Id.flTabs, fragment);
+				SlidingTabsFragment sltFragment = new SlidingTabsFragment();
+				transaction.Replace(Resource.Id.flTabs, sltFragment);
 				transaction.Commit();
+
 			}
 			catch (Exception e)
 			{

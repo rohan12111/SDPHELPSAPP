@@ -17,7 +17,7 @@ using System.Runtime.Serialization;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "UTS: HELPS", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "UTS: HELPS", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]
 	public class LoginActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

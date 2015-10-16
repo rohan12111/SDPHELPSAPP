@@ -15,7 +15,7 @@ using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "HelpActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "HelpActivity", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
 	public class HelpActivity : Activity
 	{
 		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();
@@ -34,16 +34,13 @@ namespace HELPSMobileFrontEnd
 			ctlExListBox.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
 				var itmGroup = lstKeys [e.GroupPosition];
 				var itmChild = dictGroup [itmGroup] [e.ChildPosition];
-					
 			};
-
-
 		}
 
 		void CreateExpendableListData ()
 		{
 
-			var lstChild = new List<string> ();
+			List<string> lstChild = new List<string> ();
 
 			lstChild.Add (string.Format ("Help : tile klajdsflkajsldkfaj;sdlkfj;ldksja; kldjf ;aklksjlkajdlkajdl;fkajlskdfjal;", 1, 1));
 			dictGroup.Add (string.Format ("What tiles do what", 0), lstChild);
