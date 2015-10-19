@@ -29,7 +29,7 @@ namespace HELPSMobileFrontEnd
 
 				TextView name = FindViewById<TextView>(Resource.Id.lblFirstName);
 				EditText preferredName = FindViewById<EditText>(Resource.Id.txtName);
-				TextView birthday = FindViewById<TextView>(Resource.Id.birth);
+				TextView birthday = FindViewById<TextView>(Resource.Id.lbldateofbirth);
 				RadioButton male= FindViewById<RadioButton>(Resource.Id.male);
 				RadioButton fales= FindViewById<RadioButton>(Resource.Id.female);
 				EditText contactNumber = FindViewById<EditText>(Resource.Id.txtcontactnumber);
@@ -39,6 +39,7 @@ namespace HELPSMobileFrontEnd
 				Spinner country= FindViewById<Spinner>(Resource.Id.ddlcountry);
 
 				name.Text = "Cyon";
+				birthday.Text= "01/01/1995";
 
 				languageList = new List<string>();
 				languageList.Add("Nepal");

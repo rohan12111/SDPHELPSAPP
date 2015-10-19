@@ -103,11 +103,13 @@
         android:id="@+id/gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <RelativeLayout
-        android:layout_width="fill_parent"
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:id="@+id/genderlayout">
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup1">
         <RadioButton
             android:text="Male"
             android:textStyle="bold"
@@ -125,12 +127,11 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton2"
-            android:layout_toRightOf="@+id/female"
+            android:id="@+id/female"
             android:layout_marginLeft="50.0dp"
             android:layout_marginRight="25.0dp"
             android:layout_alignParentRight="true" />
-    </RelativeLayout>
+    </RadioGroup>
     <TextView
         android:text="Best Contact Number"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -157,11 +158,13 @@
         android:id="@+id/status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <RelativeLayout
-        android:layout_width="fill_parent"
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:id="@+id/statuslayout">
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup1">
         <RadioButton
             android:text="Permanent"
             android:textStyle="bold"
@@ -170,21 +173,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/permanent"
-            android:layout_marginLeft="20.0dp"
+            android:layout_marginLeft="50.0dp"
             android:layout_marginRight="10.0dp" />
         <RadioButton
             android:text="International"
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000"
-            android:layout_marginRight="25dp"
-            android:layout_toRightOf="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/international"
-            android:layout_marginLeft="40.0dp"
+            android:layout_marginLeft="30.0dp"
+            android:layout_marginRight="25.0dp"
             android:layout_alignParentRight="true" />
-    </RelativeLayout>
+    </RadioGroup>
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
