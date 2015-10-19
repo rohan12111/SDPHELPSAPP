@@ -18,6 +18,7 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class ProfileActivity : Activity
 	{
+		private List<string> languageList;
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
@@ -26,7 +27,35 @@ namespace HELPSMobileFrontEnd
 
 				SetContentView (Resource.Layout.Profile);
 
-//				Student student = await RESTClass.GetStudent("00000000");
+				TextView name = FindViewById<TextView>(Resource.Id.lblFirstName);
+				EditText preferredName = FindViewById<EditText>(Resource.Id.txtName);
+				TextView birthday = FindViewById<TextView>(Resource.Id.birth);
+				RadioButton male= FindViewById<RadioButton>(Resource.Id.male);
+				RadioButton fales= FindViewById<RadioButton>(Resource.Id.female);
+				EditText contactNumber = FindViewById<EditText>(Resource.Id.txtcontactnumber);
+				RadioButton permanent = FindViewById<RadioButton>(Resource.Id.permanent);
+				RadioButton international= FindViewById<RadioButton>(Resource.Id.international);
+				Spinner languange= FindViewById<Spinner>(Resource.Id.ddllanguage);
+				Spinner country= FindViewById<Spinner>(Resource.Id.ddlcountry);
+
+				name.Text = "Cyon";
+
+				languageList = new List<string>();
+				languageList.Add("Nepal");
+				languageList.Add("USA");
+				languageList.Add("Australia");
+				languageList.Add("UK");
+				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,Android.Resource.Layout.SimpleDropDownItem1Line,languageList);
+				languange.Adapter = adapter;
+
+
+				country.Adapter = adapter;
+			//	Student student = await RESTClass.GetStudent("00000000");
+
+	   			
+
+
+			//	name.Text= student.
 //				throw new Exception(student.status + student.country_origin);
 			}
 			catch (Exception e) 
