@@ -34,9 +34,14 @@ namespace HELPSMobileFrontEnd
 				Button btnHelp = FindViewById<Button> (Resource.Id.btnHelp);
 				Button btnProfile = FindViewById<Button> (Resource.Id.btnProfile);
 				Button btnLogout = FindViewById<Button> (Resource.Id.btnLogout);
+				Button btnMarkAttendance = FindViewById<Button> (Resource.Id.btnMarkAttendance);
 
 				btnMakeBooking.Click += delegate {
-					StartActivity(new Intent(this, typeof(ListSessionsActivity)));
+					StartActivity(new Intent(this, typeof(MakeBookingList)));
+				};
+
+				btnMarkAttendance.Click += delegate {
+					StartActivity(new Intent(this, typeof(CheckInActivity)));
 				};
 
 				btnViewBooking.Click += delegate {

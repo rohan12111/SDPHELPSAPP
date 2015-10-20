@@ -19,8 +19,8 @@ using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "Make a booking", ScreenOrientation = ScreenOrientation.Portrait)]			
-	public class ListSessionsActivity : ListActivity
+	[Activity (Label = "  Make a Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
+	public class MakeBookingList : ListActivity
 	{
 		string[] items;
 		protected async override void OnCreate (Bundle bundle)

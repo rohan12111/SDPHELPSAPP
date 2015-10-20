@@ -92,8 +92,8 @@
             p1:minWidth="25px"
             p1:minHeight="25px">
             <Button
-                p1:id="@+id/btnCheckIn"
-                p1:text="Check-In"
+                p1:id="@+id/btnMarkAttendance"
+                p1:text="Mark Attendance"
                 p1:layout_column="0"
                 style="@style/MainButton"
                 p1:background="@drawable/buttonroundedcorners" />

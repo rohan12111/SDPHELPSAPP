@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Activities\ListSessionsActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\MainMenuActivity.cs" />
     <Compile Include="Activities\RegistrationActivity.cs" />
@@ -71,6 +70,8 @@
     <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
     <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
     <Compile Include="Resources\Tabs\SlidingTabStrip.cs" />
+    <Compile Include="Activities\MarkAttendanceActivity.cs" />
+    <Compile Include="Activities\MakeBookingList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -99,6 +100,9 @@
     <AndroidResource Include="Resources\layout\PastBookings.axml" />
     <AndroidResource Include="Resources\layout\CurrentBookings.axml" />
     <AndroidResource Include="Resources\layout\ViewBookingFragmentLayout.axml" />
+    <AndroidResource Include="Resources\layout\MarkAttendance.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\LoginButtonGradient.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

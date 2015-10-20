@@ -15,7 +15,7 @@ using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "    Help", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
+	[Activity (Label = "   Help", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
 	public class HelpActivity : Activity
 	{
 		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();

@@ -29,6 +29,8 @@ namespace HELPSMobileFrontEnd
 
 				SetContentView (Resource.Layout.Login);
 
+				ActionBar.Hide();
+
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 				EditText tbStudentID = FindViewById<EditText>(Resource.Id.tbStudentID);
 				EditText tbPassword = FindViewById<EditText>(Resource.Id.tbPassword);

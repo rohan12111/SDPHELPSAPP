@@ -15,7 +15,7 @@ using Android.Util;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "Profile", ScreenOrientation = ScreenOrientation.Portrait, Theme="@style/ActionBarTheme")]			
 	public class ProfileActivity : Activity
 	{
 		private List<string> languageList;

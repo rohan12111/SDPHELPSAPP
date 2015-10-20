@@ -45,10 +45,16 @@ namespace HELPSMobileFrontEnd
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int ButtonRoundedCorners = 2130837504;
+			public const int background = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int ButtonRoundedCorners = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int LoginButtonGradient = 2130837507;
 			
 			static Drawable()
 			{
@@ -68,9 +74,6 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f060001
 			public const int bookinglist = 2131099649;
-			
-			// aapt resource value: 0x7f060021
-			public const int btnCheckIn = 2131099681;
 			
 			// aapt resource value: 0x7f060000
 			public const int btnCount = 2131099648;
@@ -92,6 +95,9 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f06001e
 			public const int btnMakeBooking = 2131099678;
+			
+			// aapt resource value: 0x7f060021
+			public const int btnMarkAttendance = 2131099681;
 			
 			// aapt resource value: 0x7f060024
 			public const int btnProfile = 2131099684;
@@ -308,19 +314,22 @@ namespace HELPSMobileFrontEnd
 			public const int MainMenu = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int PastBookings = 2130903048;
+			public const int MarkAttendance = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Profile = 2130903049;
+			public const int PastBookings = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int SessionsListViewLayout = 2130903050;
+			public const int Profile = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int ViewBookingFragmentLayout = 2130903051;
+			public const int SessionsListViewLayout = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int ViewBookings = 2130903052;
+			public const int ViewBookingFragmentLayout = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int ViewBookings = 2130903053;
 			
 			static Layout()
 			{
