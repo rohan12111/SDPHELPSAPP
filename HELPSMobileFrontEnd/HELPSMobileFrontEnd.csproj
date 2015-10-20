@@ -86,7 +86,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ButtonRoundedCorners.xml" />
-    <AndroidResource Include="Resources\layout\BookingList.axml" />
     <AndroidResource Include="Resources\layout\ListSessions.axml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
     <AndroidResource Include="Resources\layout\MainMenu.axml" />
@@ -103,6 +102,7 @@
     <AndroidResource Include="Resources\layout\MarkAttendance.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\LoginButtonGradient.xml" />
+    <AndroidResource Include="Resources\layout\MakeBookingList.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

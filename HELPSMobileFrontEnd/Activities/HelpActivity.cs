@@ -15,11 +15,12 @@ using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "   Help", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
+	[Activity (Label = "  Help", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
 	public class HelpActivity : Activity
 	{
 		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();
 		List<string> lstKeys = new List<string> ();
+		Int32 lastExpandedPosition = -1;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -37,6 +38,15 @@ namespace HELPSMobileFrontEnd
 			ctlExListBox.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
 				var itmGroup = lstKeys [e.GroupPosition];
 				var itmChild = dictGroup [itmGroup] [e.ChildPosition];
+			};
+
+			ctlExListBox.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) {
+				if (lastExpandedPosition != -1 && e.GroupPosition != lastExpandedPosition)
+				{
+					ctlExListBox.CollapseGroup(lastExpandedPosition);
+				}
+
+				lastExpandedPosition = e.GroupPosition;
 			};
 		}
 
@@ -83,12 +93,12 @@ namespace HELPSMobileFrontEnd
 		{
 			switch (item.ItemId)
 			{
-			case Android.Resource.Id.Home:
-				Finish();
-				return true;
+				case Android.Resource.Id.Home:
+					Finish();
+					return true;
 
-			default:
-				return base.OnOptionsItemSelected(item);
+				default:
+					return base.OnOptionsItemSelected(item);
 			}
 		}
 	}

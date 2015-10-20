@@ -16,40 +16,51 @@ using Android.Widget;
 using System.IO;
 using System.Runtime.Serialization.Json;
 using Android.Content.PM;
+using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
 	[Activity (Label = "  Make a Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
-	public class MakeBookingList : ListActivity
+	public class MakeBookingList : Activity
 	{
-		string[] items;
-		protected async override void OnCreate (Bundle bundle)
+		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();
+		List<string> lstKeys = new List<string> ();
+		Int32 lastExpandedPosition = -1;
+
+		protected override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
-//				SetContentView (Resource.Layout.ListSessions);
+				SetContentView (Resource.Layout.MakeBookingList);
 
-				//ActionBar.Hide ();
+				ActionBar.SetHomeButtonEnabled(true);
+				ActionBar.SetDisplayHomeAsUpEnabled(true);
 
-				ListView lvWorkshops = FindViewById<ListView> (Resource.Id.lvClasses);
+				//List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
+				List<WorkshopSets> WrkSets = new List<WorkshopSets> {};
 
-				List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
+				WrkSets.Add(new WorkshopSets(1, "Sesh1", "01/02/2015"));
+				WrkSets.Add(new WorkshopSets(2, "Sesh2", "01/02/2015"));
 
-//				string[] items = new string[WrkSets.Count];
-				items = new string[WrkSets.Count];
+				CreateExpendableListData (WrkSets);
 
-				for (int i = 0; i < WrkSets.Count; i++)
-				{
-					items[i] = WrkSets[i].name;
-				}
-					
-//				HomeScreenAdapter ListAdapter = new HomeScreenAdapter(this, items);
+				var elvExListBox = FindViewById<ExpandableListView> (Resource.Id.elvExListBox);
+				elvExListBox.SetAdapter (new ExpendListAdapter (this, dictGroup));
 
-				ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
-//				lvWorkshops.Adapter = ListAdapter;
-//				HomeScreenAdapter ListAdapter = new HomeScreenAdapter(this, items);
-//				lvWorkshops.Adapter = ListAdapter;
+				elvExListBox.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
+					var itmGroup = lstKeys [e.GroupPosition];
+					var itmChild = dictGroup [itmGroup] [e.ChildPosition];
+				};
+
+				elvExListBox.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) {
+					if (lastExpandedPosition != -1 && e.GroupPosition != lastExpandedPosition)
+					{
+						elvExListBox.CollapseGroup(lastExpandedPosition);
+					}
+
+					lastExpandedPosition = e.GroupPosition;
+				};
 			}
 			catch (Exception e)
 			{
@@ -59,43 +70,32 @@ namespace HELPSMobileFrontEnd
 					.Show();
 			}
 		}
+
+		void CreateExpendableListData (List<WorkshopSets> InWrkshops)
+		{
+			foreach (WorkshopSets wrkshop in InWrkshops) 
+			{
+				List<string> lstTiles = new List<string> ();
+
+				lstTiles.Add ("subtext" + wrkshop.id);
+
+				dictGroup.Add (wrkshop.name, lstTiles);
+			}
+
+			lstKeys = new List<string> (dictGroup.Keys);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+			case Android.Resource.Id.Home:
+				Finish();
+				return true;
+
+			default:
+				return base.OnOptionsItemSelected(item);
+			}
+		}
 	}
-
-//	public class HomeScreenAdapter : BaseAdapter<string> 
-//	{
-//		string[] items;
-//		Activity context;
-//
-//		public HomeScreenAdapter(Activity context, string[] items) : base() 
-//		{
-//			this.context = context;
-//			this.items = items;
-//		}
-
-//		public override long GetItemId(int position)
-//		{
-//			return position;
-//		}
-//
-//		public override string this[int position] 
-//		{
-//			get { return items[position]; }
-//		}
-//
-//		public override int Count 
-//		{
-//			get { return items.Length; }
-//		}
-///		public override View GetView(int position, View convertView, ViewGroup parent)
-//		{
-//			View view = convertView; // re-use an existing view, if one is available
-//			if (view == null) // otherwise create a new one
-//			{
-//				view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
-//			}
-//
-//			view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = items[position];
-//			return view;
-//		}
-//	}
 }
