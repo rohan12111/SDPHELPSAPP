@@ -103,6 +103,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\LoginButtonGradient.xml" />
     <AndroidResource Include="Resources\layout\MakeBookingList.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\EditTextRounded.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\RectangleRounded.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

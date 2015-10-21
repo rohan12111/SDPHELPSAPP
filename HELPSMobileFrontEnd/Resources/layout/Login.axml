@@ -12,31 +12,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/llTextFields"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="160dp">
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="210dp">
         <EditText
             android:id="@+id/tbStudentID"
             android:inputType="number"
             android:textColor="#ff000000"
-            android:background="#FFFFFF"
+            android:background="@drawable/edittextrounded"
             android:hint="Student ID"
             android:textColorHint="#AAAAAA"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:maxLength="10" />
+            android:layout_height="35dp"
+            android:layout_margin="6dp"
+            android:maxLength="10"
+            android:paddingLeft="5dp"
+            android:fontFamily="arial" />
         <EditText
             android:id="@+id/tbPassword"
             android:inputType="textPassword"
             android:textColor="#ff000000"
             android:hint="Password"
             android:textColorHint="#AAAAAA"
-            android:background="#FFFFFF"
+            android:background="@drawable/edittextrounded"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:maxLength="20" />
+            android:layout_height="35dp"
+            android:layout_margin="6dp"
+            android:maxLength="20"
+            android:paddingLeft="5dp"
+            android:textStyle="normal"
+            android:fontFamily="arial" />
     </LinearLayout>
     <FrameLayout
         android:minWidth="25px"
@@ -46,7 +51,7 @@
         android:id="@+id/flSignIn">
         <Button
             android:id="@+id/btnLogin"
-            android:text="Sign into UTS: HELPS"
+            android:text="Sign in to UTS: HELPS"
             android:layout_width="match_parent"
             android:layout_height="60dip"
             android:background="@drawable/loginbuttongradient"
