@@ -71,7 +71,9 @@
     <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
     <Compile Include="Resources\Tabs\SlidingTabStrip.cs" />
     <Compile Include="Activities\MarkAttendanceActivity.cs" />
-    <Compile Include="Activities\MakeBookingList.cs" />
+    <Compile Include="Activities\MakeBookingListActivity.cs" />
+    <Compile Include="Activities\MakeBookingSeshActivity.cs" />
+    <Compile Include="Adapters\TaskListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -105,6 +107,8 @@
     <AndroidResource Include="Resources\layout\MakeBookingList.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\EditTextRounded.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\RectangleRounded.xml" />
+    <AndroidResource Include="Resources\layout\MakeBookingSesh.axml" />
+    <AndroidResource Include="Resources\layout\TaskListItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -112,5 +116,6 @@
     <Folder Include="Activities\" />
     <Folder Include="Activities\Fragments\" />
     <Folder Include="Resources\Tabs\" />
+    <Folder Include="Adapters\" />
   </ItemGroup>
 </Project>

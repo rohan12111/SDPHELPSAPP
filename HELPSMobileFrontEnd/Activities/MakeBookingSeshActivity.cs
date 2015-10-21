@@ -1,27 +1,22 @@
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Json;
-using System.Diagnostics;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using System.IO;
-using System.Runtime.Serialization.Json;
-using Android.Content.PM;
 using ExpendListBox;
+using Android.Content.PM;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "  Make a Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
-	public class MakeBookingList : Activity
+	[Activity (Label = "Make Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme" )]			
+	public class MakeBookingSeshActivity : Activity
 	{
 		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();
 		List<string> lstKeys = new List<string> ();
@@ -32,10 +27,7 @@ namespace HELPSMobileFrontEnd
 			try
 			{
 				base.OnCreate (bundle);
-				SetContentView (Resource.Layout.MakeBookingList);
-
-				ActionBar.SetHomeButtonEnabled(true);
-				ActionBar.SetDisplayHomeAsUpEnabled(true);
+				SetContentView (Resource.Layout.MakeBookingSesh);
 
 				//List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
 				List<WorkshopSets> WrkSets = new List<WorkshopSets> {};
@@ -71,31 +63,44 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
-		void CreateExpendableListData (List<WorkshopSets> InWrkshops)
+		public void CreateExpendableListData (List<WorkshopSets> InWrkshops)
 		{
-			foreach (WorkshopSets wrkshop in InWrkshops) 
+			try
 			{
-				List<string> lstTiles = new List<string> ();
-
-				lstTiles.Add ("subtext" + wrkshop.id);
-
-				dictGroup.Add (wrkshop.name, lstTiles);
+				lstKeys = new List<string> (dictGroup.Keys);
 			}
-
-			lstKeys = new List<string> (dictGroup.Keys);
+			catch (Exception e)
+			{
+				new AlertDialog.Builder (this)
+					.SetMessage(e.Message + "\n" + e.StackTrace)
+					.SetTitle("Application Error")
+					.Show();
+			}
 		}
 
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
-			switch (item.ItemId)
+			try
 			{
-			case Android.Resource.Id.Home:
-				Finish();
-				return true;
+				switch (item.ItemId)
+				{
+				case Android.Resource.Id.Home:
+					Finish();
+					return true;
 
-			default:
-				return base.OnOptionsItemSelected(item);
+				default:
+					return base.OnOptionsItemSelected(item);
+				}
+			}
+			catch (Exception e)
+			{
+				new AlertDialog.Builder (this)
+					.SetMessage(e.Message + "\n" + e.StackTrace)
+					.SetTitle("Application Error")
+					.Show();
+				return false;
 			}
 		}
 	}
 }
+

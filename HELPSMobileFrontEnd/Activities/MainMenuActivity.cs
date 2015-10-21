@@ -37,7 +37,7 @@ namespace HELPSMobileFrontEnd
 				Button btnMarkAttendance = FindViewById<Button> (Resource.Id.btnMarkAttendance);
 
 				btnMakeBooking.Click += delegate {
-					StartActivity(new Intent(this, typeof(MakeBookingList)));
+					StartActivity(new Intent(this, typeof(MakeBookingListActivity)));
 				};
 
 				btnMarkAttendance.Click += delegate {
