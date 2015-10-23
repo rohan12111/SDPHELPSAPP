@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,31 +17,35 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "Make Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme" )]			
 	public class MakeBookingSeshActivity : Activity
 	{
-		Dictionary<string, List<string> > dictGroup = new Dictionary<string, List<string> > ();
-		List<string> lstKeys = new List<string> ();
+		ProgressDialog progressDialog;
+		List<WorkshopSessions> _WorkshopSessions;
 		Int32 lastExpandedPosition = -1;
+		Dictionary<string, WorkshopSessions> dictGroup = new Dictionary<string, WorkshopSessions> ();
+		List<string> lstKeys = new List<string> ();
 
-		protected override void OnCreate (Bundle bundle)
+		protected async override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.MakeBookingSesh);
 
-				//List<WorkshopSets> WrkSets = await RESTClass.GetWorkshopList();
-				List<WorkshopSets> WrkSets = new List<WorkshopSets> {};
+				ActionBar.SetHomeButtonEnabled(true);
+				ActionBar.SetDisplayHomeAsUpEnabled(true);
 
-				WrkSets.Add(new WorkshopSets(1, "Sesh1", "01/02/2015"));
-				WrkSets.Add(new WorkshopSets(2, "Sesh2", "01/02/2015"));
+				//progressDialog = ProgressDialog.Show(this, "", "Loading...");
 
-				CreateExpendableListData (WrkSets);
+				string WorkshopSetId = Intent.GetStringExtra("WorkshopSetId");
+				_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
 
-				var elvExListBox = FindViewById<ExpandableListView> (Resource.Id.elvExListBox);
-				elvExListBox.SetAdapter (new ExpendListAdapter (this, dictGroup));
+				CreateExpendableListData();
+
+				ExpandableListView elvExListBox = FindViewById<ExpandableListView> (Resource.Id.elvExListBox);
+				elvExListBox.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
 
 				elvExListBox.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
-					var itmGroup = lstKeys [e.GroupPosition];
-					var itmChild = dictGroup [itmGroup] [e.ChildPosition];
+					string itmGroup = lstKeys [e.GroupPosition];
+					WorkshopSessions itmChild = dictGroup [itmGroup];
 				};
 
 				elvExListBox.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) {
@@ -53,28 +56,56 @@ namespace HELPSMobileFrontEnd
 
 					lastExpandedPosition = e.GroupPosition;
 				};
+
+//				Button btnViewDetails = FindViewById<Button>(Resource.Id.btnViewDetails);
+//				btnViewDetails.Click += delegate {
+//					StartActivity(new Intent(this, typeof(MakeBookingListActivity)));
+//				};
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
+			}
+			finally 
+			{
+//				progressDialog.Dismiss();
+//				progressDialog.Dispose ();
 			}
 		}
 
-		public void CreateExpendableListData (List<WorkshopSets> InWrkshops)
+		public void CreateExpendableListData ()
 		{
 			try
 			{
+				foreach (WorkshopSessions sesh in _WorkshopSessions)
+				{
+					AddListItem(sesh);
+				}
+
 				lstKeys = new List<string> (dictGroup.Keys);
 			}
 			catch (Exception e)
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				throw e;
+			}
+		}
+
+		public void AddListItem(WorkshopSessions sesh)
+		{
+			try
+			{
+				if (!dictGroup.ContainsKey (sesh.WorkshopId.ToString())) 
+				{
+					dictGroup.Add (sesh.WorkshopId.ToString(), sesh);
+				} 
+				else 
+				{
+					dictGroup.Add ((sesh.WorkshopId + sesh.WorkShopSetID).ToString(), sesh);
+				}
+			}
+			catch (Exception e) 
+			{
+				throw e;
 			}
 		}
 
@@ -92,12 +123,9 @@ namespace HELPSMobileFrontEnd
 					return base.OnOptionsItemSelected(item);
 				}
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
 				return false;
 			}
 		}

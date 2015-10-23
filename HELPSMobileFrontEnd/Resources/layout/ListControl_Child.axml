@@ -7,7 +7,7 @@
     android:background="#fafafa">
     <FrameLayout
         android:minWidth="20px"
-        android:minHeight="20px"
+        android:minHeight="10px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/frameLayout1"

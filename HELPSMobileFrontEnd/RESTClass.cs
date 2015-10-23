@@ -9,11 +9,25 @@ namespace HELPSMobileFrontEnd
 {
 	public static class RESTClass
 	{
-		public static async Task<List<WorkshopSets>> GetWorkshopList(String strParamters = "")
+		public static async Task<List<WorkshopSessions>> GetWorkshopSessions(String strParameters = "")
 		{
 			try
 			{
-				String result = await GetRESTCall("/workshop/workshopSets", strParamters);
+				String result = await GetRESTCall("/workshop/search", strParameters);
+				RootWorkshopSessions _RootObj = new RootWorkshopSessions(result);
+				return _RootObj.Results;
+			}
+			catch
+			{
+				throw;
+			}
+		}
+
+		public static async Task<List<WorkshopSets>> GetWorkshopList(String strParameters = "")
+		{
+			try
+			{
+				String result = await GetRESTCall("/workshop/workshopSets", strParameters);
 				RootWorkshopSets _RootObj = new RootWorkshopSets(result);
 				return _RootObj.Results;
 			}
@@ -286,6 +300,49 @@ namespace HELPSMobileFrontEnd
 		public bool IsSuccess { get; set; }
 		public object DisplayMessage { get; set; }
 	}
+
+	public class WorkshopSessions
+	{
+		public int WorkshopId { get; set; }
+		public string topic { get; set; }
+		public string description { get; set; }
+		public string targetingGroup { get; set; }
+		public string campus { get; set; }
+		public string StartDate { get; set; }
+		public string EndDate { get; set; }
+		public int maximum { get; set; }
+		public int WorkShopSetID { get; set; }
+		public object cutoff { get; set; }
+		public string type { get; set; }
+		public int reminder_num { get; set; }
+		public int reminder_sent { get; set; }
+		public object DaysOfWeek { get; set; }
+		public int BookingCount { get; set; }
+		public object archived { get; set; }
+	}
+	public class RootWorkshopSessions
+	{
+		public RootWorkshopSessions(String strJson)
+		{
+			try
+			{
+				JObject jObject = JObject.Parse(strJson);
+				Results = new List<WorkshopSessions>();
+				foreach (var d in jObject["Results"].Children()) 
+				{ 
+					Results.Add((WorkshopSessions)d.ToObject(typeof(WorkshopSessions)));
+				}
+			}
+			catch 
+			{
+				throw;
+			}
+		}
+		public List<WorkshopSessions> Results { get; set; }
+		public bool IsSuccess { get; set; }
+		public object DisplayMessage { get; set; }
+	}
+
 
 	public class WorkshopBooking
 	{

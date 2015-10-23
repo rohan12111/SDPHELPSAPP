@@ -44,23 +44,10 @@ namespace HELPSMobileFrontEnd
 				btnLogin.Click += delegate {
 					StartActivity(new Intent(this, typeof(MainMenuActivity)));
 				};
-
-//				tbStudentID.KeyPress += delegate(object sender, View.KeyEventArgs e) {
-//					if (e.KeyCode == Keycode.Enter)
-//					{
-//						new AlertDialog.Builder (this)
-//							.SetMessage("Enter")
-//							.SetTitle("Application Error")
-//							.Show();
-//					}
-//				};
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
 			}
 		}
 	}
@@ -77,7 +64,7 @@ namespace HELPSMobileFrontEnd
  * 		
  *		if (username = "" && password = "")
  *{
- *		lblmessage.text = "Please Supply username or Password"
+ *		lblmessage.text = "Please supply username or Password"
  *}
  *else
  *{
@@ -86,7 +73,7 @@ namespace HELPSMobileFrontEnd
  *      {
  * 		if (row.itemsarray[0].equals(username) && row.ItemsArray[1].Equals(password))
  * {
- * lblmessage.text = "User Successfully logged in!!";
+ * lblmessage.text = "User successfully logged in!!";
  * 
  * }
  * 

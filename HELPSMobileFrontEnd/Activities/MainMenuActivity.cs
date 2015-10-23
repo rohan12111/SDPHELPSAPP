@@ -25,8 +25,6 @@ namespace HELPSMobileFrontEnd
 
 				SetContentView (Resource.Layout.MainMenu);
 
-
-
 				// Get our button from the layout resource, and attach an event to it
 				Button btnMakeBooking = FindViewById<Button> (Resource.Id.btnMakeBooking);
 				Button btnViewBooking = FindViewById<Button> (Resource.Id.btnViewBooking);
@@ -64,12 +62,9 @@ namespace HELPSMobileFrontEnd
 					Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
 				};
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
 			}
 		}
 	}

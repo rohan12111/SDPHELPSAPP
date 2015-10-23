@@ -50,12 +50,10 @@ namespace HELPSMobileFrontEnd.Adapters
 			var view = (convertView ?? context.LayoutInflater.Inflate(Resource.Layout.TaskListItem, parent, false)) as LinearLayout;
 
 			// Find references to each subview in the list item's view
-			var txtName = view.FindViewById<TextView>(Resource.Id.NameText);
-			var txtDescription = view.FindViewById<TextView>(Resource.Id.NotesText);
+			var tvWorkshops = view.FindViewById<TextView>(Resource.Id.tvWorkshops);
 
 			//Assign item's values to the various subviews
-			txtName.SetText (item.id.ToString(), TextView.BufferType.Normal);
-			txtDescription.SetText (item.name, TextView.BufferType.Normal);
+			tvWorkshops.SetText (item.name, TextView.BufferType.Normal);
 
 			//Finally return the view
 			return view;

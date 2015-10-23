@@ -17,6 +17,7 @@ using System.IO;
 using System.Runtime.Serialization.Json;
 using Android.Content.PM;
 using ExpendListBox;
+using System.Threading;
 
 namespace HELPSMobileFrontEnd
 {
@@ -26,6 +27,7 @@ namespace HELPSMobileFrontEnd
 		Adapters.TaskListAdapter taskList;
 		IList<WorkshopSets> WrkSets;
 		ListView lvWorkShops;
+		ProgressDialog progressDialog;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -39,33 +41,16 @@ namespace HELPSMobileFrontEnd
 
 				lvWorkShops = FindViewById<ListView>(Resource.Id.lvWorkShops);
 				lvWorkShops.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
-					new AlertDialog.Builder (this)
-						.SetMessage("Click")
-						.SetTitle("Application Error")
-						.Show();
+					var BookingSeshions = new Intent(this, typeof(MakeBookingSeshActivity));			
+					BookingSeshions.PutExtra("WorkshopSetId", WrkSets.ElementAt<WorkshopSets>((int)e.Id).id.ToString());
+					StartActivity(BookingSeshions);
 				};
-
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
 			}
 		}
-
-//		public void GetListData() 
-//		{
-//			foreach (WorkshopSets wrkshop in InWrkshops) 
-//			{
-//				List<string> lstTiles = new List<string> ();
-//
-//				lstTiles.Add ("subtext" + wrkshop.id);
-//
-//				dictGroup.Add (wrkshop.name, lstTiles);
-//			}
-//		}
 
 		protected async override void OnResume ()
 		{
@@ -73,14 +58,18 @@ namespace HELPSMobileFrontEnd
 			{
 				base.OnResume ();
 
+				progressDialog = ProgressDialog.Show(this, "", "Loading...");
+
 				await GetWorkshops();
 			}
-			catch (Exception e)
+			catch (Exception e) 
 			{
-				new AlertDialog.Builder (this)
-					.SetMessage(e.Message + "\n" + e.StackTrace)
-					.SetTitle("Application Error")
-					.Show();
+				ErrorHandling.LogError (e, this);
+			}
+			finally 
+			{
+				progressDialog.Dismiss();
+				progressDialog.Dispose ();
 			}
 		}
 
@@ -92,9 +81,7 @@ namespace HELPSMobileFrontEnd
 				{
 					try
 					{
-						WrkSets = await RESTClass.GetWorkshopList();
-	//						List<WorkshopSets> TempWrkshopSets = await RESTClass.GetWorkshopList();
-	//						WrkSets = (IList<WorkshopSets>)TempWrkshopSets;
+						WrkSets = await RESTClass.GetWorkshopList("?active=true");
 					}
 					catch (WebException e)
 					{

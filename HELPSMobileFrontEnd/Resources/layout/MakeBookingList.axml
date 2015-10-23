@@ -6,6 +6,15 @@
     android:background="#eeeeee"
     android:minWidth="25px"
     android:minHeight="25px">
+    <TextView
+        android:text="Skill Sets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF444444"
+        android:background="#FFDDDDDD"
+        android:id="@+id/tvSkillSets"
+        android:padding="10dp"
+        android:textSize="20dp" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"

@@ -64,7 +64,6 @@
     <Compile Include="Activities\SearchActivity.cs" />
     <Compile Include="Activities\ViewBookingsActivity.cs" />
     <Compile Include="RESTClass.cs" />
-    <Compile Include="Resources\ExpandListAdapter.cs" />
     <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
     <Compile Include="Activities\Fragments\CurrentBookingsFrag.cs" />
     <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
@@ -74,6 +73,9 @@
     <Compile Include="Activities\MakeBookingListActivity.cs" />
     <Compile Include="Activities\MakeBookingSeshActivity.cs" />
     <Compile Include="Adapters\TaskListAdapter.cs" />
+    <Compile Include="Resources\ExpendListAdapter.cs" />
+    <Compile Include="Resources\ExpandListSessionAdapter.cs" />
+    <Compile Include="Resources\ErrorHandling.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -109,6 +111,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\RectangleRounded.xml" />
     <AndroidResource Include="Resources\layout\MakeBookingSesh.axml" />
     <AndroidResource Include="Resources\layout\TaskListItem.axml" />
+    <AndroidResource Include="Resources\layout\ListControl_BookingChild.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\BtnRoundedDisabled.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
