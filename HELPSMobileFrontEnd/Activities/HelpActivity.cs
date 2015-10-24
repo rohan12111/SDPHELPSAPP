@@ -86,7 +86,7 @@ namespace HELPSMobileFrontEnd
 				"A: Service are free of tuition fees for non-credit workshops and individual consultations.\n\n" +
 				"Q: Can you help me with my assignment?\n" +
 				"A: Yes. HELPS offers various workshops and individual consultations. For more information, check out our website.\n\n" +
-				"Q: Can you proofread and correct my assignment?\n\n" +
+				"Q: Can you proofread and correct my assignment?\n" +
 				"A: No. Our role is not to correct grammar or other errors in an assignment. We can help you develop your own editing strategies. You should also use a computer spell-check, find a competent friend and a good dictionary.\n\n" +
 				"Q: Can you help me with the content of my assignment?\n" +
 				"A: No. We can’t tell you what to say, we can only help you say it better and more clearly. While we’re happy to act as a sounding board for your ideas, content questions require the specialised disciplinary knowledge of lecturers and tutors in your faculty. You should take specific content questions directly to them.\n\n" +

@@ -21,7 +21,7 @@ using System.Threading;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "  Make Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
+	[Activity (Label = "  Make a booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
 	public class MakeBookingListActivity : Activity
 	{
 		Adapters.TaskListAdapter taskList;

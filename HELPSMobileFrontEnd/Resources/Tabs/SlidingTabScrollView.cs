@@ -51,7 +51,7 @@ namespace HELPSMobileFrontEnd
 
             //Make sure the tab strips fill the view
             FillViewport = true;
-            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0xE5, 0x39, 0x35)); //Redish color
+            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0x19, 0x76, 0xd2)); //Redish color
 
             mTitleOffset = (int)(TITLE_OFFSET_DIPS * Resources.DisplayMetrics.Density);
 

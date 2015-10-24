@@ -84,7 +84,7 @@
                 p1:padding="5dp" />
             <Button
                 p1:id="@+id/btnMakeBooking"
-                p1:text="MAKE BOOKING"
+                p1:text="MAKE A BOOKING"
                 p1:layout_column="1"
                 p1:background="#FAFAFA"
                 p1:textColor="#000000"
@@ -110,7 +110,7 @@
                 p1:paddingBottom="1dp" />
             <Button
                 p1:id="@+id/btnViewBooking"
-                p1:text="VIEW BOOKING"
+                p1:text="VIEW BOOKINGS"
                 p1:layout_column="1"
                 p1:background="#FAFAFA"
                 p1:textColor="#000000"
