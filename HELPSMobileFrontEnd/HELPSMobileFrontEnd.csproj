@@ -81,6 +81,7 @@
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -135,8 +136,5 @@
     <Folder Include="Adapters\" />
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProguardConfiguration Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
 </Project>
