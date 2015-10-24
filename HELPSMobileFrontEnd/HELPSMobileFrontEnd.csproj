@@ -76,6 +76,7 @@
     <Compile Include="Resources\ExpendListAdapter.cs" />
     <Compile Include="Resources\ExpandListSessionAdapter.cs" />
     <Compile Include="Resources\ErrorHandling.cs" />
+    <Compile Include="Activities\SessionList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -113,6 +114,8 @@
     <AndroidResource Include="Resources\layout\TaskListItem.axml" />
     <AndroidResource Include="Resources\layout\ListControl_BookingChild.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\BtnRoundedDisabled.xml" />
+    <AndroidResource Include="Resources\layout\Search.axml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

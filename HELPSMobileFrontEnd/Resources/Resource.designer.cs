@@ -65,6 +65,9 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f020006
 			public const int RectangleRounded = 2130837510;
 			
+			// aapt resource value: 0x7f020007
+			public const int search = 2130837511;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -126,6 +129,12 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060060
 			public const int ddllanguage = 2131099744;
 			
+			// aapt resource value: 0x7f060067
+			public const int ddpSearch = 2131099751;
+			
+			// aapt resource value: 0x7f060066
+			public const int ddpworkshop = 2131099750;
+			
 			// aapt resource value: 0x7f060000
 			public const int elvCurrentBookings = 2131099648;
 			
@@ -153,14 +162,17 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06002e
 			public const int flSignIn = 2131099694;
 			
-			// aapt resource value: 0x7f060068
-			public const int flTabs = 2131099752;
+			// aapt resource value: 0x7f06006d
+			public const int flTabs = 2131099757;
 			
 			// aapt resource value: 0x7f060023
 			public const int frameLayout1 = 2131099683;
 			
 			// aapt resource value: 0x7f060055
 			public const int gender = 2131099733;
+			
+			// aapt resource value: 0x7f060065
+			public const int imgsearch = 2131099749;
 			
 			// aapt resource value: 0x7f06005d
 			public const int international = 2131099741;
@@ -192,8 +204,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06002b
 			public const int llTextFields = 2131099691;
 			
-			// aapt resource value: 0x7f060064
-			public const int lstItemTask = 2131099748;
+			// aapt resource value: 0x7f060069
+			public const int lstItemTask = 2131099753;
 			
 			// aapt resource value: 0x7f060029
 			public const int lvClasses = 2131099689;
@@ -215,6 +227,9 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f060056
 			public const int radioGroup1 = 2131099734;
+			
+			// aapt resource value: 0x7f060063
+			public const int relativeLayout2 = 2131099747;
 			
 			// aapt resource value: 0x7f06005e
 			public const int relativeLayout4 = 2131099742;
@@ -240,8 +255,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060038
 			public const int rowTimeRoom = 2131099704;
 			
-			// aapt resource value: 0x7f060066
-			public const int sliding_tabs = 2131099750;
+			// aapt resource value: 0x7f06006b
+			public const int sliding_tabs = 2131099755;
 			
 			// aapt resource value: 0x7f06005b
 			public const int status = 2131099739;
@@ -336,8 +351,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06001b
 			public const int tvGroup = 2131099675;
 			
-			// aapt resource value: 0x7f060063
-			public const int tvListLayout = 2131099747;
+			// aapt resource value: 0x7f060068
+			public const int tvListLayout = 2131099752;
 			
 			// aapt resource value: 0x7f060002
 			public const int tvNoCurrentBookings = 2131099650;
@@ -363,8 +378,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060022
 			public const int tvWaitlist = 2131099682;
 			
-			// aapt resource value: 0x7f060065
-			public const int tvWorkshops = 2131099749;
+			// aapt resource value: 0x7f06006a
+			public const int tvWorkshops = 2131099754;
 			
 			// aapt resource value: 0x7f060037
 			public const int txtDescription = 2131099703;
@@ -390,8 +405,11 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06005a
 			public const int txtcontactnumber = 2131099738;
 			
-			// aapt resource value: 0x7f060067
-			public const int viewpager = 2131099751;
+			// aapt resource value: 0x7f060064
+			public const int txtsearch = 2131099748;
+			
+			// aapt resource value: 0x7f06006c
+			public const int viewpager = 2131099756;
 			
 			static Id()
 			{
@@ -446,16 +464,19 @@ namespace HELPSMobileFrontEnd
 			public const int Profile = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int SessionsListViewLayout = 2130903053;
+			public const int Search = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int TaskListItem = 2130903054;
+			public const int SessionsListViewLayout = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int ViewBookingFragmentLayout = 2130903055;
+			public const int TaskListItem = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int ViewBookings = 2130903056;
+			public const int ViewBookingFragmentLayout = 2130903056;
+			
+			// aapt resource value: 0x7f030011
+			public const int ViewBookings = 2130903057;
 			
 			static Layout()
 			{
