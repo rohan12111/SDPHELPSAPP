@@ -51,14 +51,24 @@ namespace HELPSMobileFrontEnd
 				{
 					try
 					{
-					 
+						string searchBy;
+						searchBy = searchWorkshop.SelectedItem.ToString();
+
 				ActionBar.SetHomeButtonEnabled(true);
 				ActionBar.SetDisplayHomeAsUpEnabled(true);
 
 				progressDialog = ProgressDialog.Show(this, "", "Searching...");
+
+						if (searchBy == "Session"){
+							string WorkshopSetId = Intent.GetStringExtra(search);
+							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
+						}
+						else if(searchBy == "Workshop"){
+							
+						}
 				
-				string WorkshopSetId = Intent.GetStringExtra(search);
-				_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
+
+			
 
 				CreateExpendableListData();
 
