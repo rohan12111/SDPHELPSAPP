@@ -48,22 +48,43 @@ namespace HELPSMobileFrontEnd
 			public const int background = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int BtnRoundedDisabled = 2130837505;
+			public const int bg_main = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ButtonRoundedCorners = 2130837506;
+			public const int BtnRoundedDisabled = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int EditTextRounded = 2130837507;
+			public const int ButtonRoundedCorners = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int Icon = 2130837508;
+			public const int EditTextRounded = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int LoginButtonGradient = 2130837509;
+			public const int ic_account_circle_white_48dp = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int RectangleRounded = 2130837510;
+			public const int ic_check_circle_white_48dp_2x = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int ic_help_outline_white_48dp = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int ic_list_white_48dp = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int ic_note_add_white_48dp = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int ic_search_white_48dp = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int Icon = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int LoginButtonGradient = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int RectangleRounded = 2130837517;
 			
 			// aapt resource value: 0x7f020007
 			public const int search = 2130837511;
@@ -81,41 +102,41 @@ namespace HELPSMobileFrontEnd
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060053
-			public const int birth = 2131099731;
+			// aapt resource value: 0x7f060059
+			public const int birth = 2131099737;
 			
 			// aapt resource value: 0x7f060025
 			public const int btnBook = 2131099685;
 			
-			// aapt resource value: 0x7f06004d
-			public const int btnCourse = 2131099725;
+			// aapt resource value: 0x7f060053
+			public const int btnCourse = 2131099731;
 			
-			// aapt resource value: 0x7f06004e
-			public const int btnEducation = 2131099726;
+			// aapt resource value: 0x7f060054
+			public const int btnEducation = 2131099732;
 			
-			// aapt resource value: 0x7f060044
-			public const int btnHelp = 2131099716;
+			// aapt resource value: 0x7f06004a
+			public const int btnHelp = 2131099722;
 			
 			// aapt resource value: 0x7f06002f
 			public const int btnLogin = 2131099695;
 			
-			// aapt resource value: 0x7f060046
-			public const int btnLogout = 2131099718;
-			
-			// aapt resource value: 0x7f06003d
-			public const int btnMakeBooking = 2131099709;
-			
-			// aapt resource value: 0x7f060040
-			public const int btnMarkAttendance = 2131099712;
-			
-			// aapt resource value: 0x7f060043
-			public const int btnProfile = 2131099715;
-			
-			// aapt resource value: 0x7f060041
-			public const int btnSearch = 2131099713;
+			// aapt resource value: 0x7f06004c
+			public const int btnLogout = 2131099724;
 			
 			// aapt resource value: 0x7f06003e
-			public const int btnViewBooking = 2131099710;
+			public const int btnMakeBooking = 2131099710;
+			
+			// aapt resource value: 0x7f060044
+			public const int btnMarkAttendance = 2131099716;
+			
+			// aapt resource value: 0x7f060048
+			public const int btnProfile = 2131099720;
+			
+			// aapt resource value: 0x7f060046
+			public const int btnSearch = 2131099718;
+			
+			// aapt resource value: 0x7f060041
+			public const int btnViewBooking = 2131099713;
 			
 			// aapt resource value: 0x7f060024
 			public const int btnViewDetails = 2131099684;
@@ -123,11 +144,11 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060003
 			public const int ctlExListBox = 2131099651;
 			
-			// aapt resource value: 0x7f060062
-			public const int ddlcountry = 2131099746;
+			// aapt resource value: 0x7f060068
+			public const int ddlcountry = 2131099752;
 			
-			// aapt resource value: 0x7f060060
-			public const int ddllanguage = 2131099744;
+			// aapt resource value: 0x7f060066
+			public const int ddllanguage = 2131099750;
 			
 			// aapt resource value: 0x7f060067
 			public const int ddpSearch = 2131099751;
@@ -138,53 +159,81 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060000
 			public const int elvCurrentBookings = 2131099648;
 			
-			// aapt resource value: 0x7f060049
-			public const int elvExListBox = 2131099721;
+			// aapt resource value: 0x7f06004f
+			public const int elvExListBox = 2131099727;
 			
-			// aapt resource value: 0x7f06004a
-			public const int elvPastBookings = 2131099722;
+			// aapt resource value: 0x7f060050
+			public const int elvPastBookings = 2131099728;
 			
-			// aapt resource value: 0x7f060058
-			public const int female = 2131099736;
+			// aapt resource value: 0x7f06005e
+			public const int female = 2131099742;
 			
-			// aapt resource value: 0x7f06005f
-			public const int firstlanguage = 2131099743;
+			// aapt resource value: 0x7f060065
+			public const int firstlanguage = 2131099749;
 			
-			// aapt resource value: 0x7f060045
-			public const int flLogout = 2131099717;
+			// aapt resource value: 0x7f06004b
+			public const int flLogout = 2131099723;
 			
 			// aapt resource value: 0x7f060001
 			public const int flNoCurrentBookings = 2131099649;
 			
-			// aapt resource value: 0x7f06004b
-			public const int flNoPastBookings = 2131099723;
+			// aapt resource value: 0x7f060051
+			public const int flNoPastBookings = 2131099729;
 			
 			// aapt resource value: 0x7f06002e
 			public const int flSignIn = 2131099694;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f06006d
 			public const int flTabs = 2131099757;
+=======
+			// aapt resource value: 0x7f06006e
+			public const int flTabs = 2131099758;
+>>>>>>> d8b9445 Changes to everything
 			
 			// aapt resource value: 0x7f060023
 			public const int frameLayout1 = 2131099683;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f060055
 			public const int gender = 2131099733;
 			
 			// aapt resource value: 0x7f060065
 			public const int imgsearch = 2131099749;
+=======
+			// aapt resource value: 0x7f06005b
+			public const int gender = 2131099739;
+>>>>>>> d8b9445 Changes to everything
 			
-			// aapt resource value: 0x7f06005d
-			public const int international = 2131099741;
+			// aapt resource value: 0x7f060063
+			public const int international = 2131099747;
 			
-			// aapt resource value: 0x7f060050
-			public const int lblFirstName = 2131099728;
+			// aapt resource value: 0x7f060049
+			public const int ivHelp = 2131099721;
 			
-			// aapt resource value: 0x7f060061
-			public const int lblStudentEmail = 2131099745;
+			// aapt resource value: 0x7f06003d
+			public const int ivMakeBooking = 2131099709;
 			
-			// aapt resource value: 0x7f060054
-			public const int lbldateofbirth = 2131099732;
+			// aapt resource value: 0x7f060043
+			public const int ivMarkAttendance = 2131099715;
+			
+			// aapt resource value: 0x7f060047
+			public const int ivProfile = 2131099719;
+			
+			// aapt resource value: 0x7f060045
+			public const int ivSearch = 2131099717;
+			
+			// aapt resource value: 0x7f060040
+			public const int ivViewBooking = 2131099712;
+			
+			// aapt resource value: 0x7f060056
+			public const int lblFirstName = 2131099734;
+			
+			// aapt resource value: 0x7f060067
+			public const int lblStudentEmail = 2131099751;
+			
+			// aapt resource value: 0x7f06005a
+			public const int lbldateofbirth = 2131099738;
 			
 			// aapt resource value: 0x7f060005
 			public const int linearLayout1 = 2131099653;
@@ -204,27 +253,36 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06002b
 			public const int llTextFields = 2131099691;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f060069
 			public const int lstItemTask = 2131099753;
+=======
+			// aapt resource value: 0x7f06006a
+			public const int lstItemTask = 2131099754;
+>>>>>>> d8b9445 Changes to everything
 			
 			// aapt resource value: 0x7f060029
 			public const int lvClasses = 2131099689;
 			
-			// aapt resource value: 0x7f060048
-			public const int lvWorkShops = 2131099720;
+			// aapt resource value: 0x7f06004e
+			public const int lvWorkShops = 2131099726;
+			
+			// aapt resource value: 0x7f06005d
+			public const int male = 2131099741;
 			
 			// aapt resource value: 0x7f060057
-			public const int male = 2131099735;
+			public const int name = 2131099735;
 			
-			// aapt resource value: 0x7f060051
-			public const int name = 2131099729;
+			// aapt resource value: 0x7f06005f
+			public const int number = 2131099743;
 			
-			// aapt resource value: 0x7f060059
-			public const int number = 2131099737;
+			// aapt resource value: 0x7f060062
+			public const int permanent = 2131099746;
 			
 			// aapt resource value: 0x7f06005c
-			public const int permanent = 2131099740;
+			public const int radioGroup1 = 2131099740;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f060056
 			public const int radioGroup1 = 2131099734;
 			
@@ -233,6 +291,10 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f06005e
 			public const int relativeLayout4 = 2131099742;
+=======
+			// aapt resource value: 0x7f060064
+			public const int relativeLayout4 = 2131099748;
+>>>>>>> d8b9445 Changes to everything
 			
 			// aapt resource value: 0x7f060032
 			public const int rowBackground = 2131099698;
@@ -255,14 +317,19 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060038
 			public const int rowTimeRoom = 2131099704;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f06006b
 			public const int sliding_tabs = 2131099755;
+=======
+			// aapt resource value: 0x7f06006c
+			public const int sliding_tabs = 2131099756;
+>>>>>>> d8b9445 Changes to everything
 			
-			// aapt resource value: 0x7f06005b
-			public const int status = 2131099739;
+			// aapt resource value: 0x7f060061
+			public const int status = 2131099745;
 			
-			// aapt resource value: 0x7f06004f
-			public const int studentName = 2131099727;
+			// aapt resource value: 0x7f060055
+			public const int studentName = 2131099733;
 			
 			// aapt resource value: 0x7f06001c
 			public const int tableLayout1 = 2131099676;
@@ -351,14 +418,19 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06001b
 			public const int tvGroup = 2131099675;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f060068
 			public const int tvListLayout = 2131099752;
+=======
+			// aapt resource value: 0x7f060069
+			public const int tvListLayout = 2131099753;
+>>>>>>> d8b9445 Changes to everything
 			
 			// aapt resource value: 0x7f060002
 			public const int tvNoCurrentBookings = 2131099650;
 			
-			// aapt resource value: 0x7f06004c
-			public const int tvNoPastBookings = 2131099724;
+			// aapt resource value: 0x7f060052
+			public const int tvNoPastBookings = 2131099730;
 			
 			// aapt resource value: 0x7f06001f
 			public const int tvPlaces = 2131099679;
@@ -366,8 +438,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06000a
 			public const int tvRoom = 2131099658;
 			
-			// aapt resource value: 0x7f060047
-			public const int tvSkillSets = 2131099719;
+			// aapt resource value: 0x7f06004d
+			public const int tvSkillSets = 2131099725;
 			
 			// aapt resource value: 0x7f060011
 			public const int tvStartDate = 2131099665;
@@ -378,8 +450,13 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060022
 			public const int tvWaitlist = 2131099682;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f06006a
 			public const int tvWorkshops = 2131099754;
+=======
+			// aapt resource value: 0x7f06006b
+			public const int tvWorkshops = 2131099755;
+>>>>>>> d8b9445 Changes to everything
 			
 			// aapt resource value: 0x7f060037
 			public const int txtDescription = 2131099703;
@@ -387,8 +464,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060028
 			public const int txtLarge = 2131099688;
 			
-			// aapt resource value: 0x7f060052
-			public const int txtName = 2131099730;
+			// aapt resource value: 0x7f060058
+			public const int txtName = 2131099736;
 			
 			// aapt resource value: 0x7f060035
 			public const int txtNextSession = 2131099701;
@@ -402,14 +479,19 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060039
 			public const int txtTime = 2131099705;
 			
-			// aapt resource value: 0x7f06005a
-			public const int txtcontactnumber = 2131099738;
+			// aapt resource value: 0x7f060060
+			public const int txtcontactnumber = 2131099744;
 			
+<<<<<<< Upstream, based on origin/master
 			// aapt resource value: 0x7f060064
 			public const int txtsearch = 2131099748;
 			
 			// aapt resource value: 0x7f06006c
 			public const int viewpager = 2131099756;
+=======
+			// aapt resource value: 0x7f06006d
+			public const int viewpager = 2131099757;
+>>>>>>> d8b9445 Changes to everything
 			
 			static Id()
 			{
@@ -510,20 +592,17 @@ namespace HELPSMobileFrontEnd
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ActionBarTheme = 2130968578;
-			
-			// aapt resource value: 0x7f040004
-			public const int ActionBarTitleStyle = 2130968580;
-			
-			// aapt resource value: 0x7f040000
-			public const int MainButton = 2130968576;
+			// aapt resource value: 0x7f040001
+			public const int ActionBarTheme = 2130968577;
 			
 			// aapt resource value: 0x7f040003
-			public const int MyActionBar = 2130968579;
+			public const int ActionBarTitleStyle = 2130968579;
 			
-			// aapt resource value: 0x7f040001
-			public const int TableLayoutInfo = 2130968577;
+			// aapt resource value: 0x7f040002
+			public const int MyActionBar = 2130968578;
+			
+			// aapt resource value: 0x7f040000
+			public const int TableLayoutInfo = 2130968576;
 			
 			static Style()
 			{

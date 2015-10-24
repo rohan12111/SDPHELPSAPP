@@ -77,33 +77,19 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
-				if (blnOnline == true)
-				{
-					try
-					{
-						WrkSets = await RESTClass.GetWorkshopList("?active=true");
-					}
-					catch (WebException e)
-					{
-						if (e.Status == WebExceptionStatus.ConnectFailure) 
-						{
-							GetWorkshops (false);
-						}
-						else
-						{
-							throw;
-						}
-					}
-				}
-				else
-				{
-					WrkSets = new List<WorkshopSets> {};
-
-					WrkSets.Add(new WorkshopSets(1, "Cannot connect to server... Try again later", "01/02/2015"));
-					WrkSets.Add(new WorkshopSets(2, "Offline WritingSkills", "01/02/2015"));
-					WrkSets.Add(new WorkshopSets(3, "Offline Study + Reading skills", "01/02/2015"));
-					WrkSets.Add(new WorkshopSets(4, "Offline Presentation + Speaking Skills", "01/02/2015"));
-				}
+//				if (blnOnline == true)
+//				{
+				WrkSets = await RESTClass.GetWorkshopList("?active=true");
+//				}
+//				else
+//				{
+//					WrkSets = new List<WorkshopSets> {};
+//
+//					WrkSets.Add(new WorkshopSets(1, "Cannot connect to server... Try again later", "01/02/2015"));
+//					WrkSets.Add(new WorkshopSets(2, "Offline WritingSkills", "01/02/2015"));
+//					WrkSets.Add(new WorkshopSets(3, "Offline Study + Reading skills", "01/02/2015"));
+//					WrkSets.Add(new WorkshopSets(4, "Offline Presentation + Speaking Skills", "01/02/2015"));
+//				}
 
 				// create our adapter
 				taskList = new Adapters.TaskListAdapter(this, WrkSets);

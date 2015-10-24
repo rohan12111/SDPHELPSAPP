@@ -3,7 +3,7 @@
     p1:orientation="vertical"
     p1:layout_width="fill_parent"
     p1:layout_height="fill_parent"
-    p1:background="#EEEEEE"
+    p1:background="@drawable/bg_main"
     p1:id="@+id/llPageRoot">
     <TableLayout
         p1:id="@+id/tlBackgroundBorder"
@@ -69,55 +69,134 @@
         p1:minHeight="25px"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/tlButtons">
+        p1:id="@+id/tlButtons"
+        p1:stretchColumns="1"
+        p1:shrinkColumns="0">
         <TableRow
             p1:id="@+id/rowButtons1"
-            p1:minWidth="25px"
-            p1:minHeight="25px">
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_note_add_white_48dp"
+                p1:layout_column="0"
+                p1:id="@+id/ivMakeBooking"
+                p1:layout_height="50dp"
+                p1:padding="5dp" />
             <Button
                 p1:id="@+id/btnMakeBooking"
-                p1:text="Make Booking"
-                p1:layout_column="0"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
-            <Button
-                p1:id="@+id/btnViewBooking"
-                p1:text="View Booking"
+                p1:text="MAKE BOOKING"
                 p1:layout_column="1"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
+                p1:background="#FAFAFA"
+                p1:textColor="#000000"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp"
+                p1:layout_width="270dp" />
         </TableRow>
         <TableRow
             p1:id="@+id/rowButtons2"
             p1:minWidth="25px"
-            p1:minHeight="25px">
-            <Button
-                p1:id="@+id/btnMarkAttendance"
-                p1:text="Mark Attendance"
+            p1:minHeight="25px"
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_list_white_48dp"
                 p1:layout_column="0"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
+                p1:id="@+id/ivViewBooking"
+                p1:layout_height="50dp"
+                p1:paddingLeft="20dp"
+                p1:paddingRight="20dp"
+                p1:paddingTop="1dp"
+                p1:paddingBottom="1dp" />
             <Button
-                p1:id="@+id/btnSearch"
-                p1:text="Search"
+                p1:id="@+id/btnViewBooking"
+                p1:text="VIEW BOOKING"
                 p1:layout_column="1"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
+                p1:background="#FAFAFA"
+                p1:textColor="#000000"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp" />
         </TableRow>
         <TableRow
-            p1:id="@+id/rowButtons3">
+            p1:id="@+id/rowButtons3"
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_check_circle_white_48dp_2x"
+                p1:layout_column="0"
+                p1:id="@+id/ivMarkAttendance"
+                p1:layout_height="50dp"
+                p1:padding="5dp" />
+            <Button
+                p1:id="@+id/btnMarkAttendance"
+                p1:text="MARK ATTENDANCE"
+                p1:layout_column="1"
+                p1:background="#FAFAFA"
+                p1:textColor="#000000"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow1"
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_search_white_48dp"
+                p1:layout_column="0"
+                p1:id="@+id/ivSearch"
+                p1:layout_height="50dp"
+                p1:padding="5dp" />
+            <Button
+                p1:text="SEARCH"
+                p1:layout_column="1"
+                p1:id="@+id/btnSearch"
+                p1:textColor="#000000"
+                p1:background="#FAFAFA"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow3"
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_account_circle_white_48dp"
+                p1:layout_column="0"
+                p1:id="@+id/ivProfile"
+                p1:layout_height="50dp"
+                p1:padding="5dp" />
             <Button
                 p1:id="@+id/btnProfile"
-                p1:text="Profile"
+                p1:text="PROFILE"
+                p1:layout_column="1"
+                p1:background="#FAFAFA"
+                p1:textColor="#000000"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp" />
+        </TableRow>
+        <TableRow
+            p1:id="@+id/tableRow2"
+            p1:background="#546E7A"
+            p1:layout_margin="4dp">
+            <ImageView
+                p1:src="@drawable/ic_help_outline_white_48dp"
                 p1:layout_column="0"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
+                p1:id="@+id/ivHelp"
+                p1:layout_height="50dp"
+                p1:padding="5dp" />
             <Button
                 p1:id="@+id/btnHelp"
-                p1:text="Help"
+                p1:text="HELP"
                 p1:layout_column="1"
-                style="@style/MainButton"
-                p1:background="@drawable/buttonroundedcorners" />
+                p1:background="#FAFAFA"
+                p1:textColor="#000000"
+                p1:layout_height="50dp"
+                p1:gravity="center_vertical"
+                p1:paddingLeft="20dp" />
         </TableRow>
     </TableLayout>
     <FrameLayout
@@ -126,8 +205,8 @@
         p1:layout_height="match_parent">
         <Button
             p1:id="@+id/btnLogout"
-            p1:text="Logout"
-            p1:background="#E53935"
+            p1:text="Sign Out"
+            p1:background="#ff1976d2"
             p1:layout_width="match_parent"
             p1:layout_height="60dip"
             p1:textColor="#ffffffff"

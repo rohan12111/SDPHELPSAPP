@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-	<style name="MainButton">
-		<item name="android:height">200dp</item>
-		<item name="android:width">200dp</item>
-		<item name="android:background">#E53935</item>
-		<item name="android:layout_margin">5dp</item>
-		<item name="android:layout_height">100dp</item>
-		<item name="android:layout_weight">1</item>
-		<item name="android:textColor">#ffffffff</item>
-		<item name="android:textSize">18dip</item>
-	</style>
-
 	<style name="TableLayoutInfo">
 		<item name="android:background">#FFFFFFFF</item>
 		<item name="android:layout_margin">2dp</item>

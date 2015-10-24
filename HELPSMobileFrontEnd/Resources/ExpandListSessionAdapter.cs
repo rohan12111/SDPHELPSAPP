@@ -104,16 +104,28 @@ namespace ExpendListBox
 					
 				btnBook.SetTextColor(Color.White);
 				btnBook.Click += delegate {
-					if (item.maximum - item.BookingCount > 0) 
+					if (item.maximum - item.BookingCount > 0) //If there are places left in the session
 					{
-//						new AlertDialog.Builder (cont)
-//							.SetMessage(e.Message + "\n" + e.StackTrace)
-//							.SetTitle("Application Error")
-//							.Show();
+						new AlertDialog.Builder (_activity)
+							.SetTitle("Booked")
+							.SetMessage("Are you sure you want to book this session?")
+							.SetCancelable(true)
+							.SetPositiveButton("Confirm", delegate(object sender, DialogClickEventArgs e) {
+								
+							})
+							.Show();
 					}
 					else
 					{
-						
+						new AlertDialog.Builder (_activity)
+							.SetTitle("Session Full")
+							.SetMessage("The session you are attempting to book is currently full, would you like to be added to the waitlist?" +
+								"You will be automatically added to the session when a spot becomes available.")
+							.SetCancelable(true)
+							.SetPositiveButton("Comfirm", delegate(object sender, DialogClickEventArgs e) {
+
+							})
+							.Show();
 					}
 				};
 
