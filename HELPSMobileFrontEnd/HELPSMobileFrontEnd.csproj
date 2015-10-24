@@ -79,17 +79,11 @@
     <Compile Include="Activities\SessionList.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ButtonRoundedCorners.xml" />
     <AndroidResource Include="Resources\layout\ListSessions.axml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
@@ -116,6 +110,21 @@
     <AndroidResource Include="Resources\drawable-hdpi\BtnRoundedDisabled.xml" />
     <AndroidResource Include="Resources\layout\Search.axml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bg_main.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_circle_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_circle_white_48dp_2x.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_help_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_list_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_note_add_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search_white_48dp.png" />
+    <AndroidResource Include="Resources\layout\Course.axml" />
+    <AndroidResource Include="Resources\layout\Education.axml" />
+    <AndroidResource Include="Resources\layout\Registration.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -124,5 +133,10 @@
     <Folder Include="Activities\Fragments\" />
     <Folder Include="Resources\Tabs\" />
     <Folder Include="Adapters\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProguardConfiguration Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
 </Project>

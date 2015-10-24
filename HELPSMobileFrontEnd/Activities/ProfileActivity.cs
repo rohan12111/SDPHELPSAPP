@@ -19,7 +19,7 @@ namespace HELPSMobileFrontEnd
 	public class ProfileActivity : Activity
 	{
 		private List<string> languageList;
-		protected override void OnCreate (Bundle bundle)
+		protected async override void OnCreate (Bundle bundle)
 		{
 			try
 			{
@@ -51,12 +51,12 @@ namespace HELPSMobileFrontEnd
 
 
 				country.Adapter = adapter;
-			//	Student student = await RESTClass.GetStudent("00000000");
+			Student student = await RESTClass.GetStudent("00000000");
 
 	   			
 
 
-			//	name.Text= student.
+				name.Text= student.preferred_name;
 //				throw new Exception(student.status + student.country_origin);
 			}
 			catch (Exception e) 

@@ -83,7 +83,19 @@ namespace HELPSMobileFrontEnd
 				"Q: Where is HELPS?\n" +
 				"A: HELPS is located in Building 1, Level 3, Room 8 (opposite the Careers service.\n\n" +
 			    "Q: How much does it cost?\n" +
-			    "A: Service are free of tuition fees for non-credit workshops and individual consultations.\n)");
+				"A: Service are free of tuition fees for non-credit workshops and individual consultations.\n\n" +
+				"Q: Can you help me with my assignment?\n" +
+				"A: Yes. HELPS offers various workshops and individual consultations. For more information, check out our website.\n\n" +
+				"Q: Can you proofread and correct my assignment?\n\n" +
+				"A: No. Our role is not to correct grammar or other errors in an assignment. We can help you develop your own editing strategies. You should also use a computer spell-check, find a competent friend and a good dictionary.\n\n" +
+				"Q: Can you help me with the content of my assignment?\n" +
+				"A: No. We can’t tell you what to say, we can only help you say it better and more clearly. While we’re happy to act as a sounding board for your ideas, content questions require the specialised disciplinary knowledge of lecturers and tutors in your faculty. You should take specific content questions directly to them.\n\n" +
+				"Q: My lecturer says I need to improve my grammar. Can you help me?\n" +
+				"A: Yes. Please check out our website or Learning resources.\n\n" +
+				"Q: Can you help me with my pronunciation?\n" +
+				"A: Yes. Please check website or Learning resources.\n\n" +
+				"Q: Can I practise my seminar presentation with someone?\n" +
+				"A: Yes. You can attend our workshops or drop in for an individual consultation session.\n");
 
 			dictGroup.Add ("What do the button do?", lstTiles);
 			dictGroup.Add ("How do I make a booking?", lstBooking);

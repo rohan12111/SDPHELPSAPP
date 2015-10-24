@@ -20,7 +20,7 @@
             <TableLayout
                 p1:id="@+id/tlNextSession"
                 style="@style/TableLayoutInfo"
-                p1:background="#ffffffff"
+                p1:background="#fafafa"
                 p1:layout_column="0"
                 p1:layout_width="wrap_content">
                 <TableRow

@@ -1,4 +1,6 @@
 ﻿
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,18 +13,52 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "Registration", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "Registration", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]
 	public class RegistrationActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+			try
+			{
+				base.OnCreate (bundle);
 
-			// Create your application here
+				SetContentView(Resource.Layout.ViewBookings);
+
+				ActionBar.SetHomeButtonEnabled(true);
+				ActionBar.SetDisplayHomeAsUpEnabled(true);
+
+				FragmentTransaction transaction = FragmentManager.BeginTransaction();
+				SlidingTabsFragment sltFragment = new SlidingTabsFragment();
+				transaction.Replace(Resource.Id.flTabs, sltFragment);
+				transaction.Commit();
+
+			}
+			catch (Exception e)
+			{
+				new AlertDialog.Builder (this)
+					.SetMessage(e.Message + "\n" + e.StackTrace)
+					.SetTitle("Application Error")
+					.Show();
+			}
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+			case Android.Resource.Id.Home:
+				Finish();
+				return true;
+
+			default:
+				return base.OnOptionsItemSelected(item);
+			}
 		}
 	}
 }
 
+       
