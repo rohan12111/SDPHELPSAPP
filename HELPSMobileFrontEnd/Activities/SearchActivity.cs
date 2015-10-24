@@ -61,10 +61,11 @@ namespace HELPSMobileFrontEnd
 
 						if (searchBy == "Session"){
 							string WorkshopSetId = Intent.GetStringExtra(search);
-							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
+							//_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
+							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?topic=" + WorkshopSetId);
 						}
 						else if(searchBy == "Workshop"){
-							
+							//await Ge
 						}
 				
 

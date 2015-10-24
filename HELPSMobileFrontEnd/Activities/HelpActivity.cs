@@ -57,19 +57,19 @@ namespace HELPSMobileFrontEnd
 			List<string> lstTiles = new List<string> ();
 
 			lstTiles.Add (
-				"- Make Booking\n" +
+				"Make Booking\n" +
 				"Make booking allows you to look at all available classes and book yourself into a class, using the \"book\" button.\n\n" +
-				"- View Booking\n" +
+				"View Booking\n" +
 				"Shows you all of your current and past bookings.\n\n" +
-				"- Check-In\n" +
+				"Check-In\n" +
 				"Allows you to mark your name off when you arive in a class.\n\n" +
-				"- Search\n" +
+				"Search\n" +
 				"General purpose search for finding classes.\n\n" +
-				"- Profile\n" +
+				"Profile\n" +
 				"View and change your personal information.\n\n" +
-				"- Help\n" +
+				"Help\n" +
 				"Brings you to this help screen.\n\n" +
-				"- Logout\n" +
+				"Logout\n" +
 				"Logs you out of the system.");
 			lstBooking.Add (
 				"\n"+
