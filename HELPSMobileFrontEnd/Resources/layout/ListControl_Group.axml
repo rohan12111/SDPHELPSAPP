@@ -5,17 +5,17 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="#ff909090">
+    android:background="#fafafa">
     <TextView
         android:id="@+id/txtLarge"
         android:text="Question"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#ff909090"
+        android:background="#fafafa"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 </LinearLayout>

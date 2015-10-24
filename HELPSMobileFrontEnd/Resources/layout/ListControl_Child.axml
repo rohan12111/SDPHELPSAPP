@@ -11,11 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/frameLayout1"
-        android:background="#ffc3c3c3" />
+        android:background="#fafafa" />
     <TextView
         android:text="Answer to question"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/black"
+        android:textColor="#5a5a5a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtSmall"

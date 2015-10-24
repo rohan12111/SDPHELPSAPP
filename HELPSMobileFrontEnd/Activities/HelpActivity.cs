@@ -72,18 +72,22 @@ namespace HELPSMobileFrontEnd
 				"- Logout\n" +
 				"Logs you out of the system.");
 			lstBooking.Add (
+				"\n"+
 				"1.\tSelect the workshop you are interested in.\n" +
 				"2.\tSelect the time slot you wish to be in.\n" +
-				"3.\tOptionally set yourself reminders.");
+				"3.\tOptionally set yourself reminders.\n");
 			lstFAQ.Add (
-				"- Who can use HELPS?\n" +
-				"Any Student enrolled in any faculty at UTS, and all members of UTS Staff.\n\n" +
-				"- Where is HELPS?\n" +
-				"HELPS is located in Building 1, Level 3, Room 8 (opposite the Careers service)");
+				"\n" +
+				"Q: Who can use HELPS?\n" +
+				"A: Any Student enrolled in any faculty at UTS, and all members of UTS Staff.\n\n" +
+				"Q: Where is HELPS?\n" +
+				"A: HELPS is located in Building 1, Level 3, Room 8 (opposite the Careers service.\n\n" +
+			    "Q: How much does it cost?\n" +
+			    "A: Service are free of tuition fees for non-credit workshops and individual consultations.\n)");
 
-			dictGroup.Add ("What tiles do what", lstTiles);
-			dictGroup.Add ("How do I make a Booking", lstBooking);
-			dictGroup.Add ("Frequently asked Question", lstFAQ);
+			dictGroup.Add ("What do the button do?", lstTiles);
+			dictGroup.Add ("How do I make a booking?", lstBooking);
+			dictGroup.Add ("Frequently Asked Questions", lstFAQ);
 
 			lstKeys = new List<string> (dictGroup.Keys);
 		}

@@ -106,10 +106,10 @@ namespace ExpendListBox
 				btnBook.Click += delegate {
 					if (item.maximum - item.BookingCount > 0) 
 					{
-						new AlertDialog.Builder ()
-							.SetMessage(e.Message + "\n" + e.StackTrace)
-							.SetTitle("Application Error")
-							.Show();
+//						new AlertDialog.Builder (cont)
+//							.SetMessage(e.Message + "\n" + e.StackTrace)
+//							.SetTitle("Application Error")
+//							.Show();
 					}
 					else
 					{
