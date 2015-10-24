@@ -15,8 +15,9 @@
             android:inputType="textPersonName"
             android:textColor="#ff000000"
             android:background="@drawable/edittextrounded"
-            android:hint="Search Date,Location,Tutor and Topic"
+            android:hint="Search date, location, tutor or topic..."
             android:textColorHint="#AAAAAA"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="310dp"
             android:layout_height="35dp"
             android:layout_margin="6dp"
@@ -33,16 +34,28 @@
             android:layout_toRightOf="@+id/txtsearch"
             android:background="@drawable/search" />
     </RelativeLayout>
-    <Spinner
-        android:layout_width="match_parent"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000"
-        android:layout_height="25dp"
-        android:layout_marginRight="25dp"
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:background="#fafafa"
-        android:layout_below="@+id/ddllanguage"
-        android:layout_alignParentRight="true"
-        android:id="@+id/ddpworkshop" />
+        android:id="@+id/relativeLayout2">
+        <Spinner
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:layout_height="35dp"
+            android:layout_toLeftOf="@+id/imgdropdown"
+            android:background="#fafafa"
+            android:id="@+id/ddpworkshop" />
+        <ImageButton
+            android:id="@+id/imgdropdown"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_expand_more_black_48dp" />
+    </RelativeLayout>
     <ExpandableListView
         android:minWidth="25px"
         android:minHeight="25px"

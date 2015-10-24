@@ -66,28 +66,31 @@ namespace HELPSMobileFrontEnd
 			public const int ic_check_circle_white_48dp_2x = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int ic_help_outline_white_48dp = 2130837511;
+			public const int ic_expand_more_black_48dp = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int ic_list_white_48dp = 2130837512;
+			public const int ic_help_outline_white_48dp = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int ic_note_add_white_48dp = 2130837513;
+			public const int ic_list_white_48dp = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int ic_search_white_48dp = 2130837514;
+			public const int ic_note_add_white_48dp = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int Icon = 2130837515;
+			public const int ic_search_white_48dp = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int LoginButtonGradient = 2130837516;
+			public const int Icon = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int RectangleRounded = 2130837517;
+			public const int LoginButtonGradient = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int search = 2130837518;
+			public const int RectangleRounded = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int search = 2130837519;
 			
 			static Drawable()
 			{
@@ -153,11 +156,11 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060074
 			public const int ddllanguage = 2131099764;
 			
-			// aapt resource value: 0x7f06007b
-			public const int ddpSearch = 2131099771;
+			// aapt resource value: 0x7f06007c
+			public const int ddpSearch = 2131099772;
 			
-			// aapt resource value: 0x7f06007a
-			public const int ddpworkshop = 2131099770;
+			// aapt resource value: 0x7f06007b
+			public const int ddpworkshop = 2131099771;
 			
 			// aapt resource value: 0x7f060005
 			public const int degree = 2131099653;
@@ -200,6 +203,9 @@ namespace HELPSMobileFrontEnd
 			
 			// aapt resource value: 0x7f06006a
 			public const int gender = 2131099754;
+			
+			// aapt resource value: 0x7f06007a
+			public const int imgdropdown = 2131099770;
 			
 			// aapt resource value: 0x7f060079
 			public const int imgsearch = 2131099769;
@@ -264,8 +270,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060039
 			public const int llTextFields = 2131099705;
 			
-			// aapt resource value: 0x7f06007d
-			public const int lstItemTask = 2131099773;
+			// aapt resource value: 0x7f06007e
+			public const int lstItemTask = 2131099774;
 			
 			// aapt resource value: 0x7f060037
 			public const int lvClasses = 2131099703;
@@ -324,8 +330,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060046
 			public const int rowTimeRoom = 2131099718;
 			
-			// aapt resource value: 0x7f06007f
-			public const int sliding_tabs = 2131099775;
+			// aapt resource value: 0x7f060080
+			public const int sliding_tabs = 2131099776;
 			
 			// aapt resource value: 0x7f06000b
 			public const int spinner1 = 2131099659;
@@ -423,8 +429,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060029
 			public const int tvGroup = 2131099689;
 			
-			// aapt resource value: 0x7f06007c
-			public const int tvListLayout = 2131099772;
+			// aapt resource value: 0x7f06007d
+			public const int tvListLayout = 2131099773;
 			
 			// aapt resource value: 0x7f06000e
 			public const int tvNoCurrentBookings = 2131099662;
@@ -450,8 +456,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060030
 			public const int tvWaitlist = 2131099696;
 			
-			// aapt resource value: 0x7f06007e
-			public const int tvWorkshops = 2131099774;
+			// aapt resource value: 0x7f06007f
+			public const int tvWorkshops = 2131099775;
 			
 			// aapt resource value: 0x7f060045
 			public const int txtDescription = 2131099717;
@@ -483,8 +489,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060007
 			public const int undergraduate = 2131099655;
 			
-			// aapt resource value: 0x7f060080
-			public const int viewpager = 2131099776;
+			// aapt resource value: 0x7f060081
+			public const int viewpager = 2131099777;
 			
 			// aapt resource value: 0x7f06000a
 			public const int year = 2131099658;
