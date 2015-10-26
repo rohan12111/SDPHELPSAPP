@@ -58,7 +58,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
     <Compile Include="Activities\MainMenuActivity.cs" />
-    <Compile Include="Activities\RegistrationActivity.cs" />
     <Compile Include="Activities\ProfileActivity.cs" />
     <Compile Include="Activities\HelpActivity.cs" />
     <Compile Include="Activities\SearchActivity.cs" />
@@ -77,6 +76,7 @@
     <Compile Include="Resources\ExpandListSessionAdapter.cs" />
     <Compile Include="Resources\ErrorHandling.cs" />
     <Compile Include="Activities\SessionList.cs" />
+    <Compile Include="Resources\Globals.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -120,7 +120,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_search_white_48dp.png" />
     <AndroidResource Include="Resources\layout\Course.axml" />
     <AndroidResource Include="Resources\layout\Education.axml" />
-    <AndroidResource Include="Resources\layout\Registration.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />

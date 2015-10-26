@@ -15,6 +15,7 @@ using Android.Widget;
 using Android.Content.PM;
 using System.Runtime.Serialization;
 using Android.Views.InputMethods;
+using System.IO;
 
 namespace HELPSMobileFrontEnd
 {
@@ -26,23 +27,20 @@ namespace HELPSMobileFrontEnd
 			string userId = "";
 			string password = "";
 
-
 			try
 			{
-
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.Login);
-				TextView txtmessage = FindViewById<TextView>(Resource.Id.txtmessage);
+
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 				EditText tbStudentID = FindViewById<EditText>(Resource.Id.tbStudentID);
 				EditText tbPassword = FindViewById<EditText>(Resource.Id.tbPassword);
 				LinearLayout llRoot = FindViewById<LinearLayout>(Resource.Id.llRoot);
-
+				TextView txtmessage = FindViewById<TextView>(Resource.Id.txtmessage);
 
 				txtmessage.Visibility = ViewStates.Invisible;
 				tbStudentID.Text = userId;
 				tbPassword.Text = password;
-
 
 				llRoot.Click += delegate {
 					//Dismiss Keybaord
@@ -52,31 +50,48 @@ namespace HELPSMobileFrontEnd
 				};
 
 				btnLogin.Click += async delegate {
-					userId = tbStudentID.Text;
-					if (tbStudentID.Text =="" || tbPassword.Text =="")
-					{
-						txtmessage.Text = "Please Supply the Student ID and Password!!!";
-						txtmessage.Visibility = ViewStates.Visible;
 
+//					Globals.StuName = "Rohan Williams";
+//					Globals.StuEmail = "rohan.williams@student.uts.edu.au";
+//					Globals.StuMobile = "0403143661";
+//					Globals.StuCourse = "C10143";
+//					Globals.StuFaculty = "Engineering & Information Technology";
+//					Globals.StuYear = "2nd Year";
+//					Globals.StuOther= "";
+//					Globals.WriteToStudentFile("11116161");
+
+					userId = tbStudentID.Text;
+					if (String.IsNullOrWhiteSpace(tbStudentID.Text) || String.IsNullOrWhiteSpace(tbPassword.Text))
+					{
+						txtmessage.Text = "Please enter your Student Id and Password.";
+						txtmessage.Visibility = ViewStates.Visible;
 					}
 					else
 					{
-						StartActivity(new Intent(this, typeof(MainMenuActivity)));
-						/*
 						Student student = await RESTClass.GetStudent(userId);
-						if (tbStudentID.Text == student.studentID)
+
+						if (student != null)
 						{
-							StartActivity(new Intent(this, typeof(MainMenuActivity)));
+							Globals.LoggedStudent = student;
+
+							if (Globals.StudentExists(student.studentID)) //Finds out if the studentid is in the text file and fills out globals if true
+							{
+								Globals.SetGlobalVars(student.studentID);
+								StartActivity(new Intent(this, typeof(MainMenuActivity)));
+							}
+							else
+							{
+								var intent = new Intent(this, typeof(ProfileActivity));
+								intent.PutExtra("PreviousActivity", "Login");
+								StartActivity(intent);
+							}
 						}
 						else
 						{
-							txtmessage.Text = "Supplied student Id does not exist!!!";
+							txtmessage.Text = "This is not a vaid UTS ID.";
 							txtmessage.Visibility = ViewStates.Visible;
 						}
-						*/
-
 					}
-
 				};
 			}
 			catch (Exception e) 

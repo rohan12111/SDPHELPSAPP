@@ -54,44 +54,49 @@ namespace HELPSMobileFrontEnd
 						string searchBy;
 						searchBy = searchWorkshop.SelectedItem.ToString();
 
-				ActionBar.SetHomeButtonEnabled(true);
-				ActionBar.SetDisplayHomeAsUpEnabled(true);
+						progressDialog = ProgressDialog.Show(this, "", "Searching...");
 
-				progressDialog = ProgressDialog.Show(this, "", "Searching...");
-
-						if (searchBy == "Session"){
+						if (searchBy == "Session")
+						{
 							string WorkshopSetId = Intent.GetStringExtra(search);
 							//_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
 							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?topic=" + WorkshopSetId);
 						}
-						else if(searchBy == "Workshop"){
+						else if(searchBy == "Workshop")
+						{
 							//await Ge
 						}
-				
 
-			
+						CreateExpendableListData();
 
-				CreateExpendableListData();
-
-
-				ddpSearchList.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
-
-				ddpSearchList.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
-					string itmGroup = lstKeys [e.GroupPosition];
-					WorkshopSessions itmChild = dictGroup [itmGroup]; };
+						ddpSearchList.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
 					}
-					catch (Exception e) 
+					catch (Exception e)
 					{
-						ErrorHandling.LogError (e, this);
+						ErrorHandling.LogError(e, this);
 					}
 					finally 
 					{
 						progressDialog.Dismiss();
-						progressDialog.Dispose ();
+						progressDialog.Dispose();
 					}
 				};
 
-				ddpSearchList.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) {
+				ddpSearchList.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) 
+				{
+					try
+					{
+						string itmGroup = lstKeys [e.GroupPosition];
+						WorkshopSessions itmChild = dictGroup [itmGroup]; 
+					}
+					catch (Exception Ex) 
+					{
+						ErrorHandling.LogError (Ex, this);
+					}
+				};
+
+				ddpSearchList.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) 
+				{
 					if (lastExpandedPosition != -1 && e.GroupPosition != lastExpandedPosition)
 					{
 						ddpSearchList.CollapseGroup(lastExpandedPosition);
@@ -114,7 +119,8 @@ namespace HELPSMobileFrontEnd
 				//				progressDialog.Dismiss();
 				//				progressDialog.Dispose ();
 			}
-	}
+		}
+
 		public void CreateExpendableListData ()
 		{
 			try

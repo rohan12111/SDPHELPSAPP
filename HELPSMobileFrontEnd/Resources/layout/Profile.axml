@@ -12,24 +12,16 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_marginLeft="20.0dp"
-        android:id="@+id/studentName"
         android:layout_width="match_parent"
-        android:layout_height="28.3dp" />
+        android:layout_height="28.3dp"
+        android:id="@+id/lblStudentName" />
     <TextView
         android:text="John Smith"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_marginLeft="25.0dp"
         android:textStyle="bold"
-        android:id="@+id/lblFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="28.3dp" />
-    <TextView
-        android:text="Preferred First Name"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000"
-        android:paddingLeft="20dp"
-        android:id="@+id/name"
+        android:id="@+id/txtStudentName"
         android:layout_width="match_parent"
         android:layout_height="28.3dp" />
     <EditText
@@ -41,13 +33,31 @@
         android:background="#fafafa"
         android:layout_width="313.0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/txtName" />
+        android:id="@+id/tbStudentName" />
+    <TextView
+        android:text="Preferred First Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:id="@+id/lblPrefferedName"
+        android:layout_width="match_parent"
+        android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbPrefferedName" />
     <TextView
         android:text="Date of Birth"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_marginLeft="20.0dp"
-        android:id="@+id/birth"
+        android:id="@+id/lblDOB"
         android:layout_width="match_parent"
         android:layout_height="28.3dp" />
     <TextView
@@ -56,15 +66,25 @@
         android:textColor="#000000"
         android:layout_marginLeft="25.0dp"
         android:textStyle="bold"
-        android:id="@+id/lbldateofbirth"
+        android:id="@+id/txtDOB"
         android:layout_width="match_parent"
         android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbDOB" />
     <TextView
         android:text="Gender"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_marginLeft="20.0dp"
-        android:id="@+id/gender"
+        android:id="@+id/lblGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <RadioGroup
@@ -73,7 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/radioGroup1">
+        android:id="@+id/rgGender">
         <RadioButton
             android:text="Male"
             android:textStyle="bold"
@@ -81,9 +101,10 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/male"
+            android:id="@+id/rbMale"
             android:layout_marginLeft="20.0dp"
-            android:layout_marginRight="10.0dp" />
+            android:layout_marginRight="10.0dp"
+            android:checked="true" />
         <RadioButton
             android:text="Female"
             android:textStyle="bold"
@@ -91,17 +112,71 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/female"
+            android:id="@+id/rbFemale"
             android:layout_marginLeft="20.0dp"
             android:layout_marginRight="25.0dp"
             android:layout_alignParentRight="true" />
     </RadioGroup>
     <TextView
+        android:text="Email"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="20.0dp"
+        android:id="@+id/lblEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="John.Smith@student.uts.edu.au"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="25.0dp"
+        android:textStyle="bold"
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbEmail" />
+    <TextView
+        android:text="Mobile"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="20.0dp"
+        android:id="@+id/lblMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="0414345264"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="25.0dp"
+        android:textStyle="bold"
+        android:id="@+id/txtMobile"
+        android:layout_width="match_parent"
+        android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbMobile" />
+    <TextView
         android:text="Best Contact Number"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="20dp"
-        android:id="@+id/number"
+        android:id="@+id/lblNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
@@ -113,13 +188,13 @@
         android:background="#fafafa"
         android:layout_width="313.0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/txtcontactnumber" />
+        android:id="@+id/tbNumber" />
     <TextView
         android:text="Status"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="20dp"
-        android:id="@+id/status"
+        android:id="@+id/lblStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <RadioGroup
@@ -128,7 +203,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/radioGroup1">
+        android:id="@+id/rgStatus">
         <RadioButton
             android:text="Permanent"
             android:textStyle="bold"
@@ -136,9 +211,10 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/permanent"
+            android:id="@+id/rbPermanent"
             android:layout_marginLeft="20.0dp"
-            android:layout_marginRight="10.0dp" />
+            android:layout_marginRight="10.0dp"
+            android:checked="true" />
         <RadioButton
             android:text="International"
             android:textStyle="bold"
@@ -146,55 +222,51 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/international"
+            android:id="@+id/rbInternational"
             android:layout_marginLeft="20.0dp"
             android:layout_marginRight="25.0dp"
             android:layout_alignParentRight="true" />
     </RadioGroup>
-    <RelativeLayout
-        android:layout_width="fill_parent"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:id="@+id/relativeLayout4">
-        <TextView
-            android:text="First Language"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#000000"
-            android:paddingLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:id="@+id/firstlanguage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Spinner
-            android:layout_width="154.3dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#000000"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="25dp"
-            android:background="#fafafa"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:id="@+id/ddllanguage" />
-        <TextView
-            android:text="Country of Origin"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#000000"
-            android:paddingLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:id="@+id/lblStudentEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/firstlanguage" />
-        <Spinner
-            android:layout_width="154.3dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#000000"
-            android:layout_height="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="25dp"
-            android:background="#fafafa"
-            android:layout_below="@+id/ddllanguage"
-            android:layout_alignParentRight="true"
-            android:id="@+id/ddlcountry" />
-    </RelativeLayout>
+        android:id="@+id/tableLayout1"
+        android:stretchColumns="1">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:text="First Language"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:id="@+id/lblFirstLanguage"
+                android:layout_column="0" />
+            <Spinner
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:background="#fafafa"
+                android:id="@+id/ddlFirstLanguage"
+                android:layout_column="1"
+                android:layout_height="25dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <TextView
+                android:text="Country of Origin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:paddingLeft="20dp"
+                android:id="@+id/lblCountryOfOrigin"
+                android:layout_column="0"
+                android:layout_marginRight="5dp" />
+            <Spinner
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:background="#fafafa"
+                android:id="@+id/ddlCountryOfOrigin"
+                android:layout_column="1"
+                android:layout_height="25dp" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

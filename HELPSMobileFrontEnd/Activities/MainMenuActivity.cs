@@ -16,13 +16,11 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "UTS: HELPS", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]
 	public class MainMenuActivity : Activity
 	{
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
 			{
 				base.OnCreate (bundle);
-
 				SetContentView (Resource.Layout.MainMenu);
 
 				// Get our button from the layout resource, and attach an event to it
@@ -76,10 +74,16 @@ namespace HELPSMobileFrontEnd
 				};
 
 				btnProfile.Click += delegate {
-					StartActivity(new Intent(this, typeof(ProfileActivity)));
+					var intent = new Intent(this, typeof(ProfileActivity));
+					intent.PutExtra("PreviousActivity", "Main");
+					StartActivity(intent);
+//					StartActivity(new Intent(this, typeof(ProfileActivity)));
 				};
 				ivProfile.Click += delegate {
-					StartActivity(new Intent(this, typeof(ProfileActivity)));
+					var intent = new Intent(this, typeof(ProfileActivity));
+					intent.PutExtra("PreviousActivity", "Main");
+					StartActivity(intent);
+//					StartActivity(new Intent(this, typeof(ProfileActivity)));
 				};
 
 				btnLogout.Click += delegate {
