@@ -152,7 +152,14 @@ namespace HELPSMobileFrontEnd
             for (int i = 0; i < adapter.Count; i++)
             {
                 TextView tabView = CreateDefaultTabView(Context);
-                tabView.Text = ((SlidingTabsFragment.ViewBookingsAdapter)adapter).GetHeaderTitle(i);
+				if (adapter.Count == 2) 
+				{
+					tabView.Text = ((SlidingTabsFragment.ViewBookingsAdapter)adapter).GetHeaderTitle (i);
+				}
+				else 
+				{
+					tabView.Text = ((ProfileFragment.ProfileAdapter)adapter).GetHeaderTitle (i);
+				}
 				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;

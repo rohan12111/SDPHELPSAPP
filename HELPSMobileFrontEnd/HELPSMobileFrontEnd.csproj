@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -63,7 +63,6 @@
     <Compile Include="Activities\SearchActivity.cs" />
     <Compile Include="Activities\ViewBookingsActivity.cs" />
     <Compile Include="RESTClass.cs" />
-    <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
     <Compile Include="Activities\Fragments\CurrentBookingsFrag.cs" />
     <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
     <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
@@ -77,6 +76,11 @@
     <Compile Include="Resources\ErrorHandling.cs" />
     <Compile Include="Activities\SessionList.cs" />
     <Compile Include="Resources\Globals.cs" />
+    <Compile Include="Activities\Fragments\ProfileFrag.cs" />
+    <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
+    <Compile Include="Activities\Fragments\CourseFrag.cs" />
+    <Compile Include="Activities\Fragments\EducationFrag.cs" />
+    <Compile Include="Resources\Tabs\ProfileFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -95,10 +99,8 @@
     <AndroidResource Include="Resources\layout\HelpPage.axml" />
     <AndroidResource Include="Resources\layout\ListControl_Group.axml" />
     <AndroidResource Include="Resources\layout\ListControl_Child.axml" />
-    <AndroidResource Include="Resources\layout\ViewBookings.axml" />
     <AndroidResource Include="Resources\layout\PastBookings.axml" />
     <AndroidResource Include="Resources\layout\CurrentBookings.axml" />
-    <AndroidResource Include="Resources\layout\ViewBookingFragmentLayout.axml" />
     <AndroidResource Include="Resources\layout\MarkAttendance.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\LoginButtonGradient.xml" />
@@ -126,6 +128,8 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_expand_more_black_48dp.png" />
+    <AndroidResource Include="Resources\layout\SlidingFragmentLayout.axml" />
+    <AndroidResource Include="Resources\layout\TabsLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

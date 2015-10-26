@@ -23,7 +23,7 @@ namespace HELPSMobileFrontEnd
 			{
 				base.OnCreate (bundle);
 
-				SetContentView(Resource.Layout.ViewBookings);
+				SetContentView(Resource.Layout.TabsLayout);
 
 				ActionBar.SetHomeButtonEnabled(true);
 				ActionBar.SetDisplayHomeAsUpEnabled(true);

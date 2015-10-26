@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace HELPSMobileFrontEnd
 {
-	public class PastBookingsFrag : Fragment
+	public class CourseFrag : Fragment
 	{
 		public override void OnCreate (Bundle savedInstanceState)
 		{

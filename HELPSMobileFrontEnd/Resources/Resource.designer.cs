@@ -186,8 +186,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f06003d
 			public const int flSignIn = 2131099709;
 			
-			// aapt resource value: 0x7f06008b
-			public const int flTabs = 2131099787;
+			// aapt resource value: 0x7f060089
+			public const int flTabs = 2131099785;
 			
 			// aapt resource value: 0x7f060031
 			public const int frameLayout1 = 2131099697;
@@ -276,8 +276,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060039
 			public const int llTextFields = 2131099705;
 			
-			// aapt resource value: 0x7f060087
-			public const int lstItemTask = 2131099783;
+			// aapt resource value: 0x7f06008a
+			public const int lstItemTask = 2131099786;
 			
 			// aapt resource value: 0x7f060037
 			public const int lvClasses = 2131099703;
@@ -339,8 +339,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060047
 			public const int rowTimeRoom = 2131099719;
 			
-			// aapt resource value: 0x7f060089
-			public const int sliding_tabs = 2131099785;
+			// aapt resource value: 0x7f060087
+			public const int sliding_tabs = 2131099783;
 			
 			// aapt resource value: 0x7f06000b
 			public const int spinner1 = 2131099659;
@@ -477,8 +477,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060030
 			public const int tvWaitlist = 2131099696;
 			
-			// aapt resource value: 0x7f060088
-			public const int tvWorkshops = 2131099784;
+			// aapt resource value: 0x7f06008b
+			public const int tvWorkshops = 2131099787;
 			
 			// aapt resource value: 0x7f06006b
 			public const int txtDOB = 2131099755;
@@ -519,8 +519,8 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060007
 			public const int undergraduate = 2131099655;
 			
-			// aapt resource value: 0x7f06008a
-			public const int viewpager = 2131099786;
+			// aapt resource value: 0x7f060088
+			public const int viewpager = 2131099784;
 			
 			// aapt resource value: 0x7f06000a
 			public const int year = 2131099658;
@@ -590,13 +590,13 @@ namespace HELPSMobileFrontEnd
 			public const int SessionsListViewLayout = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int TaskListItem = 2130903057;
+			public const int SlidingFragmentLayout = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int ViewBookingFragmentLayout = 2130903058;
+			public const int TabsLayout = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int ViewBookings = 2130903059;
+			public const int TaskListItem = 2130903059;
 			
 			static Layout()
 			{

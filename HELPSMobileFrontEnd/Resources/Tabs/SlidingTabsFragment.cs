@@ -21,7 +21,7 @@ namespace HELPSMobileFrontEnd
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-			return inflater.Inflate(Resource.Layout.ViewBookingFragmentLayout, container, false);
+			return inflater.Inflate(Resource.Layout.SlidingFragmentLayout, container, false);
         }
 
         public override void OnViewCreated(View view, Bundle savedInstanceState)
@@ -40,7 +40,7 @@ namespace HELPSMobileFrontEnd
             public ViewBookingsAdapter() : base()
             {
                 items.Add("Current");
-                items.Add("Past");                
+                items.Add("Past");
             }
 
             public override int Count
@@ -80,54 +80,5 @@ namespace HELPSMobileFrontEnd
                 container.RemoveView((View)obj);
             }
         }
-
-		public class ProfileAdapter : PagerAdapter
-		{
-			List<string> items = new List<string>();
-
-			public ProfileAdapter() : base()
-			{
-				items.Add("Profile");
-				items.Add("Course");
-				items.Add("Education");
-			}
-
-			public override int Count
-			{
-				get { return items.Count; }
-			}
-
-			public override bool IsViewFromObject(View view, Java.Lang.Object obj)
-			{
-				return view == obj;
-			}
-
-			public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
-			{
-				View view;
-				if (position == 0) //Current Booking tab
-				{ 
-					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.CurrentBookings, container, false);
-					container.AddView (view);
-				}
-				else //Past Bookings
-				{
-					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.PastBookings, container, false);
-					container.AddView (view);
-				}
-
-				return view;
-			}
-
-			public string GetHeaderTitle (int position)
-			{
-				return items[position];
-			}
-
-			public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object obj)
-			{
-				container.RemoveView((View)obj);
-			}
-		}
     }
 }
