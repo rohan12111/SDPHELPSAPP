@@ -156,7 +156,7 @@ namespace HELPSMobileFrontEnd
 				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
-				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / 2); //width of tabs
+				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / adapter.Count); //width of tabs
 
                 mTabStrip.AddView(tabView);
             }
