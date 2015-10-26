@@ -42,6 +42,14 @@
             android:paddingLeft="5dp"
             android:textStyle="normal"
             android:fontFamily="arial" />
+        <TextView
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ff000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextrounded"
+            android:id="@+id/txtmessage" />
     </LinearLayout>
     <FrameLayout
         android:minWidth="25px"

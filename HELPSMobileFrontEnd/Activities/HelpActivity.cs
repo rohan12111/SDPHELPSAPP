@@ -51,38 +51,37 @@ namespace HELPSMobileFrontEnd
 
 		void CreateExpendableListData ()
 		{
-
 			List<string> lstFAQ = new List<string> ();
 			List<string> lstBooking = new List<string> ();
-			List<string> lstTiles = new List<string> ();
+			List<string> lstButtons = new List<string> ();
 
-			lstTiles.Add (
+			lstButtons.Add (
 				"Make Booking\n" +
-				"Make booking allows you to look at all available classes and book yourself into a class, using the \"book\" button.\n\n" +
+				"Make a HELPS booking for a session, workshop or programme.\n\n" +
 				"View Booking\n" +
-				"Shows you all of your current and past bookings.\n\n" +
-				"Check-In\n" +
-				"Allows you to mark your name off when you arive in a class.\n\n" +
+				"View all of your current or past HELPS bookings.\n\n" +
+				"Mark Attendance\n" +
+				"Marks you off as attending a booking by submitting a unique code.\n\n" +
 				"Search\n" +
-				"General purpose search for finding classes.\n\n" +
+				"Search and display available sessions, workshops or programmes; search can be by date, location, topic, tutor.\n\n" +
 				"Profile\n" +
-				"View and change your personal information.\n\n" +
-				"Help\n" +
-				"Brings you to this help screen.\n\n" +
-				"Logout\n" +
-				"Logs you out of the system.");
+				"View and edit student information supplied to UTS: HELPS.\n\n" +
+				"HELP\n" +
+				"Outlines details on how to use the application and FAQs.");
 			lstBooking.Add (
-				"\n"+
-				"1.\tSelect the workshop you are interested in.\n" +
-				"2.\tSelect the time slot you wish to be in.\n" +
-				"3.\tOptionally set yourself reminders.\n");
+				"1.\tSelect a skill-set\n\n" +
+				"2.\tSelect a session, workshop or programme\n\n" +
+				"3.\tSet reminder(s)\n\n" +
+				"Important information:\n" +
+				"- Follow each step to complete your booking.\n" +
+				"- Check the time to ensure that there is no timetable clash.\n" +
+				"- Check your email (UTS email address) for the booking confirmation.");
 			lstFAQ.Add (
-				"\n" +
 				"Q: Who can use HELPS?\n" +
 				"A: Any Student enrolled in any faculty at UTS, and all members of UTS Staff.\n\n" +
 				"Q: Where is HELPS?\n" +
 				"A: HELPS is located in Building 1, Level 3, Room 8 (opposite the Careers service.\n\n" +
-			    "Q: How much does it cost?\n" +
+				"Q: How much does it cost?\n" +
 				"A: Service are free of tuition fees for non-credit workshops and individual consultations.\n\n" +
 				"Q: Can you help me with my assignment?\n" +
 				"A: Yes. HELPS offers various workshops and individual consultations. For more information, check out our website.\n\n" +
@@ -95,9 +94,9 @@ namespace HELPSMobileFrontEnd
 				"Q: Can you help me with my pronunciation?\n" +
 				"A: Yes. Please check website or Learning resources.\n\n" +
 				"Q: Can I practise my seminar presentation with someone?\n" +
-				"A: Yes. You can attend our workshops or drop in for an individual consultation session.\n");
+				"A: Yes. You can attend our workshops or drop in for an individual consultation session.");
 
-			dictGroup.Add ("What do the button do?", lstTiles);
+			dictGroup.Add ("What do the buttons do?", lstButtons);
 			dictGroup.Add ("How do I make a booking?", lstBooking);
 			dictGroup.Add ("Frequently Asked Questions", lstFAQ);
 

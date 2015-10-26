@@ -23,16 +23,26 @@ namespace HELPSMobileFrontEnd
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
+			string userId = "";
+			string password = "";
+
+
 			try
 			{
+
 				base.OnCreate (bundle);
-
 				SetContentView (Resource.Layout.Login);
-
+				TextView txtmessage = FindViewById<TextView>(Resource.Id.txtmessage);
 				Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 				EditText tbStudentID = FindViewById<EditText>(Resource.Id.tbStudentID);
 				EditText tbPassword = FindViewById<EditText>(Resource.Id.tbPassword);
 				LinearLayout llRoot = FindViewById<LinearLayout>(Resource.Id.llRoot);
+
+
+				txtmessage.Visibility = ViewStates.Invisible;
+				tbStudentID.Text = userId;
+				tbPassword.Text = password;
+
 
 				llRoot.Click += delegate {
 					//Dismiss Keybaord
@@ -41,8 +51,32 @@ namespace HELPSMobileFrontEnd
 					btnLogin.RequestFocus();
 				};
 
-				btnLogin.Click += delegate {
-					StartActivity(new Intent(this, typeof(MainMenuActivity)));
+				btnLogin.Click += async delegate {
+					userId = tbStudentID.Text;
+					if (tbStudentID.Text =="" || tbPassword.Text =="")
+					{
+						txtmessage.Text = "Please Supply the Student ID and Password!!!";
+						txtmessage.Visibility = ViewStates.Visible;
+
+					}
+					else
+					{
+						StartActivity(new Intent(this, typeof(MainMenuActivity)));
+						/*
+						Student student = await RESTClass.GetStudent(userId);
+						if (tbStudentID.Text == student.studentID)
+						{
+							StartActivity(new Intent(this, typeof(MainMenuActivity)));
+						}
+						else
+						{
+							txtmessage.Text = "Supplied student Id does not exist!!!";
+							txtmessage.Visibility = ViewStates.Visible;
+						}
+						*/
+
+					}
+
 				};
 			}
 			catch (Exception e) 
@@ -52,34 +86,3 @@ namespace HELPSMobileFrontEnd
 		}
 	}
 }
-
-/*
- * 
- * login
- *       string userName = txtusername.text;
- *		 string password = txtpassword.text;
- *		
- * public void Login(string userName ,string password)
- * {
- * 		
- *		if (username = "" && password = "")
- *{
- *		lblmessage.text = "Please supply username or Password"
- *}
- *else
- *{
- *     Connection();
- *     for (datarow row in login data set)
- *      {
- * 		if (row.itemsarray[0].equals(username) && row.ItemsArray[1].Equals(password))
- * {
- * lblmessage.text = "User successfully logged in!!";
- * 
- * }
- * 
-
-*}
- *
- * }
- **/
-
