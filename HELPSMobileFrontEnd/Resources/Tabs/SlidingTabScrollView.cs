@@ -17,15 +17,14 @@ namespace HELPSMobileFrontEnd
 {
     public class SlidingTabScrollView : HorizontalScrollView
     {
+//        private int mTabViewLayoutID;
+//        private int mTabViewTextViewID;
 
         private const int TITLE_OFFSET_DIPS = 10;
         private const int TAB_VIEW_PADDING_DIPS = 16;
         private const int TAB_VIEW_TEXT_SIZE_DIPS = 14;
 
         private int mTitleOffset;
-
-//        private int mTabViewLayoutID;
-//        private int mTabViewTextViewID;
 
         private ViewPager mViewPager;
         private ViewPager.IOnPageChangeListener mViewPagerPageChangeListener;
@@ -51,7 +50,7 @@ namespace HELPSMobileFrontEnd
 
             //Make sure the tab strips fill the view
             FillViewport = true;
-            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0x19, 0x76, 0xd2)); //Redish color
+            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0x19, 0x76, 0xd2)); //blueish color
 
             mTitleOffset = (int)(TITLE_OFFSET_DIPS * Resources.DisplayMetrics.Density);
 
@@ -153,15 +152,14 @@ namespace HELPSMobileFrontEnd
             for (int i = 0; i < adapter.Count; i++)
             {
                 TextView tabView = CreateDefaultTabView(Context);
-                tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
+                tabView.Text = ((SlidingTabsFragment.ViewBookingsAdapter)adapter).GetHeaderTitle(i);
 				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
-				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / 2);
+				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / 2); //width of tabs
 
                 mTabStrip.AddView(tabView);
             }
-
         }
 
 		static public void FadeTabs(int inPos, float inPosOffset)

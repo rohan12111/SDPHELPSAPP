@@ -19,25 +19,23 @@ namespace HELPSMobileFrontEnd
     {
 //        private const int DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS = 2;
 //        private const byte DEFAULT_BOTTOM_BORDER_COLOR_ALPHA = 0X26;
-        private const int SELECTED_INDICATOR_THICKNESS_DIPS = 4;
 //        private int[] INDICATOR_COLORS = { 0x19A319, 0x0000FC };
 //        private int[] DIVIDER_COLORS = { 0xC5C5C5 };
-
 //        private const int DEFAULT_DIVIDER_THICKNESS_DIPS = 1;
 //        private const float DEFAULT_DIVIDER_HEIGHT = 0.5f;
-
         //Bottom border
 //        private int mBottomBorderThickness;
 //        private Paint mBottomBorderPaint;
 //        private int mDefaultBottomBorderColor;
+		//Divider
+//        private Paint mDividerPaint;
+//        private float mDividerHeight;
+
+		private const int SELECTED_INDICATOR_THICKNESS_DIPS = 4;
 
         //Indicator
         private int mSelectedIndicatorThickness;
         private Paint mSelectedIndicatorPaint;
-
-        //Divider
-//        private Paint mDividerPaint;
-//        private float mDividerHeight;
 
         //Selected position and offset
         private int mSelectedPosition;
@@ -53,29 +51,29 @@ namespace HELPSMobileFrontEnd
 
         public SlidingTabStrip (Context context, IAttributeSet attrs) : base(context, attrs)
         {
-            SetWillNotDraw(false);
+//				mDefaultBottomBorderColor = SetColorAlpha(themeForeGround, DEFAULT_BOTTOM_BORDER_COLOR_ALPHA);
+//				mDefaultTabColorizer.DividerColors = DIVIDER_COLORS;
+//            	mBottomBorderThickness = (int)(DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS * density);
+//            	mBottomBorderPaint = new Paint();
+//            	mBottomBorderPaint.Color = GetColorFromInteger(0xC5C5C5); //Gray
+//            	mDividerHeight = DEFAULT_DIVIDER_HEIGHT;
+//            	mDividerPaint = new Paint();
+//            	mDividerPaint.StrokeWidth = (int)(DEFAULT_DIVIDER_THICKNESS_DIPS * density);
+            
+			SetWillNotDraw(false);
 
             float density = Resources.DisplayMetrics.Density;
 
             TypedValue outValue = new TypedValue();
             context.Theme.ResolveAttribute(Android.Resource.Attribute.ColorForeground, outValue, true);
             int themeForeGround = outValue.Data;
-            //mDefaultBottomBorderColor = SetColorAlpha(themeForeGround, DEFAULT_BOTTOM_BORDER_COLOR_ALPHA);
 
             mDefaultTabColorizer = new SimpleTabColorizer();
 			mDefaultTabColorizer.IndicatorColors = new int[] { 0xFFFFFF };
-            //mDefaultTabColorizer.DividerColors = DIVIDER_COLORS;
-
-//            mBottomBorderThickness = (int)(DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS * density);
-//            mBottomBorderPaint = new Paint();
-//            mBottomBorderPaint.Color = GetColorFromInteger(0xC5C5C5); //Gray
 
             mSelectedIndicatorThickness = (int)(SELECTED_INDICATOR_THICKNESS_DIPS * density);
             mSelectedIndicatorPaint = new Paint();
 
-//            mDividerHeight = DEFAULT_DIVIDER_HEIGHT;
-//            mDividerPaint = new Paint();
-//            mDividerPaint.StrokeWidth = (int)(DEFAULT_DIVIDER_THICKNESS_DIPS * density);
         }
 
         public SlidingTabScrollView.TabColorizer CustomTabColorizer
@@ -127,9 +125,19 @@ namespace HELPSMobileFrontEnd
 
         protected override void OnDraw(Canvas canvas)
         {
+//				  int dividerHeightPx = (int)(Math.Min(Math.Max(0f, mDividerHeight), 1f) * height);
+			//Creat vertical dividers between tabs
+//                int separatorTop = (height - dividerHeightPx) / 2;
+//                for (int i = 0; i < ChildCount; i++)
+//                {
+//                    View child = GetChildAt(i);
+//                    mDividerPaint.Color = GetColorFromInteger(tabColorizer.GetDividerColor(i));
+//                    canvas.DrawLine(child.Right, separatorTop, child.Right, separatorTop + dividerHeightPx, mDividerPaint);
+//                }
+//                canvas.DrawRect(0, height - mBottomBorderThickness, Width, height, mBottomBorderPaint);
+
             int height = Height;
             int tabCount = ChildCount;
-            //int dividerHeightPx = (int)(Math.Min(Math.Max(0f, mDividerHeight), 1f) * height);
             SlidingTabScrollView.TabColorizer tabColorizer = mCustomTabColorizer != null ? mCustomTabColorizer : mDefaultTabColorizer;
 
             //Thick colored underline below the current selection
@@ -156,17 +164,6 @@ namespace HELPSMobileFrontEnd
                 mSelectedIndicatorPaint.Color = GetColorFromInteger(color);
 
                 canvas.DrawRect(left, height - mSelectedIndicatorThickness, right, height, mSelectedIndicatorPaint);
-
-                //Creat vertical dividers between tabs
-//                int separatorTop = (height - dividerHeightPx) / 2;
-//                for (int i = 0; i < ChildCount; i++)
-//                {
-//                    View child = GetChildAt(i);
-//                    mDividerPaint.Color = GetColorFromInteger(tabColorizer.GetDividerColor(i));
-//                    canvas.DrawLine(child.Right, separatorTop, child.Right, separatorTop + dividerHeightPx, mDividerPaint);
-//                }
-//
-//                canvas.DrawRect(0, height - mBottomBorderThickness, Width, height, mBottomBorderPaint);
             }
         }
 
