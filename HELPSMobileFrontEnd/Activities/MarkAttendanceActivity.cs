@@ -23,6 +23,15 @@ namespace HELPSMobileFrontEnd
 
 			ActionBar.SetHomeButtonEnabled(true);
 			ActionBar.SetDisplayHomeAsUpEnabled(true);
+
+			Button btnSubmit = FindViewById<Button> (Resource.Id.btnSubmit);
+
+			btnSubmit.Click += delegate {
+				new AlertDialog.Builder (this)
+					.SetTitle("Attendance")
+					.SetMessage("You have been marked as attended for this session.")
+					.Show();
+			};
 		}
 	}
 }

@@ -130,6 +130,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_expand_more_black_48dp.png" />
     <AndroidResource Include="Resources\layout\SlidingFragmentLayout.axml" />
     <AndroidResource Include="Resources\layout\TabsLayout.axml" />
+    <AndroidResource Include="Resources\layout\Contact.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -19,7 +19,7 @@ namespace HELPSMobileFrontEnd
 	public class SearchActivity : Activity
 	{
 
-		string search;
+
 
 		ProgressDialog progressDialog;
 		List<WorkshopSessions> _WorkshopSessions;
@@ -31,6 +31,8 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
+
+
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.Search);	
 				List<string> WorkshopList;
@@ -38,11 +40,12 @@ namespace HELPSMobileFrontEnd
 				Spinner searchWorkshop= FindViewById<Spinner>(Resource.Id.ddpworkshop);
 				ExpandableListView ddpSearchList = FindViewById<ExpandableListView> (Resource.Id.ddpSearch);
 				ImageButton btnsearch = FindViewById<ImageButton>(Resource.Id.imgsearch);
-				search= txtsearch.Text;
+				string search;
+
 
 				WorkshopList = new List<string>();
-				WorkshopList.Add("Workshop");
 				WorkshopList.Add("Session");
+				WorkshopList.Add("Workshop");
 				WorkshopList.Add("Programs");
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,Android.Resource.Layout.SimpleDropDownItem1Line,WorkshopList);
 				searchWorkshop.Adapter = adapter;
@@ -51,6 +54,7 @@ namespace HELPSMobileFrontEnd
 				{
 					try
 					{
+						search= txtsearch.Text;
 						string searchBy;
 						searchBy = searchWorkshop.SelectedItem.ToString();
 
@@ -58,15 +62,19 @@ namespace HELPSMobileFrontEnd
 
 						if (searchBy == "Session")
 						{
-							string WorkshopSetId = Intent.GetStringExtra(search);
-							//_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
-							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?topic=" + WorkshopSetId);
+							//string WorkshopSetId = Intent.GetStringExtra(search);
+							_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + search);
+							//_WorkshopSessions = await RESTClass.GetWorkshopSessions("?topic=" + WorkshopSetId + "&active=true&etc.");
+
 						}
 						else if(searchBy == "Workshop")
 						{
 							//await Ge
 						}
-
+						else if(searchBy == "Programs")
+						{
+							//await Ge
+						}
 						CreateExpendableListData();
 
 						ddpSearchList.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
@@ -80,7 +88,7 @@ namespace HELPSMobileFrontEnd
 						progressDialog.Dismiss();
 						progressDialog.Dispose();
 					}
-				};
+				} ;
 
 				ddpSearchList.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) 
 				{
@@ -93,7 +101,7 @@ namespace HELPSMobileFrontEnd
 					{
 						ErrorHandling.LogError (Ex, this);
 					}
-				};
+				} ;
 
 				ddpSearchList.GroupExpand += delegate(object sender, ExpandableListView.GroupExpandEventArgs e) 
 				{
@@ -103,12 +111,12 @@ namespace HELPSMobileFrontEnd
 					}
 
 					lastExpandedPosition = e.GroupPosition;
-				};
+				} ;
 
 				//				Button btnViewDetails = FindViewById<Button>(Resource.Id.btnViewDetails);
 				//				btnViewDetails.Click += delegate {
 				//					StartActivity(new Intent(this, typeof(MakeBookingListActivity)));
-				//				};
+				//				} ;
 			}
 			catch (Exception e) 
 			{
@@ -125,8 +133,10 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
+
 				foreach (WorkshopSessions sesh in _WorkshopSessions)
 				{
+
 					AddListItem(sesh);
 				}
 
@@ -142,12 +152,15 @@ namespace HELPSMobileFrontEnd
 		{
 			try
 			{
+
 				if (!dictGroup.ContainsKey (sesh.WorkshopId.ToString())) 
 				{
+
 					dictGroup.Add (sesh.WorkshopId.ToString(), sesh);
-				} 
+				}  
 				else 
 				{
+
 					dictGroup.Add ((sesh.WorkshopId + sesh.WorkShopSetID).ToString(), sesh);
 				}
 			}

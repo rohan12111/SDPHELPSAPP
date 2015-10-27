@@ -105,47 +105,47 @@ namespace HELPSMobileFrontEnd
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060033
-			public const int btnBook = 2131099699;
-			
-			// aapt resource value: 0x7f060059
-			public const int btnHelp = 2131099737;
-			
-			// aapt resource value: 0x7f06003e
-			public const int btnLogin = 2131099710;
-			
-			// aapt resource value: 0x7f06005b
-			public const int btnLogout = 2131099739;
-			
-			// aapt resource value: 0x7f06004d
-			public const int btnMakeBooking = 2131099725;
-			
-			// aapt resource value: 0x7f060053
-			public const int btnMarkAttendance = 2131099731;
-			
-			// aapt resource value: 0x7f060057
-			public const int btnProfile = 2131099735;
-			
-			// aapt resource value: 0x7f060055
-			public const int btnSearch = 2131099733;
-			
-			// aapt resource value: 0x7f060050
-			public const int btnViewBooking = 2131099728;
-			
-			// aapt resource value: 0x7f060032
-			public const int btnViewDetails = 2131099698;
+			// aapt resource value: 0x7f06003b
+			public const int btnBook = 2131099707;
 			
 			// aapt resource value: 0x7f060061
-			public const int button1 = 2131099745;
+			public const int btnHelp = 2131099745;
 			
-			// aapt resource value: 0x7f06000f
-			public const int checkBox1 = 2131099663;
+			// aapt resource value: 0x7f060046
+			public const int btnLogin = 2131099718;
 			
-			// aapt resource value: 0x7f060000
-			public const int course = 2131099648;
+			// aapt resource value: 0x7f060063
+			public const int btnLogout = 2131099747;
 			
-			// aapt resource value: 0x7f060011
-			public const int ctlExListBox = 2131099665;
+			// aapt resource value: 0x7f060055
+			public const int btnMakeBooking = 2131099733;
+			
+			// aapt resource value: 0x7f06005b
+			public const int btnMarkAttendance = 2131099739;
+			
+			// aapt resource value: 0x7f06005f
+			public const int btnProfile = 2131099743;
+			
+			// aapt resource value: 0x7f06005d
+			public const int btnSearch = 2131099741;
+			
+			// aapt resource value: 0x7f060069
+			public const int btnSubmit = 2131099753;
+			
+			// aapt resource value: 0x7f060058
+			public const int btnViewBooking = 2131099736;
+			
+			// aapt resource value: 0x7f06003a
+			public const int btnViewDetails = 2131099706;
+			
+			// aapt resource value: 0x7f060017
+			public const int checkBox1 = 2131099671;
+			
+			// aapt resource value: 0x7f060008
+			public const int course = 2131099656;
+			
+			// aapt resource value: 0x7f060019
+			public const int ctlExListBox = 2131099673;
 			
 			// aapt resource value: 0x7f060080
 			public const int ddlCountryOfOrigin = 2131099776;
@@ -159,38 +159,38 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060084
 			public const int ddpworkshop = 2131099780;
 			
-			// aapt resource value: 0x7f060005
-			public const int degree = 2131099653;
+			// aapt resource value: 0x7f06000d
+			public const int degree = 2131099661;
 			
-			// aapt resource value: 0x7f06000c
-			public const int elvCurrentBookings = 2131099660;
+			// aapt resource value: 0x7f060014
+			public const int elvCurrentBookings = 2131099668;
 			
-			// aapt resource value: 0x7f06005e
-			public const int elvExListBox = 2131099742;
+			// aapt resource value: 0x7f060066
+			public const int elvExListBox = 2131099750;
+			
+			// aapt resource value: 0x7f06006a
+			public const int elvPastBookings = 2131099754;
+			
+			// aapt resource value: 0x7f06000b
+			public const int faculty = 2131099659;
 			
 			// aapt resource value: 0x7f060062
-			public const int elvPastBookings = 2131099746;
+			public const int flLogout = 2131099746;
 			
-			// aapt resource value: 0x7f060003
-			public const int faculty = 2131099651;
+			// aapt resource value: 0x7f060015
+			public const int flNoCurrentBookings = 2131099669;
 			
-			// aapt resource value: 0x7f06005a
-			public const int flLogout = 2131099738;
+			// aapt resource value: 0x7f06006b
+			public const int flNoPastBookings = 2131099755;
 			
-			// aapt resource value: 0x7f06000d
-			public const int flNoCurrentBookings = 2131099661;
-			
-			// aapt resource value: 0x7f060063
-			public const int flNoPastBookings = 2131099747;
-			
-			// aapt resource value: 0x7f06003d
-			public const int flSignIn = 2131099709;
+			// aapt resource value: 0x7f060045
+			public const int flSignIn = 2131099717;
 			
 			// aapt resource value: 0x7f060089
 			public const int flTabs = 2131099785;
 			
-			// aapt resource value: 0x7f060031
-			public const int frameLayout1 = 2131099697;
+			// aapt resource value: 0x7f060039
+			public const int frameLayout1 = 2131099705;
 			
 			// aapt resource value: 0x7f060083
 			public const int imgdropdown = 2131099779;
@@ -198,332 +198,332 @@ namespace HELPSMobileFrontEnd
 			// aapt resource value: 0x7f060082
 			public const int imgsearch = 2131099778;
 			
-			// aapt resource value: 0x7f060058
-			public const int ivHelp = 2131099736;
-			
-			// aapt resource value: 0x7f06004c
-			public const int ivMakeBooking = 2131099724;
-			
-			// aapt resource value: 0x7f060052
-			public const int ivMarkAttendance = 2131099730;
-			
-			// aapt resource value: 0x7f060056
-			public const int ivProfile = 2131099734;
+			// aapt resource value: 0x7f060060
+			public const int ivHelp = 2131099744;
 			
 			// aapt resource value: 0x7f060054
-			public const int ivSearch = 2131099732;
+			public const int ivMakeBooking = 2131099732;
 			
-			// aapt resource value: 0x7f06004f
-			public const int ivViewBooking = 2131099727;
+			// aapt resource value: 0x7f06005a
+			public const int ivMarkAttendance = 2131099738;
+			
+			// aapt resource value: 0x7f06005e
+			public const int ivProfile = 2131099742;
+			
+			// aapt resource value: 0x7f06005c
+			public const int ivSearch = 2131099740;
+			
+			// aapt resource value: 0x7f060057
+			public const int ivViewBooking = 2131099735;
 			
 			// aapt resource value: 0x7f06007f
 			public const int lblCountryOfOrigin = 2131099775;
 			
-			// aapt resource value: 0x7f06006a
-			public const int lblDOB = 2131099754;
+			// aapt resource value: 0x7f060072
+			public const int lblDOB = 2131099762;
 			
-			// aapt resource value: 0x7f060071
-			public const int lblEmail = 2131099761;
+			// aapt resource value: 0x7f060000
+			public const int lblEmail = 2131099648;
 			
 			// aapt resource value: 0x7f06007d
 			public const int lblFirstLanguage = 2131099773;
 			
-			// aapt resource value: 0x7f06006d
-			public const int lblGender = 2131099757;
+			// aapt resource value: 0x7f060075
+			public const int lblGender = 2131099765;
 			
-			// aapt resource value: 0x7f060074
-			public const int lblMobile = 2131099764;
+			// aapt resource value: 0x7f060003
+			public const int lblMobile = 2131099651;
 			
-			// aapt resource value: 0x7f060077
-			public const int lblNumber = 2131099767;
+			// aapt resource value: 0x7f060006
+			public const int lblNumber = 2131099654;
 			
-			// aapt resource value: 0x7f060068
-			public const int lblPrefferedName = 2131099752;
+			// aapt resource value: 0x7f060070
+			public const int lblPrefferedName = 2131099760;
 			
 			// aapt resource value: 0x7f060079
 			public const int lblStatus = 2131099769;
 			
-			// aapt resource value: 0x7f060065
-			public const int lblStudentName = 2131099749;
+			// aapt resource value: 0x7f06006d
+			public const int lblStudentName = 2131099757;
 			
-			// aapt resource value: 0x7f060002
-			public const int lblStudentNumber = 2131099650;
+			// aapt resource value: 0x7f06000a
+			public const int lblStudentNumber = 2131099658;
 			
-			// aapt resource value: 0x7f06005f
-			public const int lblchanges = 2131099743;
+			// aapt resource value: 0x7f060067
+			public const int lblchanges = 2131099751;
 			
-			// aapt resource value: 0x7f060001
-			public const int lblcourseID = 2131099649;
+			// aapt resource value: 0x7f060009
+			public const int lblcourseID = 2131099657;
 			
-			// aapt resource value: 0x7f060004
-			public const int lblfacultyName = 2131099652;
+			// aapt resource value: 0x7f06000c
+			public const int lblfacultyName = 2131099660;
 			
-			// aapt resource value: 0x7f060013
-			public const int linearLayout1 = 2131099667;
+			// aapt resource value: 0x7f06001b
+			public const int linearLayout1 = 2131099675;
 			
-			// aapt resource value: 0x7f060034
-			public const int llFAQChild = 2131099700;
+			// aapt resource value: 0x7f06003c
+			public const int llFAQChild = 2131099708;
 			
-			// aapt resource value: 0x7f06003f
-			public const int llPageRoot = 2131099711;
+			// aapt resource value: 0x7f060047
+			public const int llPageRoot = 2131099719;
 			
-			// aapt resource value: 0x7f060038
-			public const int llRoot = 2131099704;
+			// aapt resource value: 0x7f060040
+			public const int llRoot = 2131099712;
 			
-			// aapt resource value: 0x7f060012
-			public const int llSessionsRoot = 2131099666;
+			// aapt resource value: 0x7f06001a
+			public const int llSessionsRoot = 2131099674;
 			
-			// aapt resource value: 0x7f060039
-			public const int llTextFields = 2131099705;
+			// aapt resource value: 0x7f060041
+			public const int llTextFields = 2131099713;
 			
 			// aapt resource value: 0x7f06008a
 			public const int lstItemTask = 2131099786;
 			
-			// aapt resource value: 0x7f060037
-			public const int lvClasses = 2131099703;
+			// aapt resource value: 0x7f06003f
+			public const int lvClasses = 2131099711;
 			
-			// aapt resource value: 0x7f06005d
-			public const int lvWorkShops = 2131099741;
+			// aapt resource value: 0x7f060065
+			public const int lvWorkShops = 2131099749;
+			
+			// aapt resource value: 0x7f060018
+			public const int multiAutoCompleteTextView1 = 2131099672;
 			
 			// aapt resource value: 0x7f060010
-			public const int multiAutoCompleteTextView1 = 2131099664;
+			public const int postgraduate = 2131099664;
 			
-			// aapt resource value: 0x7f060008
-			public const int postgraduate = 2131099656;
+			// aapt resource value: 0x7f06000e
+			public const int radioGroup1 = 2131099662;
 			
-			// aapt resource value: 0x7f060006
-			public const int radioGroup1 = 2131099654;
-			
-			// aapt resource value: 0x7f060070
-			public const int rbFemale = 2131099760;
+			// aapt resource value: 0x7f060078
+			public const int rbFemale = 2131099768;
 			
 			// aapt resource value: 0x7f06007c
 			public const int rbInternational = 2131099772;
 			
-			// aapt resource value: 0x7f06006f
-			public const int rbMale = 2131099759;
+			// aapt resource value: 0x7f060077
+			public const int rbMale = 2131099767;
 			
 			// aapt resource value: 0x7f06007b
 			public const int rbPermanent = 2131099771;
 			
-			// aapt resource value: 0x7f060009
-			public const int relativeLayout1 = 2131099657;
+			// aapt resource value: 0x7f060011
+			public const int relativeLayout1 = 2131099665;
 			
 			// aapt resource value: 0x7f060081
 			public const int relativeLayout2 = 2131099777;
 			
-			// aapt resource value: 0x7f06006e
-			public const int rgGender = 2131099758;
+			// aapt resource value: 0x7f060076
+			public const int rgGender = 2131099766;
 			
 			// aapt resource value: 0x7f06007a
 			public const int rgStatus = 2131099770;
 			
-			// aapt resource value: 0x7f060041
-			public const int rowBackground = 2131099713;
+			// aapt resource value: 0x7f060049
+			public const int rowBackground = 2131099721;
+			
+			// aapt resource value: 0x7f060053
+			public const int rowButtons1 = 2131099731;
+			
+			// aapt resource value: 0x7f060056
+			public const int rowButtons2 = 2131099734;
+			
+			// aapt resource value: 0x7f060059
+			public const int rowButtons3 = 2131099737;
+			
+			// aapt resource value: 0x7f06004d
+			public const int rowDescription = 2131099725;
 			
 			// aapt resource value: 0x7f06004b
-			public const int rowButtons1 = 2131099723;
+			public const int rowNextSession = 2131099723;
 			
-			// aapt resource value: 0x7f06004e
-			public const int rowButtons2 = 2131099726;
-			
-			// aapt resource value: 0x7f060051
-			public const int rowButtons3 = 2131099729;
-			
-			// aapt resource value: 0x7f060045
-			public const int rowDescription = 2131099717;
-			
-			// aapt resource value: 0x7f060043
-			public const int rowNextSession = 2131099715;
-			
-			// aapt resource value: 0x7f060047
-			public const int rowTimeRoom = 2131099719;
+			// aapt resource value: 0x7f06004f
+			public const int rowTimeRoom = 2131099727;
 			
 			// aapt resource value: 0x7f060087
 			public const int sliding_tabs = 2131099783;
 			
-			// aapt resource value: 0x7f06000b
-			public const int spinner1 = 2131099659;
+			// aapt resource value: 0x7f060013
+			public const int spinner1 = 2131099667;
 			
-			// aapt resource value: 0x7f06002a
-			public const int tableLayout1 = 2131099690;
-			
-			// aapt resource value: 0x7f060023
-			public const int tableLayout2 = 2131099683;
-			
-			// aapt resource value: 0x7f060014
-			public const int tableLayout3 = 2131099668;
-			
-			// aapt resource value: 0x7f060025
-			public const int tableLayout4 = 2131099685;
-			
-			// aapt resource value: 0x7f060024
-			public const int tableRow1 = 2131099684;
-			
-			// aapt resource value: 0x7f060026
-			public const int tableRow10 = 2131099686;
-			
-			// aapt resource value: 0x7f060028
-			public const int tableRow11 = 2131099688;
+			// aapt resource value: 0x7f060032
+			public const int tableLayout1 = 2131099698;
 			
 			// aapt resource value: 0x7f06002b
-			public const int tableRow2 = 2131099691;
-			
-			// aapt resource value: 0x7f06002e
-			public const int tableRow3 = 2131099694;
-			
-			// aapt resource value: 0x7f060015
-			public const int tableRow4 = 2131099669;
-			
-			// aapt resource value: 0x7f060017
-			public const int tableRow5 = 2131099671;
-			
-			// aapt resource value: 0x7f060019
-			public const int tableRow6 = 2131099673;
-			
-			// aapt resource value: 0x7f06001d
-			public const int tableRow8 = 2131099677;
-			
-			// aapt resource value: 0x7f060020
-			public const int tableRow9 = 2131099680;
-			
-			// aapt resource value: 0x7f06006c
-			public const int tbDOB = 2131099756;
-			
-			// aapt resource value: 0x7f060073
-			public const int tbEmail = 2131099763;
-			
-			// aapt resource value: 0x7f060076
-			public const int tbMobile = 2131099766;
-			
-			// aapt resource value: 0x7f060078
-			public const int tbNumber = 2131099768;
-			
-			// aapt resource value: 0x7f06003b
-			public const int tbPassword = 2131099707;
-			
-			// aapt resource value: 0x7f060069
-			public const int tbPrefferedName = 2131099753;
-			
-			// aapt resource value: 0x7f06003a
-			public const int tbStudentID = 2131099706;
-			
-			// aapt resource value: 0x7f060067
-			public const int tbStudentName = 2131099751;
-			
-			// aapt resource value: 0x7f06002c
-			public const int textView1 = 2131099692;
-			
-			// aapt resource value: 0x7f06002f
-			public const int textView2 = 2131099695;
-			
-			// aapt resource value: 0x7f06001a
-			public const int textView24 = 2131099674;
-			
-			// aapt resource value: 0x7f06001e
-			public const int textView27 = 2131099678;
-			
-			// aapt resource value: 0x7f060021
-			public const int textView31 = 2131099681;
-			
-			// aapt resource value: 0x7f060027
-			public const int textView36 = 2131099687;
-			
-			// aapt resource value: 0x7f060040
-			public const int tlBackgroundBorder = 2131099712;
-			
-			// aapt resource value: 0x7f06004a
-			public const int tlButtons = 2131099722;
+			public const int tableLayout2 = 2131099691;
 			
 			// aapt resource value: 0x7f06001c
-			public const int tlDates = 2131099676;
+			public const int tableLayout3 = 2131099676;
+			
+			// aapt resource value: 0x7f06002d
+			public const int tableLayout4 = 2131099693;
+			
+			// aapt resource value: 0x7f06002c
+			public const int tableRow1 = 2131099692;
+			
+			// aapt resource value: 0x7f06002e
+			public const int tableRow10 = 2131099694;
+			
+			// aapt resource value: 0x7f060030
+			public const int tableRow11 = 2131099696;
+			
+			// aapt resource value: 0x7f060033
+			public const int tableRow2 = 2131099699;
+			
+			// aapt resource value: 0x7f060036
+			public const int tableRow3 = 2131099702;
+			
+			// aapt resource value: 0x7f06001d
+			public const int tableRow4 = 2131099677;
+			
+			// aapt resource value: 0x7f06001f
+			public const int tableRow5 = 2131099679;
+			
+			// aapt resource value: 0x7f060021
+			public const int tableRow6 = 2131099681;
+			
+			// aapt resource value: 0x7f060025
+			public const int tableRow8 = 2131099685;
+			
+			// aapt resource value: 0x7f060028
+			public const int tableRow9 = 2131099688;
+			
+			// aapt resource value: 0x7f060074
+			public const int tbDOB = 2131099764;
+			
+			// aapt resource value: 0x7f060002
+			public const int tbEmail = 2131099650;
+			
+			// aapt resource value: 0x7f060005
+			public const int tbMobile = 2131099653;
+			
+			// aapt resource value: 0x7f060007
+			public const int tbNumber = 2131099655;
+			
+			// aapt resource value: 0x7f060043
+			public const int tbPassword = 2131099715;
+			
+			// aapt resource value: 0x7f060071
+			public const int tbPrefferedName = 2131099761;
 			
 			// aapt resource value: 0x7f060042
-			public const int tlNextSession = 2131099714;
+			public const int tbStudentID = 2131099714;
 			
-			// aapt resource value: 0x7f060016
-			public const int tlRoomTime = 2131099670;
+			// aapt resource value: 0x7f06006f
+			public const int tbStudentName = 2131099759;
+			
+			// aapt resource value: 0x7f060034
+			public const int textView1 = 2131099700;
+			
+			// aapt resource value: 0x7f060037
+			public const int textView2 = 2131099703;
 			
 			// aapt resource value: 0x7f060022
-			public const int tvFinishDate = 2131099682;
+			public const int textView24 = 2131099682;
+			
+			// aapt resource value: 0x7f060026
+			public const int textView27 = 2131099686;
 			
 			// aapt resource value: 0x7f060029
-			public const int tvGroup = 2131099689;
+			public const int textView31 = 2131099689;
+			
+			// aapt resource value: 0x7f06002f
+			public const int textView36 = 2131099695;
+			
+			// aapt resource value: 0x7f060048
+			public const int tlBackgroundBorder = 2131099720;
+			
+			// aapt resource value: 0x7f060052
+			public const int tlButtons = 2131099730;
+			
+			// aapt resource value: 0x7f060024
+			public const int tlDates = 2131099684;
+			
+			// aapt resource value: 0x7f06004a
+			public const int tlNextSession = 2131099722;
+			
+			// aapt resource value: 0x7f06001e
+			public const int tlRoomTime = 2131099678;
+			
+			// aapt resource value: 0x7f06002a
+			public const int tvFinishDate = 2131099690;
+			
+			// aapt resource value: 0x7f060031
+			public const int tvGroup = 2131099697;
 			
 			// aapt resource value: 0x7f060086
 			public const int tvListLayout = 2131099782;
 			
-			// aapt resource value: 0x7f06000e
-			public const int tvNoCurrentBookings = 2131099662;
+			// aapt resource value: 0x7f060016
+			public const int tvNoCurrentBookings = 2131099670;
+			
+			// aapt resource value: 0x7f06006c
+			public const int tvNoPastBookings = 2131099756;
+			
+			// aapt resource value: 0x7f060035
+			public const int tvPlaces = 2131099701;
+			
+			// aapt resource value: 0x7f060020
+			public const int tvRoom = 2131099680;
 			
 			// aapt resource value: 0x7f060064
-			public const int tvNoPastBookings = 2131099748;
+			public const int tvSkillSets = 2131099748;
 			
-			// aapt resource value: 0x7f06002d
-			public const int tvPlaces = 2131099693;
+			// aapt resource value: 0x7f060027
+			public const int tvStartDate = 2131099687;
 			
-			// aapt resource value: 0x7f060018
-			public const int tvRoom = 2131099672;
+			// aapt resource value: 0x7f060023
+			public const int tvTime = 2131099683;
 			
-			// aapt resource value: 0x7f06005c
-			public const int tvSkillSets = 2131099740;
-			
-			// aapt resource value: 0x7f06001f
-			public const int tvStartDate = 2131099679;
-			
-			// aapt resource value: 0x7f06001b
-			public const int tvTime = 2131099675;
-			
-			// aapt resource value: 0x7f060030
-			public const int tvWaitlist = 2131099696;
+			// aapt resource value: 0x7f060038
+			public const int tvWaitlist = 2131099704;
 			
 			// aapt resource value: 0x7f06008b
 			public const int tvWorkshops = 2131099787;
 			
-			// aapt resource value: 0x7f06006b
-			public const int txtDOB = 2131099755;
+			// aapt resource value: 0x7f060073
+			public const int txtDOB = 2131099763;
 			
-			// aapt resource value: 0x7f060046
-			public const int txtDescription = 2131099718;
+			// aapt resource value: 0x7f06004e
+			public const int txtDescription = 2131099726;
 			
-			// aapt resource value: 0x7f060072
-			public const int txtEmail = 2131099762;
+			// aapt resource value: 0x7f060001
+			public const int txtEmail = 2131099649;
 			
-			// aapt resource value: 0x7f060036
-			public const int txtLarge = 2131099702;
+			// aapt resource value: 0x7f06003e
+			public const int txtLarge = 2131099710;
 			
-			// aapt resource value: 0x7f060075
-			public const int txtMobile = 2131099765;
+			// aapt resource value: 0x7f060004
+			public const int txtMobile = 2131099652;
+			
+			// aapt resource value: 0x7f06004c
+			public const int txtNextSession = 2131099724;
+			
+			// aapt resource value: 0x7f060051
+			public const int txtRoom = 2131099729;
+			
+			// aapt resource value: 0x7f06003d
+			public const int txtSmall = 2131099709;
+			
+			// aapt resource value: 0x7f06006e
+			public const int txtStudentName = 2131099758;
+			
+			// aapt resource value: 0x7f060050
+			public const int txtTime = 2131099728;
 			
 			// aapt resource value: 0x7f060044
-			public const int txtNextSession = 2131099716;
+			public const int txtmessage = 2131099716;
 			
-			// aapt resource value: 0x7f060049
-			public const int txtRoom = 2131099721;
+			// aapt resource value: 0x7f060068
+			public const int txtsearch = 2131099752;
 			
-			// aapt resource value: 0x7f060035
-			public const int txtSmall = 2131099701;
-			
-			// aapt resource value: 0x7f060066
-			public const int txtStudentName = 2131099750;
-			
-			// aapt resource value: 0x7f060048
-			public const int txtTime = 2131099720;
-			
-			// aapt resource value: 0x7f06003c
-			public const int txtmessage = 2131099708;
-			
-			// aapt resource value: 0x7f060060
-			public const int txtsearch = 2131099744;
-			
-			// aapt resource value: 0x7f060007
-			public const int undergraduate = 2131099655;
+			// aapt resource value: 0x7f06000f
+			public const int undergraduate = 2131099663;
 			
 			// aapt resource value: 0x7f060088
 			public const int viewpager = 2131099784;
 			
-			// aapt resource value: 0x7f06000a
-			public const int year = 2131099658;
+			// aapt resource value: 0x7f060012
+			public const int year = 2131099666;
 			
 			static Id()
 			{
@@ -539,64 +539,67 @@ namespace HELPSMobileFrontEnd
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Course = 2130903040;
+			public const int Contact = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int CurrentBookings = 2130903041;
+			public const int Course = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Education = 2130903042;
+			public const int CurrentBookings = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int HelpPage = 2130903043;
+			public const int Education = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ListControl_BookingChild = 2130903044;
+			public const int HelpPage = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int ListControl_Child = 2130903045;
+			public const int ListControl_BookingChild = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ListControl_Group = 2130903046;
+			public const int ListControl_Child = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ListSessions = 2130903047;
+			public const int ListControl_Group = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Login = 2130903048;
+			public const int ListSessions = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int MainMenu = 2130903049;
+			public const int Login = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int MakeBookingList = 2130903050;
+			public const int MainMenu = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int MakeBookingSesh = 2130903051;
+			public const int MakeBookingList = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int MarkAttendance = 2130903052;
+			public const int MakeBookingSesh = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int PastBookings = 2130903053;
+			public const int MarkAttendance = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Profile = 2130903054;
+			public const int PastBookings = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Search = 2130903055;
+			public const int Profile = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int SessionsListViewLayout = 2130903056;
+			public const int Search = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int SlidingFragmentLayout = 2130903057;
+			public const int SessionsListViewLayout = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int TabsLayout = 2130903058;
+			public const int SlidingFragmentLayout = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int TaskListItem = 2130903059;
+			public const int TabsLayout = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int TaskListItem = 2130903060;
 			
 			static Layout()
 			{

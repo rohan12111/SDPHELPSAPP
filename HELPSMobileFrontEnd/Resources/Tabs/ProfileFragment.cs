@@ -40,6 +40,7 @@ namespace HELPSMobileFrontEnd
 			public ProfileAdapter() : base()
 			{
 				items.Add("Profile");
+				items.Add("Contact");
 				items.Add("Course");
 				items.Add("Education");
 			}
@@ -68,11 +69,6 @@ namespace HELPSMobileFrontEnd
 					TextView txtDOB = view.FindViewById<TextView>(Resource.Id.txtDOB);
 					EditText tbDOB = view.FindViewById<EditText>(Resource.Id.tbDOB);
 					RadioGroup rgGender = view.FindViewById<RadioGroup>(Resource.Id.rgGender);
-					TextView txtEmail = view.FindViewById<TextView>(Resource.Id.txtEmail);
-					EditText tbEmail = view.FindViewById<EditText>(Resource.Id.tbEmail);
-					TextView txtMobile = view.FindViewById<TextView>(Resource.Id.txtMobile);
-					EditText tbMobile = view.FindViewById<EditText>(Resource.Id.tbMobile);
-					EditText tbNumber = view.FindViewById<EditText>(Resource.Id.tbNumber);
 					RadioGroup rgStatus = view.FindViewById<RadioGroup>(Resource.Id.rgStatus);
 					Spinner ddlFirstLanguage = view.FindViewById<Spinner>(Resource.Id.ddlFirstLanguage);
 					Spinner ddlCountryOfOrigin = view.FindViewById<Spinner>(Resource.Id.ddlCountryOfOrigin);
@@ -84,19 +80,15 @@ namespace HELPSMobileFrontEnd
 					ddlFirstLanguage.Adapter = adapter;
 					ddlCountryOfOrigin.Adapter = adapter;
 
-					String preActivity = container.ToString ();//Intent.GetStringExtra("PreviousActivity");
+//					String preActivity = container.ToString ();//Intent.GetStringExtra("PreviousActivity");
 
-					if (preActivity == "Main")
+					if (!String.IsNullOrWhiteSpace(Globals.StuName))
 					{
 						tbStudentName.Visibility = ViewStates.Gone;
 						tbDOB.Visibility = ViewStates.Gone;
-						tbEmail.Visibility = ViewStates.Gone;
-						tbMobile.Visibility = ViewStates.Gone;
 
 						txtStudentName.Visibility = ViewStates.Visible;
 						txtDOB.Visibility = ViewStates.Visible;
-						txtEmail.Visibility = ViewStates.Visible;
-						txtMobile.Visibility = ViewStates.Visible;
 
 						txtStudentName.Text = Globals.StuName;
 						tbPrefferedName.Text = Globals.LoggedStudent.preferred_name;
@@ -105,9 +97,7 @@ namespace HELPSMobileFrontEnd
 							rgGender.Check(Resource.Id.rbMale);
 						else
 							rgGender.Check(Resource.Id.rbFemale);
-						txtEmail.Text = Globals.StuEmail;
-						txtMobile.Text = Globals.StuMobile;
-						tbNumber.Text = Globals.LoggedStudent.alternative_contact;
+						
 						if (Globals.LoggedStudent.status.Trim() == "International")
 							rgStatus.Check(Resource.Id.rbInternational);
 						else
@@ -118,16 +108,42 @@ namespace HELPSMobileFrontEnd
 					{
 						tbStudentName.Visibility = ViewStates.Visible;
 						tbDOB.Visibility = ViewStates.Visible;
-						tbEmail.Visibility = ViewStates.Visible;
-						tbMobile.Visibility = ViewStates.Visible;
 
 						txtStudentName.Visibility = ViewStates.Gone;
 						txtDOB.Visibility = ViewStates.Gone;
+					}
+				}
+				else if(position == 1) //Contact tab
+				{
+					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.Contact, container, false);
+					container.AddView (view);
+
+					TextView txtEmail = view.FindViewById<TextView>(Resource.Id.txtEmail);
+					EditText tbEmail = view.FindViewById<EditText>(Resource.Id.tbEmail);
+					TextView txtMobile = view.FindViewById<TextView>(Resource.Id.txtMobile);
+					EditText tbMobile = view.FindViewById<EditText>(Resource.Id.tbMobile);
+					EditText tbNumber = view.FindViewById<EditText>(Resource.Id.tbNumber);
+
+					if (!String.IsNullOrWhiteSpace (Globals.StuName)) 
+					{
+						tbEmail.Visibility = ViewStates.Gone;
+						tbMobile.Visibility = ViewStates.Gone;
+						txtEmail.Visibility = ViewStates.Visible;
+						txtMobile.Visibility = ViewStates.Visible;
+
+						txtEmail.Text = Globals.StuEmail;
+						txtMobile.Text = Globals.StuMobile;
+						tbNumber.Text = Globals.LoggedStudent.alternative_contact;
+					}
+					else
+					{
+						tbEmail.Visibility = ViewStates.Visible;
+						tbMobile.Visibility = ViewStates.Visible;
 						txtEmail.Visibility = ViewStates.Gone;
 						txtMobile.Visibility = ViewStates.Gone;
 					}
 				}
-				else if(position == 1) //Course tab
+				else if(position == 2) //Course tab
 				{
 					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.Course, container, false);
 					container.AddView (view);

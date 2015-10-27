@@ -65,5 +65,5 @@
         android:textColor="#ffffff"
         android:layout_marginTop="15dp"
         android:layout_gravity="right"
-        android:id="@+id/button1" />
+        android:id="@+id/btnSubmit" />
 </LinearLayout>

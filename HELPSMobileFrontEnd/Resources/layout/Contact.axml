@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context=".LinearLayout">
+    <TextView
+        android:text="Email"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="20.0dp"
+        android:id="@+id/lblEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="John.Smith@student.uts.edu.au"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="25.0dp"
+        android:textStyle="bold"
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbEmail" />
+    <TextView
+        android:text="Mobile"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="20.0dp"
+        android:id="@+id/lblMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="0414345264"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:layout_marginLeft="25.0dp"
+        android:textStyle="bold"
+        android:id="@+id/txtMobile"
+        android:layout_width="match_parent"
+        android:layout_height="28.3dp" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbMobile" />
+    <TextView
+        android:text="Best Contact Number"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:id="@+id/lblNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:inputType="number"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbNumber" />
+</LinearLayout>
