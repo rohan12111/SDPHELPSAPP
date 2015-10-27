@@ -51,17 +51,8 @@ namespace HELPSMobileFrontEnd
 				};
 
 				btnLogin.Click += async delegate {
-
-//					Globals.StuName = "Rohan Williams";
-//					Globals.StuEmail = "rohan.williams@student.uts.edu.au";
-//					Globals.StuMobile = "0403143661";
-//					Globals.StuCourse = "C10143";
-//					Globals.StuFaculty = "Engineering & Information Technology";
-//					Globals.StuYear = "2nd Year";
-//					Globals.StuOther= "";
-//					Globals.WriteToStudentFile("11116161");
-
 					userId = tbStudentID.Text;
+
 					if (String.IsNullOrWhiteSpace(tbStudentID.Text) || String.IsNullOrWhiteSpace(tbPassword.Text))
 					{
 						txtmessage.Text = "Please enter your Student Id and Password.";

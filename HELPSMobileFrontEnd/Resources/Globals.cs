@@ -23,11 +23,11 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
-		public static void WriteToStudentFile(String StuID = "")
+		public static void WriteToStudentFile(String StuID = "", Boolean fileExists = true)
 		{
 			String StudentID = String.IsNullOrWhiteSpace (StuID) ? LoggedStudent.studentID : StuID;
 
-			if (StudentExists (StudentID)) //record already exists
+			if (fileExists && StudentExists (StudentID)) //record already exists
 			{
 				string[] lines = System.IO.File.ReadAllLines(path);
 				for (int i = 0; i < lines.Length; i++)
@@ -55,11 +55,27 @@ namespace HELPSMobileFrontEnd
 		public static Boolean StudentExists(String StuID)
 		{
 			String content;
-			using (var streamReader = new StreamReader(path))
+			if (File.Exists (path)) 
 			{
-				content = streamReader.ReadToEnd();
+				using (var streamReader = new StreamReader(path))
+				{
+					content = streamReader.ReadToEnd();
+				}
+				return content.Contains (StuID.Trim());
 			}
-			return content.Contains (StuID.Trim());
+			else
+			{
+				Globals.StuName = "Rohan Williams";
+				Globals.StuEmail = "rohan.williams@student.uts.edu.au";
+				Globals.StuMobile = "0403143661";
+				Globals.StuCourse = "C10143";
+				Globals.StuFaculty = "Engineering & Information Technology";
+				Globals.StuYear = "2nd Year";
+				Globals.StuOther= "Other Text";
+				Globals.WriteToStudentFile("11116161", false);//file doesnt exist
+
+				return false;
+			}
 		}
 
 		public static void SetGlobalVars(String StuID)
