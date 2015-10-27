@@ -72,8 +72,15 @@ namespace HELPSMobileFrontEnd
 			try
 			{
 				String result = await GetRESTCall("/student/" + strStudentID);
-				RootStudent _RootObj = new RootStudent(result);
-				return _RootObj.Result;
+				if (!String.IsNullOrWhiteSpace(result))
+				{
+					RootStudent _RootObj = new RootStudent(result);
+					return _RootObj.Result;
+				}
+				else
+				{
+					return null;
+				}
 			}
 			catch
 			{

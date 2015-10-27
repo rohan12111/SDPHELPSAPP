@@ -16,6 +16,7 @@ using Android.Content.PM;
 using System.Runtime.Serialization;
 using Android.Views.InputMethods;
 using System.IO;
+using System.Net.NetworkInformation;
 
 namespace HELPSMobileFrontEnd
 {
