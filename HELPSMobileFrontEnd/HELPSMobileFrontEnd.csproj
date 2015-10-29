@@ -81,6 +81,10 @@
     <Compile Include="Activities\Fragments\CourseFrag.cs" />
     <Compile Include="Activities\Fragments\EducationFrag.cs" />
     <Compile Include="Resources\Tabs\ProfileFragment.cs" />
+    <Compile Include="Adapters\SearchAdapter.cs" />
+    <Compile Include="Adapters\Search.cs" />
+    <Compile Include="Resources\layout\ListControl_ViewBookingChild.axml" />
+    <Compile Include="Resources\layout\CurrentBookings.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -100,7 +104,6 @@
     <AndroidResource Include="Resources\layout\ListControl_Group.axml" />
     <AndroidResource Include="Resources\layout\ListControl_Child.axml" />
     <AndroidResource Include="Resources\layout\PastBookings.axml" />
-    <AndroidResource Include="Resources\layout\CurrentBookings.axml" />
     <AndroidResource Include="Resources\layout\MarkAttendance.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
     <AndroidResource Include="Resources\drawable-hdpi\LoginButtonGradient.xml" />

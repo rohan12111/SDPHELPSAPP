@@ -15,12 +15,12 @@ using ExpendListBox;
 
 namespace HELPSMobileFrontEnd
 {
-	[Activity (Label = "Search", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
+	[Activity (Label = "Search", MainLauncher = false, ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme")]			
 	public class SearchActivity : Activity
 	{
 
 
-
+		Adapters.SearchAdapter taskList;
 		ProgressDialog progressDialog;
 		List<WorkshopSessions> _WorkshopSessions;
 		Int32 lastExpandedPosition = -1;
@@ -36,10 +36,12 @@ namespace HELPSMobileFrontEnd
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.Search);	
 				List<string> WorkshopList;
+				List<WorkshopSets> WrkSets;
 				EditText txtsearch = FindViewById<EditText>(Resource.Id.txtsearch);
 				Spinner searchWorkshop= FindViewById<Spinner>(Resource.Id.ddpworkshop);
 				ExpandableListView ddpSearchList = FindViewById<ExpandableListView> (Resource.Id.ddpSearch);
 				ImageButton btnsearch = FindViewById<ImageButton>(Resource.Id.imgsearch);
+				ListView workshoplist= FindViewById<ListView>(Resource.Id.lvlWorkShops);
 				string search;
 
 
@@ -69,12 +71,24 @@ namespace HELPSMobileFrontEnd
 						}
 						else if(searchBy == "Workshop")
 						{
-							//await Ge
+							WrkSets = await RESTClass.GetWorkshopList("?active=true");
+
+							taskList = new Adapters.SearchAdapter(this, WrkSets);
+							workshoplist.Adapter= taskList;
+						//	lvWorkShops.Adapter = taskList;
+
+
+				//			new AlertDialog.Builder (this)
+				//				.SetMessage(taskList.GetId(0))
+				//				.SetTitle("Application Error")
+				//				.Show();
+													 
 						}
 						else if(searchBy == "Programs")
 						{
 							//await Ge
 						}
+						dictGroup.Clear();
 						CreateExpendableListData();
 
 						ddpSearchList.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
