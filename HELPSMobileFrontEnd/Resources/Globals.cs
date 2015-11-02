@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace HELPSMobileFrontEnd
 {
@@ -21,6 +23,43 @@ namespace HELPSMobileFrontEnd
 				string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 				return Path.Combine(path, "HELPSLoginDetails.txt");
 			}
+		}
+
+		public static async Task SaveProfile(Student student)
+		{
+			WriteToStudentFile (student.studentID);
+			KeyValuePair<string, object>[] values = new KeyValuePair<string, object>[]{
+				new KeyValuePair<string, object>("StudentId", student.studentID),
+				new KeyValuePair<string, object>("DateOfBirth", student.dob),
+				new KeyValuePair<string, object>("Gender", student.gender),
+				new KeyValuePair<string, object>("Degree", student.degree),
+				new KeyValuePair<string, object>("Status", student.status),
+				new KeyValuePair<string, object>("FirstLanguage", student.first_language),
+				new KeyValuePair<string, object>("CountryOrigin", student.country_origin),
+				new KeyValuePair<string, object>("Background", student.background),
+				new KeyValuePair<string, object>("DegreeDetails", student.degree_details),
+				new KeyValuePair<string, object>("AltContact", student.alternative_contact),
+				new KeyValuePair<string, object>("PreferredName", student.preferred_name),
+				new KeyValuePair<string, object>("HSC", student.HSC),
+				new KeyValuePair<string, object>("HSCMark", student.HSC_mark),
+				new KeyValuePair<string, object>("IELTS", student.IELTS),
+				new KeyValuePair<string, object>("IELTSMark", student.IELTS_mark),
+				new KeyValuePair<string, object>("TOEFL", student.TOEFL),
+				new KeyValuePair<string, object>("TOEFLMark", student.TOEFL_mark),
+				new KeyValuePair<string, object>("TAFE", student.TAFE),
+				new KeyValuePair<string, object>("TAFEMark", student.TAFE_mark),
+				new KeyValuePair<string, object>("CULT", student.CULT),
+				new KeyValuePair<string, object>("CULTMark", student.CULT_mark),
+				new KeyValuePair<string, object>("InsearchDEEP", student.InsearchDEEP),
+				new KeyValuePair<string, object>("InsearchDEEPMark", student.InsearchDEEP_mark),
+				new KeyValuePair<string, object>("InsearchDiploma", student.InsearchDiploma),
+				new KeyValuePair<string, object>("InsearchDiplomaMark", student.InsearchDiploma_mark),
+				new KeyValuePair<string, object>("FoundationCourse", student.foundationcourse),
+				new KeyValuePair<string, object>("FoundationCourseMark", student.foundationcourse_mark),
+				new KeyValuePair<string, object>("CreatorId", student.creatorID) 
+			};
+
+			await RESTClass.PostStudent(values);
 		}
 
 		public static void WriteToStudentFile(String StuID = "", Boolean fileExists = true)

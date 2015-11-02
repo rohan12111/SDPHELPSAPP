@@ -17,6 +17,7 @@ using System.Runtime.Serialization;
 using Android.Views.InputMethods;
 using System.IO;
 using System.Net.NetworkInformation;
+using System.Threading;
 
 namespace HELPSMobileFrontEnd
 {
@@ -27,6 +28,7 @@ namespace HELPSMobileFrontEnd
 		{
 			string userId = "";
 			string password = "";
+			ProgressDialog ProgressDialogLogin = null;
 
 			try
 			{
@@ -52,7 +54,7 @@ namespace HELPSMobileFrontEnd
 
 				btnLogin.Click += async delegate {
 					userId = tbStudentID.Text;
-
+								
 					if (String.IsNullOrWhiteSpace(tbStudentID.Text) || String.IsNullOrWhiteSpace(tbPassword.Text))
 					{
 						txtmessage.Text = "Please enter your Student Id and Password.";
@@ -60,12 +62,13 @@ namespace HELPSMobileFrontEnd
 					}
 					else
 					{
+						ProgressDialogLogin = ProgressDialog.Show(this, "", "Logging In...");
 						Student student = await RESTClass.GetStudent(userId);
 
 						if (student != null)
 						{
 							Globals.LoggedStudent = student;
-
+									
 							if (Globals.StudentExists(student.studentID)) //Finds out if the studentid is in the text file and fills out globals if true
 							{
 								Globals.SetGlobalVars(student.studentID);
@@ -89,6 +92,14 @@ namespace HELPSMobileFrontEnd
 			catch (Exception e) 
 			{
 				ErrorHandling.LogError (e, this);
+			}
+			finally 
+			{
+				if (ProgressDialogLogin != null) 
+				{
+					ProgressDialogLogin.Dismiss ();
+					ProgressDialogLogin.Dispose ();
+				}
 			}
 		}
 	}

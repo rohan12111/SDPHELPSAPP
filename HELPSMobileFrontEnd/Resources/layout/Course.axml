@@ -12,7 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/course"
+        android:id="@+id/lblCourse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -20,17 +20,27 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/lblcourseID"
+        android:id="@+id/txtCourse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_below="@+id/lblStudentNumber" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbCourse" />
     <TextView
         android:text="Faculty"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/faculty"
+        android:id="@+id/lblFaculty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
@@ -38,17 +48,27 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/lblfacultyName"
+        android:id="@+id/txtFaculty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_below="@+id/lblStudentNumber" />
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_marginLeft="25.0dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:background="#fafafa"
+        android:layout_width="313.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbFaculty" />
     <TextView
         android:text="Degree"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/degree"
+        android:id="@+id/lblDegree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <RadioGroup
@@ -57,7 +77,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup1">
+        android:id="@+id/rgDegree">
         <RadioButton
             android:text="Undergraduate"
             android:textStyle="bold"
@@ -65,9 +85,10 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/undergraduate"
+            android:id="@+id/rbUndergraduate"
             android:layout_marginLeft="20.0dp"
-            android:layout_marginRight="10.0dp" />
+            android:layout_marginRight="10.0dp"
+            android:checked="true" />
         <RadioButton
             android:text="Postgraduate"
             android:textStyle="bold"
@@ -75,7 +96,7 @@
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/postgraduate"
+            android:id="@+id/rbPostgraduate"
             android:layout_marginLeft="10.0dp"
             android:layout_marginRight="20.0dp" />
     </RadioGroup>
@@ -89,7 +110,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000"
             android:paddingLeft="50dp"
-            android:id="@+id/year"
+            android:id="@+id/lblYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Spinner
@@ -101,6 +122,6 @@
             android:layout_marginRight="25dp"
             android:layout_toRightOf="@+id/year"
             android:background="#fafafa"
-            android:id="@+id/spinner1" />
+            android:id="@+id/ddlYear" />
     </RelativeLayout>
 </LinearLayout>

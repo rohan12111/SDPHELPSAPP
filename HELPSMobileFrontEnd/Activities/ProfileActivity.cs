@@ -20,7 +20,7 @@ namespace HELPSMobileFrontEnd
 		protected override void OnCreate (Bundle bundle)
 		{
 			try
-			{
+			{ 
 				base.OnCreate (bundle);
 				SetContentView (Resource.Layout.TabsLayout);
 

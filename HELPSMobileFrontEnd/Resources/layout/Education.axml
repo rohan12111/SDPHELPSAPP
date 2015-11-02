@@ -12,7 +12,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/course"
+        android:id="@+id/lblCourse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <CheckBox
@@ -21,66 +21,66 @@
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbHSC" />
     <CheckBox
         android:text="IELTS"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbIELTS" />
     <CheckBox
-        android:text="TOFEL"
+        android:text="TOEFL"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbTOEFL" />
     <CheckBox
         android:text="TAFE"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbTAFE" />
     <CheckBox
         android:text="CULT"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbCULT" />
     <CheckBox
         android:text="Insearch DEEP"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbDEEP" />
     <CheckBox
         android:text="Insearch Diploma"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbInDiploma" />
     <CheckBox
         android:text="Foundation Course"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
+        android:id="@+id/cbFoundationCourse" />
     <TextView
         android:text="Other"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:paddingLeft="50dp"
-        android:id="@+id/course"
+        android:id="@+id/lblOther"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <MultiAutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="107.5dp"
-        android:id="@+id/multiAutoCompleteTextView1" />
+        android:id="@+id/tbOther" />
 </LinearLayout>

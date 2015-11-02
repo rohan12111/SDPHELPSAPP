@@ -208,7 +208,7 @@
             p1:text="Sign Out"
             p1:background="#ff1976d2"
             p1:layout_width="match_parent"
-            p1:layout_height="60dip"
+            p1:layout_height="50dip"
             p1:textColor="#ffffffff"
             p1:layout_gravity="bottom" />
     </FrameLayout>

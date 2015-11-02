@@ -87,7 +87,7 @@ namespace HELPSMobileFrontEnd
 				throw;
 			}
 		}
-
+			
 		private static async Task<String> GetRESTCall(String strCall, String strParameters = "")
 		{
 			try
@@ -119,7 +119,57 @@ namespace HELPSMobileFrontEnd
 				throw;
 			}
 		}
+
+		public static async Task PostStudent(KeyValuePair<string, object>[] values)
+		{
+			try
+			{
+				await PostRESTCall("/student/register", values);
+			}
+			catch
+			{
+				throw;
+			}
+		}
+
+		private static async Task<Boolean> PostRESTCall(String strCall, KeyValuePair<string, object>[] values)
+		{
+			try
+			{
+				using (HttpClient _HttpClient = new HttpClient())
+				{
+					_HttpClient.Timeout = new TimeSpan(0, 0, 1, 0);
+					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Post, "http://sdpmachine.cloudapp.net/api" + strCall))
+					{
+						_HttpRequest.Headers.Add("AppKey", "123456");
+						foreach (KeyValuePair<string, object> property in values)
+						{
+							_HttpRequest.Properties.Add(property);
+						}
+
+						using (HttpResponseMessage _HttpResponse = await _HttpClient.SendAsync(_HttpRequest))
+						{
+							return _HttpResponse.IsSuccessStatusCode;
+//							if (_HttpResponse.IsSuccessStatusCode)
+//							{
+//								String strTemp = await _HttpResponse.Content.ReadAsStringAsync();
+//								return strTemp;
+//							}
+//							else
+//							{
+//								return null;
+//							}
+						}
+					}
+				}
+			}
+			catch
+			{
+				throw;
+			}
+		}
 	}
+
 
 
 
