@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:background="#EEEEEE">
     <ExpandableListView
-        android:id="@+id/elvCurrentBookings"
+        android:id="@+id/elvPastBookings"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dip"
@@ -13,12 +13,12 @@
         android:layout_marginTop="5dip"
         android:layout_marginBottom="5dip" />
     <FrameLayout
-        android:id="@+id/flNoCurrentBookings"
+        android:id="@+id/flNoPastBookings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/tvNoCurrentBookings"
-            android:text="No Current Bookings"
+            android:id="@+id/tvNoPastBookings"
+            android:text="No Past Bookings"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

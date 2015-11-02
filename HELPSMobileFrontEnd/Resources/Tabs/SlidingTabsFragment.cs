@@ -58,7 +58,7 @@ namespace HELPSMobileFrontEnd
 				View view;
 				if (position == 0) //Current Booking tab
 				{ 
-					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.CurrentBookings, container, false);
+					view = LayoutInflater.From (container.Context).Inflate (Resource.Layout.CurrentBookingLayout, container, false);
 					container.AddView (view);
 				}
 				else //Past Bookings

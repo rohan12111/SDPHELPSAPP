@@ -21,7 +21,7 @@ namespace HELPSMobileFrontEnd
 //        private int mTabViewTextViewID;
 
         private const int TITLE_OFFSET_DIPS = 10;
-        private const int TAB_VIEW_PADDING_DIPS = 16;
+        private const int TAB_VIEW_PADDING_DIPS = 14;
         private const int TAB_VIEW_TEXT_SIZE_DIPS = 14;
 
         private int mTitleOffset;
@@ -158,12 +158,13 @@ namespace HELPSMobileFrontEnd
 				}
 				else 
 				{
-					tabView.Text = ((ProfileFragment.ProfileAdapter)adapter).GetHeaderTitle (i);
+					tabView.Text = ((ProfileAdapter)adapter).GetHeaderTitle (i);
 				}
 				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
-				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / adapter.Count); //width of tabs
+//				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / adapter.Count); //width of tabs
+				tabView.SetWidth ((tabView.Text.Length + 1) * 35);
 
                 mTabStrip.AddView(tabView);
             }

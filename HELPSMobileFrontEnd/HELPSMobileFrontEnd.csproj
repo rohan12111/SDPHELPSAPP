@@ -83,8 +83,6 @@
     <Compile Include="Resources\Tabs\ProfileFragment.cs" />
     <Compile Include="Adapters\SearchAdapter.cs" />
     <Compile Include="Adapters\Search.cs" />
-    <Compile Include="Resources\layout\ListControl_ViewBookingChild.axml" />
-    <Compile Include="Resources\layout\CurrentBookings.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -134,6 +132,7 @@
     <AndroidResource Include="Resources\layout\SlidingFragmentLayout.axml" />
     <AndroidResource Include="Resources\layout\TabsLayout.axml" />
     <AndroidResource Include="Resources\layout\Contact.axml" />
+    <AndroidResource Include="Resources\layout\CurrentBookingLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

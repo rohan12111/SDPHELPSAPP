@@ -53,39 +53,53 @@ namespace HELPSMobileFrontEnd
 				};
 
 				btnLogin.Click += async delegate {
-					userId = tbStudentID.Text;
-								
-					if (String.IsNullOrWhiteSpace(tbStudentID.Text) || String.IsNullOrWhiteSpace(tbPassword.Text))
+					try
 					{
-						txtmessage.Text = "Please enter your Student Id and Password.";
-						txtmessage.Visibility = ViewStates.Visible;
-					}
-					else
-					{
-						ProgressDialogLogin = ProgressDialog.Show(this, "", "Logging In...");
-						Student student = await RESTClass.GetStudent(userId);
-
-						if (student != null)
-						{
-							Globals.LoggedStudent = student;
+						userId = tbStudentID.Text;
 									
-							if (Globals.StudentExists(student.studentID)) //Finds out if the studentid is in the text file and fills out globals if true
-							{
-								Globals.SetGlobalVars(student.studentID);
-								StartActivity(new Intent(this, typeof(MainMenuActivity)));
-							}
-							else
-							{
-								var intent = new Intent(this, typeof(ProfileActivity));
-								intent.PutExtra("PreviousActivity", "Login");
-								StartActivity(intent);
-							}
+						if (String.IsNullOrWhiteSpace(tbStudentID.Text) || String.IsNullOrWhiteSpace(tbPassword.Text))
+						{
+							txtmessage.Text = "Please enter your Student Id and Password.";
+							txtmessage.Visibility = ViewStates.Visible;
 						}
 						else
 						{
-							txtmessage.Text = "This is not a vaid UTS ID.";
-							txtmessage.Visibility = ViewStates.Visible;
+							if (ProgressDialogLogin == null)
+							{
+								ProgressDialogLogin = ProgressDialog.Show(this, "", "Logging In...");
+							
+								Student student = await RESTClass.GetStudent(userId);
+
+								if (student != null)
+								{
+									Globals.LoggedStudent = student;
+											
+									if (Globals.StudentExists(student.studentID)) //Finds out if the studentid is in the text file and fills out globals if true
+									{
+										Globals.IsNewStudent = false;
+										Globals.SetGlobalVars(student.studentID);
+										StartActivity(new Intent(this, typeof(MainMenuActivity)));
+									}
+									else
+									{
+										Globals.IsNewStudent = true;
+										StartActivity(new Intent(this, typeof(ProfileActivity)));
+									}
+								}
+								else
+								{
+									txtmessage.Text = "This is not a vaid UTS ID.";
+									txtmessage.Visibility = ViewStates.Visible;
+								}
+
+								ProgressDialogLogin.Dismiss ();
+								ProgressDialogLogin = null;
+							}
 						}
+					}
+					catch (Exception e) 
+					{
+						ErrorHandling.LogError (e, this);
 					}
 				};
 			}
@@ -98,7 +112,7 @@ namespace HELPSMobileFrontEnd
 				if (ProgressDialogLogin != null) 
 				{
 					ProgressDialogLogin.Dismiss ();
-					ProgressDialogLogin.Dispose ();
+					ProgressDialogLogin = null;
 				}
 			}
 		}

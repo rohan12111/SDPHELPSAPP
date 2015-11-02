@@ -75,13 +75,13 @@ namespace HELPSMobileFrontEnd
 
 				btnProfile.Click += delegate {
 					var intent = new Intent(this, typeof(ProfileActivity));
-					intent.PutExtra("PreviousActivity", "Main");
+//					intent.PutExtra("PreviousActivity", "Main");
 					StartActivity(intent);
 //					StartActivity(new Intent(this, typeof(ProfileActivity)));
 				};
 				ivProfile.Click += delegate {
 					var intent = new Intent(this, typeof(ProfileActivity));
-					intent.PutExtra("PreviousActivity", "Main");
+//					intent.PutExtra("PreviousActivity", "Main");
 					StartActivity(intent);
 //					StartActivity(new Intent(this, typeof(ProfileActivity)));
 				};
@@ -90,6 +90,10 @@ namespace HELPSMobileFrontEnd
 					Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
 				};
 
+				if (Globals.ActivityFrom == "Registration")
+				{
+					
+				}
 			}
 			catch (Exception e) 
 			{

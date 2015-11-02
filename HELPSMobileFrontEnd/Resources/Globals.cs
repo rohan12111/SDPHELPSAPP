@@ -8,6 +8,7 @@ namespace HELPSMobileFrontEnd
 	public static class Globals
 	{
 		public static Student LoggedStudent { get; set; }
+		public static Boolean IsNewStudent { get; set;}
 		public static String StuName { get; set; }
 		public static String StuEmail { get; set; }
 		public static String StuMobile { get; set; }
@@ -15,6 +16,8 @@ namespace HELPSMobileFrontEnd
 		public static String StuFaculty { get; set; }
 		public static String StuYear { get; set; }
 		public static String StuOther { get; set; }
+
+		public static String ActivityFrom { get; set;}
 
 		private static String path 
 		{
