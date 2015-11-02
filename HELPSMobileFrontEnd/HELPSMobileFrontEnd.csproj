@@ -63,7 +63,6 @@
     <Compile Include="Activities\SearchActivity.cs" />
     <Compile Include="Activities\ViewBookingsActivity.cs" />
     <Compile Include="RESTClass.cs" />
-    <Compile Include="Activities\Fragments\CurrentBookingsFrag.cs" />
     <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
     <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
     <Compile Include="Resources\Tabs\SlidingTabStrip.cs" />
@@ -71,18 +70,13 @@
     <Compile Include="Activities\MakeBookingListActivity.cs" />
     <Compile Include="Activities\MakeBookingSeshActivity.cs" />
     <Compile Include="Adapters\TaskListAdapter.cs" />
-    <Compile Include="Resources\ExpendListAdapter.cs" />
-    <Compile Include="Resources\ExpandListSessionAdapter.cs" />
     <Compile Include="Resources\ErrorHandling.cs" />
     <Compile Include="Activities\SessionList.cs" />
     <Compile Include="Resources\Globals.cs" />
-    <Compile Include="Activities\Fragments\ProfileFrag.cs" />
-    <Compile Include="Activities\Fragments\PastBookingsFrag.cs" />
-    <Compile Include="Activities\Fragments\CourseFrag.cs" />
-    <Compile Include="Activities\Fragments\EducationFrag.cs" />
     <Compile Include="Resources\Tabs\ProfileFragment.cs" />
     <Compile Include="Adapters\SearchAdapter.cs" />
-    <Compile Include="Adapters\Search.cs" />
+    <Compile Include="Adapters\ExpandListSessionAdapter.cs" />
+    <Compile Include="Adapters\ExpendListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
@@ -138,7 +132,6 @@
   <ItemGroup>
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Activities\" />
-    <Folder Include="Activities\Fragments\" />
     <Folder Include="Resources\Tabs\" />
     <Folder Include="Adapters\" />
     <Folder Include="Resources\drawable-mdpi\" />
