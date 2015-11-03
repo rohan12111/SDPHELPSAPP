@@ -11,6 +11,7 @@ using Android.Widget;
 using HELPSMobileFrontEnd;
 using System.Globalization;
 using Android.Graphics;
+using Android.Provider;
 
 
 namespace HELPSMobileFrontEnd
@@ -100,23 +101,12 @@ namespace HELPSMobileFrontEnd
 				SetTVText(tvFinishDate, EndDte.ToShortDateString());
 				SetTVText(tvGroup, ((item.targetingGroup != null) ? item.targetingGroup : "No Target"));
 				SetTVText(tvPlaces, item.maximum - item.BookingCount);
-				SetTVText(tvWaitlist, -1);
+				SetTVText(tvWaitlist, 0);
 					
 				btnBook.SetTextColor(Color.White);
 				if (btnBook.HasOnClickListeners == false) {
 					btnBook.Click += delegate {
-						if (item.maximum - item.BookingCount > 0) //If there are places left in the session
-						{
-							new AlertDialog.Builder (_activity)
-								.SetTitle("Booked")
-								.SetMessage("Are you sure you want to book this session?")
-								.SetCancelable(true)
-								.SetPositiveButton("Confirm", async delegate(object sender, DialogClickEventArgs e) {
-									await RESTClass.PostMakeBooking( item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
-								})
-								.Show();
-						}
-						else
+						if (tvPlaces.Text.Trim() == "0") //If there are places left in the session
 						{
 							new AlertDialog.Builder (_activity)
 								.SetTitle("Session Full")
@@ -127,6 +117,39 @@ namespace HELPSMobileFrontEnd
 									await RESTClass.PostMakeWaitlist(item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
 								})
 								.Show();
+						}
+						else
+						{
+							new AlertDialog.Builder (_activity)
+								.SetTitle("Booked")
+								.SetMessage("Are you sure you want to book this session?")
+								.SetCancelable(true)
+								.SetPositiveButton("Confirm", async delegate(object sender, DialogClickEventArgs e) {
+									await RESTClass.PostMakeBooking( item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
+									//create calendar item
+//									ContentValues eventValues = new ContentValues ();
+//
+//									eventValues.Put (CalendarContract.Events.InterfaceConsts.CalendarId,
+//										_calId);
+//									eventValues.Put (CalendarContract.Events.InterfaceConsts.Title,
+//										"Test Event from M4A");
+//									eventValues.Put (CalendarContract.Events.InterfaceConsts.Description,
+//										"This is an event created from Xamarin.Android");
+//									eventValues.Put (CalendarContract.Events.InterfaceConsts.Dtstart,
+//										GetDateTimeMS (2011, 12, 15, 10, 0));
+//									eventValues.Put (CalendarContract.Events.InterfaceConsts.Dtend,
+//										GetDateTimeMS (2011, 12, 15, 11, 0));
+//
+//									eventValues.Put(CalendarContract.Events.InterfaceConsts.EventTimezone, 
+//										"UTC");
+//									eventValues.Put(CalendarContract.Events.InterfaceConsts.EventEndTimezone, 
+//										"UTC");
+//
+//									var uri = ContentResolver.Insert (CalendarContract.Events.ContentUri,
+//										eventValues);alendarContract.Calendars.InterfaceConsts.AccountName
+//									};
+//								})
+//								.Show();
 						}
 					};
 				}
