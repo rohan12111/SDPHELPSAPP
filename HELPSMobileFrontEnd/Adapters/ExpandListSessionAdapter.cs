@@ -148,8 +148,8 @@ namespace HELPSMobileFrontEnd
 //									var uri = ContentResolver.Insert (CalendarContract.Events.ContentUri,
 //										eventValues);alendarContract.Calendars.InterfaceConsts.AccountName
 //									};
-//								})
-//								.Show();
+								})
+								.Show();
 						}
 					};
 				}
