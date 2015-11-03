@@ -138,15 +138,20 @@ namespace HELPSMobileFrontEnd
 				tbPrefferedName.Text = Globals.LoggedStudent.preferred_name;
 				txtDOB.Text = Globals.LoggedStudent.dob;
 				tbDOB.Text = Globals.LoggedStudent.dob;
-				if (Globals.LoggedStudent.gender.Trim() == "M")
-					rgGender.Check(Resource.Id.rbMale);
-				else
-					rgGender.Check(Resource.Id.rbFemale);
-
-				if (Globals.LoggedStudent.status.Trim() == "International")
-					rgStatus.Check(Resource.Id.rbInternational);
-				else
-					rgStatus.Check(Resource.Id.rbPermanent);
+				if (Globals.LoggedStudent != null && Globals.LoggedStudent.gender != null) 
+				{
+					if (Globals.LoggedStudent.gender.Trim () == "F")
+						rgGender.Check (Resource.Id.rbFemale);
+					else
+						rgGender.Check (Resource.Id.rbMale);
+				}
+				if (Globals.LoggedStudent != null && Globals.LoggedStudent.status != null) 
+				{
+					if (Globals.LoggedStudent.status.Trim () == "International")
+						rgStatus.Check (Resource.Id.rbInternational);
+					else
+						rgStatus.Check (Resource.Id.rbPermanent);
+				}
 				//Need to do language and Country;
 
 				if (!Globals.IsNewStudent)
@@ -216,10 +221,13 @@ namespace HELPSMobileFrontEnd
 				tbCourse.Text = Globals.StuCourse;
 				txtFaculty.Text = Globals.StuFaculty;
 				tbFaculty.Text = Globals.StuFaculty;
-				if (Globals.LoggedStudent.degree.Trim() == "UG")
-					rgDegree.Check(Resource.Id.rbUndergraduate);
-				else
-					rgDegree.Check(Resource.Id.rbPostgraduate);
+				if (Globals.LoggedStudent != null && Globals.LoggedStudent.degree != null) 
+				{
+					if (Globals.LoggedStudent.degree.Trim () == "PG")
+						rgDegree.Check (Resource.Id.rbPostgraduate);
+					else
+						rgDegree.Check (Resource.Id.rbUndergraduate);
+				}
 				//Something for year
 
 				if (!Globals.IsNewStudent) 
@@ -270,7 +278,7 @@ namespace HELPSMobileFrontEnd
 			{
 				btnSave.Click += btnClickHandler;
 			}
-
+			btnSave.Visibility = ViewStates.Visible;
 			return view;
 		}
 

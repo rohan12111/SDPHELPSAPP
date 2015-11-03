@@ -15,13 +15,13 @@ using Android.Graphics;
 
 namespace HELPSMobileFrontEnd
 {
-	class ExpandListSessionAdapter : BaseExpandableListAdapter
+	class ExpandViewBookingAdapter : BaseExpandableListAdapter
 	{
-		Dictionary<string, WorkshopSessions> _dictGroup = null;
+		Dictionary<string, WorkshopBooking> _dictGroup = null;
 		List<string> _lstGroupID = null;
 		Activity _activity;
 
-		public ExpandListSessionAdapter (Activity activity, Dictionary<string, WorkshopSessions> dictGroupIn)
+		public ExpandViewBookingAdapter (Activity activity, Dictionary<string, WorkshopBooking> dictGroupIn)
 		{
 			try
 			{
@@ -84,50 +84,41 @@ namespace HELPSMobileFrontEnd
 				Button btnViewDetails = convertView.FindViewById<Button> (Resource.Id.btnViewDetails);
 				Button btnBook = convertView.FindViewById<Button> (Resource.Id.btnBook);
 
-				if (item.StartDate != null) 
+				if (item.starting != null) 
 				{ // 07/31/2012 17:00:00
-					StartDte = DateTime.ParseExact(item.StartDate, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+					StartDte = DateTime.ParseExact(item.starting, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
 				}
 
-				if (item.EndDate != null) 
+				if (item.ending != null) 
 				{
-					EndDte = DateTime.ParseExact(item.EndDate, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+					EndDte = DateTime.ParseExact(item.ending, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
 				}
 
-				SetTVText(tvRoom, item.campus);
+				SetTVText(tvRoom, item.campusID);
 				SetTVText(tvStartDate, StartDte.ToShortDateString());
 				SetTVText(tvTime, StartDte.ToShortTimeString().Remove(5) + " - " + EndDte.ToShortTimeString().Remove(5)); // get just the time aspect from dates
 				SetTVText(tvFinishDate, EndDte.ToShortDateString());
 				SetTVText(tvGroup, ((item.targetingGroup != null) ? item.targetingGroup : "No Target"));
-				SetTVText(tvPlaces, item.maximum - item.BookingCount);
-				SetTVText(tvWaitlist, -1);
+
+				TextView lblPlacesAvailable = convertView.FindViewById<TextView> (Resource.Id.lblPlacesAvailable);
+				TextView lblOnWaitlist = convertView.FindViewById<TextView> (Resource.Id.lblOnWaitlist);
+				lblOnWaitlist.Visibility = ViewStates.Gone;
+				lblPlacesAvailable.Visibility = ViewStates.Gone;
+				tvPlaces.Visibility = ViewStates.Gone;
+				tvWaitlist.Visibility = ViewStates.Gone;
+				//SetTVText(tvPlaces, "Placeholder");//item.maximum - item.cutoff);
+				//SetTVText(tvWaitlist, -1);
 					
 				btnBook.SetTextColor(Color.White);
-				if (btnBook.HasOnClickListeners == false) {
+				if (DateTime.ParseExact(item.ending, "MM/dd/yyyy HH:mm:ss", CultureInfo.InvariantCulture) < DateTime.Now) //past
+				{
+					btnBook.Visibility = ViewStates.Gone;
+				}
+				else
+				{
+					btnBook.SetText ("Cancel", Button.BufferType.Normal);
 					btnBook.Click += delegate {
-						if (item.maximum - item.BookingCount > 0) //If there are places left in the session
-						{
-							new AlertDialog.Builder (_activity)
-								.SetTitle("Booked")
-								.SetMessage("Are you sure you want to book this session?")
-								.SetCancelable(true)
-								.SetPositiveButton("Confirm", async delegate(object sender, DialogClickEventArgs e) {
-									await RESTClass.PostMakeBooking( item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
-								})
-								.Show();
-						}
-						else
-						{
-							new AlertDialog.Builder (_activity)
-								.SetTitle("Session Full")
-								.SetMessage("The session you are attempting to book is currently full, would you like to be added to the waitlist?" +
-									" You will be automatically added to the session when a spot becomes available.")
-								.SetCancelable(true)
-								.SetPositiveButton("Comfirm", async delegate(object sender, DialogClickEventArgs e) {
-									await RESTClass.PostMakeWaitlist(item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
-								})
-								.Show();
-						}
+						
 					};
 				}
 

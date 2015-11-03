@@ -17,7 +17,8 @@ namespace HELPSMobileFrontEnd
 	[Activity (Label = "Make Booking", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/ActionBarTheme" )]			
 	public class MakeBookingSeshActivity : Activity
 	{
-		ProgressDialog progressDialog;
+		ProgressDialog ProgressDialogLogin = null;
+		ExpandableListView elvExListBox;
 		List<WorkshopSessions> _WorkshopSessions;
 		Int32 lastExpandedPosition = -1;
 		Dictionary<string, WorkshopSessions> dictGroup = new Dictionary<string, WorkshopSessions> ();
@@ -33,15 +34,24 @@ namespace HELPSMobileFrontEnd
 				ActionBar.SetHomeButtonEnabled(true);
 				ActionBar.SetDisplayHomeAsUpEnabled(true);
 
-				//progressDialog = ProgressDialog.Show(this, "", "Loading...");
+				if (ProgressDialogLogin == null)
+				{
+					ProgressDialogLogin = ProgressDialog.Show(this, "", "Loading...");
+				}
 
 				string WorkshopSetId = Intent.GetStringExtra("WorkshopSetId");
 				_WorkshopSessions = await RESTClass.GetWorkshopSessions("?workshopSetId=" + WorkshopSetId);
 
-				CreateExpendableListData();
+				CreateExpandableListData();
 
-				ExpandableListView elvExListBox = FindViewById<ExpandableListView> (Resource.Id.elvExListBox);
+				elvExListBox = FindViewById<ExpandableListView> (Resource.Id.elvExListBox);
 				elvExListBox.SetAdapter (new ExpandListSessionAdapter (this, dictGroup));
+
+				if (ProgressDialogLogin != null)
+				{
+					ProgressDialogLogin.Dismiss();
+					ProgressDialogLogin = null;
+				}
 
 				elvExListBox.ChildClick += delegate(object sender, ExpandableListView.ChildClickEventArgs e) {
 					string itmGroup = lstKeys [e.GroupPosition];
@@ -68,12 +78,15 @@ namespace HELPSMobileFrontEnd
 			}
 			finally 
 			{
-//				progressDialog.Dismiss();
-//				progressDialog.Dispose ();
+				if (ProgressDialogLogin != null)
+				{
+					ProgressDialogLogin.Dismiss();
+					ProgressDialogLogin = null;
+				}
 			}
 		}
 
-		public void CreateExpendableListData ()
+		public void CreateExpandableListData ()
 		{
 			try
 			{
@@ -115,12 +128,12 @@ namespace HELPSMobileFrontEnd
 			{
 				switch (item.ItemId)
 				{
-				case Android.Resource.Id.Home:
-					Finish();
-					return true;
+					case Android.Resource.Id.Home:
+						Finish();
+						return true;
 
-				default:
-					return base.OnOptionsItemSelected(item);
+					default:
+						return base.OnOptionsItemSelected(item);
 				}
 			}
 			catch (Exception e) 
@@ -131,4 +144,3 @@ namespace HELPSMobileFrontEnd
 		}
 	}
 }
-

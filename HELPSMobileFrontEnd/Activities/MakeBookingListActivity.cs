@@ -27,7 +27,7 @@ namespace HELPSMobileFrontEnd
 		Adapters.TaskListAdapter taskList;
 		IList<WorkshopSets> WrkSets;
 		ListView lvWorkShops;
-		ProgressDialog progressDialog;
+		ProgressDialog ProgressDialogLogin = null;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -58,9 +58,15 @@ namespace HELPSMobileFrontEnd
 			{
 				base.OnResume ();
 
-				progressDialog = ProgressDialog.Show(this, "", "Loading...");
+				ProgressDialogLogin = ProgressDialog.Show(this, "", "Loading...");
 
 				await GetWorkshops();
+
+				if (ProgressDialogLogin != null)
+				{
+					ProgressDialogLogin.Dismiss();
+					ProgressDialogLogin = null;
+				}
 			}
 			catch (Exception e) 
 			{
@@ -68,8 +74,11 @@ namespace HELPSMobileFrontEnd
 			}
 			finally 
 			{
-				progressDialog.Dismiss();
-				progressDialog.Dispose ();
+				if (ProgressDialogLogin != null)
+				{
+					ProgressDialogLogin.Dismiss();
+					ProgressDialogLogin = null;
+				}
 			}
 		}
 

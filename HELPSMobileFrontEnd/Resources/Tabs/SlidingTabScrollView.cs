@@ -154,17 +154,25 @@ namespace HELPSMobileFrontEnd
                 TextView tabView = CreateDefaultTabView(Context);
 				if (adapter.Count == 2) 
 				{
-					tabView.Text = ((SlidingTabsFragment.ViewBookingsAdapter)adapter).GetHeaderTitle (i);
+					tabView.Text = ((ViewBookingsFragment.ViewBookingsAdapter)adapter).GetHeaderTitle (i);
 				}
 				else 
 				{
 					tabView.Text = ((ProfileAdapter)adapter).GetHeaderTitle (i);
 				}
 				tabView.SetTextColor(new Color(0xFF, 0xFF, 0xFF, 0x73)); //tab text colour
+
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
-//				tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / adapter.Count); //width of tabs
-				tabView.SetWidth ((tabView.Text.Length + 1) * 35);
+
+				if (adapter.Count > 3) 
+				{
+					tabView.SetWidth ((tabView.Text.Length + 1) * 35);
+				}
+				else
+				{	
+					tabView.SetWidth (Resources.DisplayMetrics.WidthPixels / adapter.Count); //width of tabs
+				}
 
                 mTabStrip.AddView(tabView);
             }

@@ -4,14 +4,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#EEEEEE">
-    <ExpandableListView
-        android:id="@+id/elvPastBookings"
-        android:layout_width="fill_parent"
+    <FrameLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dip"
-        android:layout_marginRight="2dip"
-        android:layout_marginTop="5dip"
-        android:layout_marginBottom="5dip" />
+        android:id="@+id/flPastBookings">
+        <ExpandableListView
+            android:id="@+id/elvPastBookings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip" />
+    </FrameLayout>
     <FrameLayout
         android:id="@+id/flNoPastBookings"
         android:layout_width="match_parent"

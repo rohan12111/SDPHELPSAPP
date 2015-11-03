@@ -4,21 +4,30 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#EEEEEE">
-    <ExpandableListView
-        android:id="@+id/elvPastBookings"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="2dip"
-        android:layout_marginRight="2dip"
-        android:layout_marginTop="5dip"
-        android:layout_marginBottom="5dip" />
     <FrameLayout
-        android:id="@+id/flNoPastBookings"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/flCurrentBookings">
+        <ExpandableListView
+            android:id="@+id/elvCurrentBookings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/flNoCurrentBookings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px">
         <TextView
-            android:id="@+id/tvNoPastBookings"
-            android:text="No Past Bookings"
+            android:id="@+id/tvNoCurrentBookings"
+            android:text="No Current Bookings"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

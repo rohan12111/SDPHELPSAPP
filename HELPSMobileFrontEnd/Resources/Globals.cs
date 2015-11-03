@@ -16,6 +16,7 @@ namespace HELPSMobileFrontEnd
 		public static String StuFaculty { get; set; }
 		public static String StuYear { get; set; }
 		public static String StuOther { get; set; }
+		public static List<WorkshopBooking> StuBookings { get; set; }
 
 		public static String ActivityFrom { get; set;}
 

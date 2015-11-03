@@ -172,7 +172,7 @@
                             android:textColor="#FF000000"
                             android:textSize="15dp"
                             android:layout_column="0"
-                            android:id="@+id/textView1"
+                            android:id="@+id/lblPlacesAvailable"
                             android:textStyle="bold"
                             android:paddingRight="3dp" />
                         <TextView
@@ -192,7 +192,7 @@
                             android:textColor="#FF000000"
                             android:textSize="15dp"
                             android:layout_column="0"
-                            android:id="@+id/textView2"
+                            android:id="@+id/lblOnWaitlist"
                             android:textStyle="bold"
                             android:paddingRight="3dp" />
                         <TextView

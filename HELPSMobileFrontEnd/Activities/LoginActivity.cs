@@ -92,14 +92,22 @@ namespace HELPSMobileFrontEnd
 									txtmessage.Visibility = ViewStates.Visible;
 								}
 
-								ProgressDialogLogin.Dismiss ();
-								ProgressDialogLogin = null;
+								if (ProgressDialogLogin != null) 
+								{
+									ProgressDialogLogin.Dismiss ();
+									ProgressDialogLogin = null;
+								}
 							}
 						}
 					}
 					catch (Exception e) 
 					{
 						ErrorHandling.LogError (e, this);
+						if (ProgressDialogLogin != null) 
+						{
+							ProgressDialogLogin.Dismiss ();
+							ProgressDialogLogin = null;
+						}
 					}
 				};
 			}

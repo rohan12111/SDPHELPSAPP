@@ -39,13 +39,13 @@ namespace HELPSMobileFrontEnd
 
 
 
-		public static async Task<WorkshopBooking> GetWorkshopBookings(String strParamters = "")
+		public static async Task<List<WorkshopBooking>> GetWorkshopBookings(String strParamters = "")
 		{
 			try
 			{
 				String result = await GetRESTCall("/workshop/booking/search", strParamters);
 				RootWorkshopBooking _RootObj = new RootWorkshopBooking(result);
-				return _RootObj.Result;
+				return _RootObj.Results;
 			}
 			catch
 			{
@@ -132,6 +132,19 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
+		public static async Task PostMakeBooking(String WorkshopID, String StudentID, String UserID)
+		{
+			KeyValuePair<string, object>[] values = null;
+
+			await PostRESTCall(String.Format("/workshop/booking/create?workshopId={0}&studentId={1}&userId={2}", WorkshopID.Trim(), StudentID.Trim(), UserID.Trim()), values);
+		}
+
+		public static async Task PostMakeWaitlist(String WorkshopID, String StudentID, String UserID)
+		{
+			KeyValuePair<string, object>[] values = null;
+			await PostRESTCall(String.Format("/workshop/wait/create?workshopId={0}&studentId={1}&userId={2}", WorkshopID.Trim(), StudentID.Trim(), UserID.Trim()), values);
+		}
+
 		private static async Task<Boolean> PostRESTCall(String strCall, KeyValuePair<string, object>[] values)
 		{
 			try
@@ -142,23 +155,16 @@ namespace HELPSMobileFrontEnd
 					using (HttpRequestMessage _HttpRequest = new HttpRequestMessage(HttpMethod.Post, "http://sdpmachine.cloudapp.net/api" + strCall))
 					{
 						_HttpRequest.Headers.Add("AppKey", "123456");
-						foreach (KeyValuePair<string, object> property in values)
-						{
-							_HttpRequest.Properties.Add(property);
+						if (values != null){
+							foreach (KeyValuePair<string, object> property in values)
+							{
+								_HttpRequest.Properties.Add(property);
+							}
 						}
 
 						using (HttpResponseMessage _HttpResponse = await _HttpClient.SendAsync(_HttpRequest))
 						{
 							return _HttpResponse.IsSuccessStatusCode;
-//							if (_HttpResponse.IsSuccessStatusCode)
-//							{
-//								String strTemp = await _HttpResponse.Content.ReadAsStringAsync();
-//								return strTemp;
-//							}
-//							else
-//							{
-//								return null;
-//							}
 						}
 					}
 				}
@@ -360,15 +366,19 @@ namespace HELPSMobileFrontEnd
 			try
 			{
 				JObject jObject = JObject.Parse(strJson);
-				var d = jObject["Result"];
-				Result = (WorkshopBooking)d.ToObject(typeof(WorkshopBooking));
+				Results = new List<WorkshopBooking>();
+//				var d = jObject["Result"];
+				foreach (var d in jObject["Results"].Children()) 
+				{ 
+					Results.Add((WorkshopBooking)d.ToObject(typeof(WorkshopBooking)));
+				}
 			}
 			catch 
 			{
 				throw;
 			}
 		}
-		public WorkshopBooking Result { get; set; }
+		public List<WorkshopBooking> Results { get; set; }
 		public bool IsSuccess { get; set; }
 		public object DisplayMessage { get; set; }
 	}

@@ -64,7 +64,6 @@
     <Compile Include="Activities\ViewBookingsActivity.cs" />
     <Compile Include="RESTClass.cs" />
     <Compile Include="Resources\Tabs\SlidingTabScrollView.cs" />
-    <Compile Include="Resources\Tabs\SlidingTabsFragment.cs" />
     <Compile Include="Resources\Tabs\SlidingTabStrip.cs" />
     <Compile Include="Activities\MarkAttendanceActivity.cs" />
     <Compile Include="Activities\MakeBookingListActivity.cs" />
@@ -75,8 +74,10 @@
     <Compile Include="Resources\Globals.cs" />
     <Compile Include="Resources\Tabs\ProfileFragment.cs" />
     <Compile Include="Adapters\SearchAdapter.cs" />
-    <Compile Include="Adapters\ExpandListSessionAdapter.cs" />
     <Compile Include="Adapters\ExpendListAdapter.cs" />
+    <Compile Include="Resources\Tabs\ViewBookingsFragment.cs" />
+    <Compile Include="Adapters\ExpandViewBoookingAdapter.cs" />
+    <Compile Include="Adapters\ExpandListSessionAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AboutAssets.txt" />
