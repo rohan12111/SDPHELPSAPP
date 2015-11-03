@@ -123,7 +123,7 @@ namespace HELPSMobileFrontEnd
 								.SetMessage("The session you are attempting to book is currently full, would you like to be added to the waitlist?" +
 									" You will be automatically added to the session when a spot becomes available.")
 								.SetCancelable(true)
-								.SetPositiveButton("Comfirm", async delegate(object sender, DialogClickEventArgs e) {
+								.SetPositiveButton("Confirm", async delegate(object sender, DialogClickEventArgs e) {
 									await RESTClass.PostMakeWaitlist(item.WorkshopId.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
 								})
 								.Show();

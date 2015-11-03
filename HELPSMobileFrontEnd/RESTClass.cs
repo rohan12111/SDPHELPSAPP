@@ -132,6 +132,13 @@ namespace HELPSMobileFrontEnd
 			}
 		}
 
+		public static async Task PostCancelBooking(String WorkshopID, String StudentID, String UserID)
+		{
+			KeyValuePair<string, object>[] values = null;
+
+			await PostRESTCall(String.Format("/workshop/booking/cancel?workshopId={0}&studentId={1}&userId={2}", WorkshopID.Trim(), StudentID.Trim(), UserID.Trim()), values);
+		}
+
 		public static async Task PostMakeBooking(String WorkshopID, String StudentID, String UserID)
 		{
 			KeyValuePair<string, object>[] values = null;

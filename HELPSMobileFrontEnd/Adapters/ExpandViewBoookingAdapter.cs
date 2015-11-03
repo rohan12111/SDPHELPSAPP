@@ -117,9 +117,19 @@ namespace HELPSMobileFrontEnd
 				else
 				{
 					btnBook.SetText ("Cancel", Button.BufferType.Normal);
-					btnBook.Click += delegate {
-						
-					};
+					if (btnBook.HasOnClickListeners == false)
+					{
+						btnBook.Click += delegate {
+							new AlertDialog.Builder (_activity)
+								.SetTitle("Booked")
+								.SetMessage("Are you sure you want to cancel this booking?")
+								.SetCancelable(true)
+								.SetPositiveButton("Confirm", async delegate(object sender, DialogClickEventArgs e) {
+									await RESTClass.PostCancelBooking( item.workshopID.ToString(), Globals.LoggedStudent.studentID, Globals.LoggedStudent.studentID);
+								})
+								.Show();
+						};
+					}
 				}
 
 				return convertView;
